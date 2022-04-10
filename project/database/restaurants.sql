@@ -59,10 +59,9 @@ CREATE TABLE Review (
 CREATE TABLE Dish (
   id_Dish INTEGER PRIMARY KEY,                                  -- id for each dish
   name VARCHAR,                                                 -- dish's name
-  price INTEGER,                                                -- dish's price
+  price FLOAT,                                                  -- dish's price
   description VARCHAR,                                          -- dish's description
   photo VARCHAR,                                                -- dish's photo
-  categories VARCHAR,                                           -- dish's categories
   id_Restaurant INTEGER REFERENCES Restaurant                   -- restaurant's id to identify where dish is from
 );
 
@@ -89,11 +88,11 @@ INSERT INTO Users(1,'Joana Valente','#Test1','Joana','Valente',918929898,20);   
 INSERT INTO Users(2,'Diogo Almeida','#Test2','Diogo','Almeida',918929892,21);     -- Owner of Adega Soares
 INSERT INTO Users(3,'Jorge Duarte','#Test3','Jorge','Duarte',918929843,22);       -- Owner of Soul Food
 INSERT INTO Users(4,'Carlos Sousa','#Test4','Carlos','Sousa',918929223,23);       -- Owner of 100culpa
-INSERT INTO Users(5,'João Sousa','#Test5','João','Sousa',918929123,24);           -- Owner of Rocinha 
+INSERT INTO Users(5,'João Sousa','#Test5','João','Sousa',918929123,24);           -- Owner of Rocinha
 INSERT INTO Users(6,'João Almeida','#Test6','João','Almeida',918929124,25);       -- Owner of Burguer King S.Mamede
 INSERT INTO Users(7,'Manuel Andrade','#Test8','Manuel','Andrade',918719124,26);   -- Owner of Burguer King S.Mamede
 
--- Different types of categories 
+-- Different types of categories
 INSERT INTO Category VALUES(1,'Fast-Food');
 INSERT INTO Category VALUES(2,'Gourmet');
 INSERT INTO Category VALUES(3,'Healthy');
@@ -109,11 +108,11 @@ INSERT INTO Address VALUES(6,'Porto','4465-366','Estrada Nacional 14');         
 INSERT INTO Address VALUES(7,'Lisboa','1500-392','Avenida Lusíada C Colombo');            -- Burguer King Colombo
 
 -- User's (Owners) address
-INSERT INTO Address VALUES(20,'Porto','4100-127','Av. da Boavista 621');                  -- Joana Valente 
-INSERT INTO Address VALUES(21,'Vale de Cambra','3730-360','Rua de São João');             -- Diogo Almeida 
-INSERT INTO Address VALUES(22,'Porto','4200-050','Rua de Álvaro Castelões');              -- Jorge Duarte  
+INSERT INTO Address VALUES(20,'Porto','4100-127','Av. da Boavista 621');                  -- Joana Valente
+INSERT INTO Address VALUES(21,'Vale de Cambra','3730-360','Rua de São João');             -- Diogo Almeida
+INSERT INTO Address VALUES(22,'Porto','4200-050','Rua de Álvaro Castelões');              -- Jorge Duarte
 INSERT INTO Address VALUES(23,'Arouca','4540-176','Rua de Vila Nova');                    -- Carlos Sousa
-INSERT INTO Address VALUES(24,'Porto','4200-315','Rua Grupo 10 de Maio');                 -- João Sousa 
+INSERT INTO Address VALUES(24,'Porto','4200-315','Rua Grupo 10 de Maio');                 -- João Sousa
 INSERT INTO Address VALUES(25,'Porto','4910-357','Rua de Rio Tinto');                     -- João Almeida
 INSERT INTO Address VALUES(26,'Lisboa','1300-472 ','Rua 1º de Maio');                     -- Manuel Andrade
 
@@ -125,3 +124,6 @@ INSERT INTO ROwner VALUES(4,'100culpa');
 INSERT INTO ROwner VALUES(5,'Rocinha');
 INSERT INTO ROwner VALUES(6,'Burguer King S.Mamede');
 INSERT INTO ROwner VALUES(7,'Burguer King Colombo');
+
+--  Mcdonals Aliados dishes
+INSERT INTO Dish VALUES(1,'Cheeseburguer',5.90,'simple hamburguer with cheese, pickles and ketchup',1);   --falta a foto
