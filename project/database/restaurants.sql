@@ -66,14 +66,20 @@ CREATE TABLE Dish (
   id_Restaurant INTEGER REFERENCES Restaurant                   -- restaurant's id to identify where dish is from
 );
 
-CREATE TABLE OOrder (
+CREATE TABLE Order (
     id_Order INTEGER PRIMARY KEY,                                   -- id for each order given by the website
     price INTEGER,                                                  -- order's price
     descritpion VARCHAR,                                            -- order's description with everything ordered and quantities
     id_Restaurant INTEGER REFERENCES Restaurant(id_Restaurant)      -- id's user for orders's history
 );
 
--- Different types of categories
+-- Users (Restaurant Owners)
+INSERT INTO Users (1,'Joana Valente','#Test1','Joana','Valente',918929898,6); -- Dona do Macdonalds
+INSERT INTO Users (2,'Diogo Almeida','#Test2','Diogo','Almeida',918929892,7); -- Dono do Adega Soares
+INSERT INTO Users (3,'Jorge Duarte','#Test3','Jorge','Duarte',918929843,8);   -- Dono do 
+INSERT INTO Users (4,'Carlos Sousa','#Test3','Jorge','Duarte',918929843,8);
+
+-- Different types of categories 
 INSERT INTO Category VALUES(1,'Fast-Food');
 INSERT INTO Category VALUES(2,'Gourmet');
 INSERT INTO Category VALUES(3,'Healthy');
