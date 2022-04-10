@@ -74,10 +74,11 @@ CREATE TABLE Order (
 );
 
 -- Users (Restaurant Owners)
-INSERT INTO Users (1,'Joana Valente','#Test1','Joana','Valente',918929898,6); -- Dona do Macdonalds
-INSERT INTO Users (2,'Diogo Almeida','#Test2','Diogo','Almeida',918929892,7); -- Dono do Adega Soares
-INSERT INTO Users (3,'Jorge Duarte','#Test3','Jorge','Duarte',918929843,8);   -- Dono do 
-INSERT INTO Users (4,'Carlos Sousa','#Test3','Jorge','Duarte',918929843,8);
+INSERT INTO Users (1,'Joana Valente','#Test1','Joana','Valente',918929898,20); -- Owner of Macdonalds
+INSERT INTO Users (2,'Diogo Almeida','#Test2','Diogo','Almeida',918929892,21); -- Owner of Adega Soares
+INSERT INTO Users (3,'Jorge Duarte','#Test3','Jorge','Duarte',918929843,22);   -- Owner of Soul Food
+INSERT INTO Users (4,'Carlos Sousa','#Test4','Carlos','Sousa',918929223,23);   -- Owner of 100culpa
+INSERT INTO Users (5,'Joao Sousa','#Test5','Joao','Sousa',918929123,24);      -- Owner of Rocinha 
 
 -- Different types of categories 
 INSERT INTO Category VALUES(1,'Fast-Food');
@@ -86,12 +87,12 @@ INSERT INTO Category VALUES(3,'Healthy');
 INSERT INTO Category VALUES(4,'Desert');
 
 -- Restaurant's address
-INSERT INTO Address VALUES(1,'Porto','4000-322','Praça da Liberdade, 126');               --Mcdonals aliados
-INSERT INTO Address VALUES(2,'Vale de Cambra','3730-249','Av. de Santo António 289');     --Adega Soares
-INSERT INTO Address VALUES(3,'Porto','4200-068','Rua de Antero de Quental 677');          --Soul Food
-INSERT INTO Address VALUES(4,'Porto','4000-042','Rua da Alegria 145');                    --100culpa
-INSERT INTO Address VALUES(5,'Porto','4050-553','Rua de São João 5');                     --Rocinha
+INSERT INTO Address VALUES(1,'Porto','4000-322','Praça da Liberdade, 126');               -- Mcdonals aliados
+INSERT INTO Address VALUES(2,'Vale de Cambra','3730-249','Av. de Santo António 289');     -- Adega Soares
+INSERT INTO Address VALUES(3,'Porto','4200-068','Rua de Antero de Quental 677');          -- Soul Food
+INSERT INTO Address VALUES(4,'Porto','4000-042','Rua da Alegria 145');                    -- 100culpa
+INSERT INTO Address VALUES(5,'Porto','4050-553','Rua de São João 5');                     -- Rocinha
 
--- User's address
-INSERT INTO Address VALUES(6,'Porto','4100-127','Av. da Boavista 621');
-INSERT INTO Address VALUES(7,'Vale de Cambra','3730-360','Rua de São João');
+-- User's (Owners) address
+INSERT INTO Address VALUES(20,'Porto','4100-127','Av. da Boavista 621');
+INSERT INTO Address VALUES(21,'Vale de Cambra','3730-360','Rua de São João');
