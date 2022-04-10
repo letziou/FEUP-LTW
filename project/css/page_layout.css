@@ -1,0 +1,87 @@
+/* main layout */
+
+body {
+  background-color: #edeff0;
+
+  margin: 0 auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: [start] 1fr [middle] 1fr [end];
+  grid-template-rows: [start] auto [search] auto [categories] 1fr [footer] auto [end];
+}
+
+body > header {
+  grid-column: start / end;
+}
+ 
+
+/* header layout */
+
+body > header {
+  display: grid;
+  grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
+  grid-template-rows: auto auto auto;
+}
+
+body > header #signup {
+  grid-column: end;
+  grid-row: 1;
+}
+
+#logo {
+  grid-column-start: start;
+  grid-column-end: end;
+  display: block;
+  margin-left: auto;
+  margin-right: 10%;
+
+  width: 50%;
+}
+
+h2 {
+  height: 1em;
+  grid-column-start: start;
+  grid-column-end: end;
+}
+/* searchbar */
+
+#searchbar {
+  height: 4em;
+  grid-column-start: start;
+  grid-column-end: end;
+}
+
+.searchbar {
+  display: block;
+  margin-top: 0.7%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60%;
+  width: 50%;
+}
+
+/*food section*/
+
+#foodsections {
+  background-color: #edeff0;
+
+  margin: 0 auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
+  grid-template-rows: [start] auto [image] auto [title] auto [end];
+}
+
+#foodsections > article {
+ margin: 0.5em 4.5em 0.5em 4.5em;
+}
+
+#foodsections > article:nth-child(1n) {
+  margin-left: 7em;
+ }
+
+/*footer*/
+body > footer {
+  grid-column-start: start;
+  grid-column-end: end;
+}

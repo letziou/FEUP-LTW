@@ -1,0 +1,61 @@
+body > header {
+  background-color: #DD7230;
+  color: white;
+  padding: 1em;
+}
+
+body > #searchbar{
+  background-color: #7F7F7F;
+}
+
+.button {
+  border: none;
+  background-color: #FCD07D;
+  color: #7F7F7F;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#logo {
+  grid-column-start: start;
+  grid-column-end: end;
+  display: block;
+  margin-left: auto;
+  margin-right: 20%;
+  width: 50%;
+}
+
+/* footer */
+
+body > footer {
+  background-color: #2a2f33;
+  color: white;
+
+  padding: 1em;
+
+  height: 1em;
+}
+
+body > footer p {
+  margin: 0;
+}
+
+/* fonts */ 
+
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Lora", serif;
+  line-height: 1.4em;
+}
+
+
