@@ -73,6 +73,8 @@ CREATE TABLE OOrder (
     id_Restaurant INTEGER REFERENCES Restaurant(id_Restaurant)      -- id's user for orders's history
 );
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
 --Restaurants
 INSERT INTO Restaurant(1,'McDonals Imperial',1,1,1);
 INSERT INTO Restaurant(2,'Adega Soares',2,2,2);
@@ -116,9 +118,10 @@ INSERT INTO Address VALUES(25,'Porto','4910-357','Rua de Rio Tinto');           
 INSERT INTO Address VALUES(26,'Lisboa','1300-472 ','Rua 1º de Maio');                     -- Manuel Andrade
 
 -- Restaurant Owners
-INSERT INTO ROwner VALUES(1,'McDonalds');
-INSERT INTO ROwner VALUES(2,'Adega Soares lda');
-INSERT INTO ROwner VALUES(3,'Soul Food lda');
-INSERT INTO ROwner VALUES(4,'100culpa lda');
-INSERT INTO ROwner VALUES(5,'Rocinha lda');
-INSERT INTO ROwner VALUES(6,'Burguer King');
+INSERT INTO ROwner VALUES(1,'McDonalds Aliados');
+INSERT INTO ROwner VALUES(2,'Adega Soares');
+INSERT INTO ROwner VALUES(3,'Soul Food');
+INSERT INTO ROwner VALUES(4,'100culpa');
+INSERT INTO ROwner VALUES(5,'Rocinha');
+INSERT INTO ROwner VALUES(6,'Burguer King S.Mamede');
+INSERT INTO ROwner VALUES(7,'Burguer King Colombo');
