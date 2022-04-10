@@ -88,4 +88,10 @@ INSERT INTO Category VALUES(4,'Desert');
 -- Restaurant's address
 INSERT INTO Address VALUES(1,'Porto','4000-322','Praça da Liberdade, 126');               --Mcdonals aliados
 INSERT INTO Address VALUES(2,'Vale de Cambra','3730-249','Av. de Santo António 289');     --Adega Soares
-INSERT INTO Address VALUES(3,'Porto','')
+INSERT INTO Address VALUES(3,'Porto','4200-068','Rua de Antero de Quental 677');          --Soul Food
+INSERT INTO Address VALUES(4,'Porto','4000-042','Rua da Alegria 145');                    --100culpa
+INSERT INTO Address VALUES(5,'Porto','4050-553','Rua de São João 5');                     --Rocinha
+
+-- User's address
+INSERT INTO Address VALUES(6,'Porto','4100-127','Av. da Boavista 621');
+INSERT INTO Address VALUES(7,'Vale de Cambra','3730-360','Rua de São João');
