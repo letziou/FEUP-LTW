@@ -66,19 +66,30 @@ CREATE TABLE Dish (
   id_Restaurant INTEGER REFERENCES Restaurant                   -- restaurant's id to identify where dish is from
 );
 
-CREATE TABLE Order (
+CREATE TABLE OOrder (
     id_Order INTEGER PRIMARY KEY,                                   -- id for each order given by the website
     price INTEGER,                                                  -- order's price
     descritpion VARCHAR,                                            -- order's description with everything ordered and quantities
     id_Restaurant INTEGER REFERENCES Restaurant(id_Restaurant)      -- id's user for orders's history
 );
 
+--Restaurants
+INSERT INTO Restaurant(1,'McDonals Imperial',1,1,1);
+INSERT INTO Restaurant(2,'Adega Soares',2,2,2);
+INSERT INTO Restaurant(3,'Soul Food',3,3,3);
+INSERT INTO Restaurant(4,'100culpa',4,4,4);
+INSERT INTO Restaurant(5,'Rocinha',2,5,5);
+INSERT INTO Restaurant(6,'Burguer King S.Mamede',1,6,6);
+INSERT INTO Restaurant(7,'Burguer King Colombo',1,7,6);
+
 -- Users (Restaurant Owners)
-INSERT INTO Users (1,'Joana Valente','#Test1','Joana','Valente',918929898,20); -- Owner of Macdonalds
-INSERT INTO Users (2,'Diogo Almeida','#Test2','Diogo','Almeida',918929892,21); -- Owner of Adega Soares
-INSERT INTO Users (3,'Jorge Duarte','#Test3','Jorge','Duarte',918929843,22);   -- Owner of Soul Food
-INSERT INTO Users (4,'Carlos Sousa','#Test4','Carlos','Sousa',918929223,23);   -- Owner of 100culpa
-INSERT INTO Users (5,'Joao Sousa','#Test5','Joao','Sousa',918929123,24);      -- Owner of Rocinha 
+INSERT INTO Users(1,'Joana Valente','#Test1','Joana','Valente',918929898,20);     -- Owner of Macdonalds Circunvalação
+INSERT INTO Users(2,'Diogo Almeida','#Test2','Diogo','Almeida',918929892,21);     -- Owner of Adega Soares
+INSERT INTO Users(3,'Jorge Duarte','#Test3','Jorge','Duarte',918929843,22);       -- Owner of Soul Food
+INSERT INTO Users(4,'Carlos Sousa','#Test4','Carlos','Sousa',918929223,23);       -- Owner of 100culpa
+INSERT INTO Users(5,'João Sousa','#Test5','João','Sousa',918929123,24);           -- Owner of Rocinha 
+INSERT INTO Users(6,'João Almeida','#Test6','João','Almeida',918929124,25);       -- Owner of Burguer King S.Mamede
+INSERT INTO Users(7,'Manuel Andrade','#Test8','Manuel','Andrade',918719124,26);   -- Owner of Burguer King S.Mamede
 
 -- Different types of categories 
 INSERT INTO Category VALUES(1,'Fast-Food');
@@ -87,12 +98,27 @@ INSERT INTO Category VALUES(3,'Healthy');
 INSERT INTO Category VALUES(4,'Desert');
 
 -- Restaurant's address
-INSERT INTO Address VALUES(1,'Porto','4000-322','Praça da Liberdade, 126');               -- Mcdonals aliados
+INSERT INTO Address VALUES(1,'Porto','4000-322','Praça da Liberdade, 126');               -- Mcdonals Aliados
 INSERT INTO Address VALUES(2,'Vale de Cambra','3730-249','Av. de Santo António 289');     -- Adega Soares
 INSERT INTO Address VALUES(3,'Porto','4200-068','Rua de Antero de Quental 677');          -- Soul Food
 INSERT INTO Address VALUES(4,'Porto','4000-042','Rua da Alegria 145');                    -- 100culpa
 INSERT INTO Address VALUES(5,'Porto','4050-553','Rua de São João 5');                     -- Rocinha
+INSERT INTO Address VALUES(6,'Porto','4465-366','Estrada Nacional 14');                   -- Burguer King São Mamede
+INSERT INTO Address VALUES(7,'Lisboa','1500-392','Avenida Lusíada C Colombo');            -- Burguer King Colombo
 
 -- User's (Owners) address
-INSERT INTO Address VALUES(20,'Porto','4100-127','Av. da Boavista 621');
-INSERT INTO Address VALUES(21,'Vale de Cambra','3730-360','Rua de São João');
+INSERT INTO Address VALUES(20,'Porto','4100-127','Av. da Boavista 621');                  -- Joana Valente 
+INSERT INTO Address VALUES(21,'Vale de Cambra','3730-360','Rua de São João');             -- Diogo Almeida 
+INSERT INTO Address VALUES(22,'Porto','4200-050','Rua de Álvaro Castelões');              -- Jorge Duarte  
+INSERT INTO Address VALUES(23,'Arouca','4540-176','Rua de Vila Nova');                    -- Carlos Sousa
+INSERT INTO Address VALUES(24,'Porto','4200-315','Rua Grupo 10 de Maio');                 -- João Sousa 
+INSERT INTO Address VALUES(25,'Porto','4910-357','Rua de Rio Tinto');                     -- João Almeida
+INSERT INTO Address VALUES(26,'Lisboa','1300-472 ','Rua 1º de Maio');                     -- Manuel Andrade
+
+-- Restaurant Owners
+INSERT INTO ROwner VALUES(1,'McDonalds');
+INSERT INTO ROwner VALUES(2,'Adega Soares lda');
+INSERT INTO ROwner VALUES(3,'Soul Food lda');
+INSERT INTO ROwner VALUES(4,'100culpa lda');
+INSERT INTO ROwner VALUES(5,'Rocinha lda');
+INSERT INTO ROwner VALUES(6,'Burguer King');
