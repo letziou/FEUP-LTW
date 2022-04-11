@@ -87,7 +87,7 @@ INSERT INTO Restaurant(1,'McDonals Imperial',1,1,1);
 INSERT INTO Restaurant(2,'KFC',1,2,2);
 INSERT INTO Restaurant(3,'daTerra',3,3,3);
 INSERT INTO Restaurant(4,'Extremepita',3,4,4);
-INSERT INTO Restaurant(5,'Dunkin Donuts',2,5,5);
+INSERT INTO Restaurant(5,'Dunkin Donuts',4,5,5);
 INSERT INTO Restaurant(6,'Burguer King S.Mamede',1,6,6);
 INSERT INTO Restaurant(7,'Burguer King Colombo',1,7,6);
 
@@ -102,7 +102,7 @@ INSERT INTO Users(7,'Manuel Andrade','#Test7','Manuel','Andrade',918719124,26); 
 
 -- Different types of categories
 INSERT INTO Category VALUES(1,'Fast-Food');
-INSERT INTO Category VALUES(2,'Gourmet');
+INSERT INTO Category VALUES(2,'Casual Dining');
 INSERT INTO Category VALUES(3,'Healthy');
 INSERT INTO Category VALUES(4,'Desert');
 
