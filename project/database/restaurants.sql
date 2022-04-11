@@ -27,6 +27,11 @@ CREATE TABLE ROwner (
     PRIMARY KEY(id_Owner)
 );
 
+CREATE TABLE Image (
+    id_Image INTEGER PRIMARY KEY,                           -- image id given by website to each image 
+    link VARCHAR
+)
+
 CREATE TABLE Address (
     id_Address INTEGER PRIMARY KEY,                         -- unique id given to address
     city VARCHAR,                                           -- name of the address's city
@@ -37,14 +42,16 @@ CREATE TABLE Address (
 CREATE TABLE Restaurant (
     id_Restaurant INTEGER PRIMARY KEY,                          -- id for each id_Restaurant
     name VARCHAR,                                               -- restaurant's name
-    id_category INTEGER REFERENCES category(id_Category),       -- restaurants's category
+    id_category INTEGER REFERENCES Category(id_Category),       -- restaurants's category
     id_Address INTEGER REFERENCES Address(id_Address),          -- id of
-    id_Owner INTEGER REFERENCES ROwner(id_Owner)                -- owner's id of restaurant
+    id_Owner INTEGER REFERENCES ROwner(id_Owner),               -- owner's id of restaurant
+    id_Image INTEGER REFERENCES Image(id_Image)                 -- image id of restaurant
 );
 
 CREATE TABLE Category (
     id_Category INTEGER PRIMARY KEY,                            -- id for each category
-    type VARCHAR                                                -- type of category
+    type VARCHAR,                                                -- type of category
+    id_Image INTEGER REFERENCES Image(id_Image)
 );
 
 CREATE TABLE Review (
@@ -62,7 +69,8 @@ CREATE TABLE Dish (
   price FLOAT,                                                  -- dish's price
   description VARCHAR,                                          -- dish's description
   photo VARCHAR,                                                -- dish's photo
-  id_Restaurant INTEGER REFERENCES Restaurant                   -- restaurant's id to identify where dish is from
+  id_Restaurant INTEGER REFERENCES Restaurant,                   -- restaurant's id to identify where dish is from
+  id_Image INTEGER REFERENCES Image(id_Image)  
 );
 
 CREATE TABLE OOrder (
@@ -76,10 +84,10 @@ CREATE TABLE OOrder (
 
 --Restaurants
 INSERT INTO Restaurant(1,'McDonals Imperial',1,1,1);
-INSERT INTO Restaurant(2,'Adega Soares',2,2,2);
-INSERT INTO Restaurant(3,'Soul Food',3,3,3);
-INSERT INTO Restaurant(4,'100culpa',4,4,4);
-INSERT INTO Restaurant(5,'Rocinha',2,5,5);
+INSERT INTO Restaurant(2,'KFC',1,2,2);
+INSERT INTO Restaurant(3,'daTerra',3,3,3);
+INSERT INTO Restaurant(4,'Extremepita',3,4,4);
+INSERT INTO Restaurant(5,'Dunkin Donuts',2,5,5);
 INSERT INTO Restaurant(6,'Burguer King S.Mamede',1,6,6);
 INSERT INTO Restaurant(7,'Burguer King Colombo',1,7,6);
 
@@ -90,7 +98,7 @@ INSERT INTO Users(3,'Jorge Duarte','#Test3','Jorge','Duarte',918929843,22);     
 INSERT INTO Users(4,'Carlos Sousa','#Test4','Carlos','Sousa',918929223,23);       -- Owner of 100culpa
 INSERT INTO Users(5,'João Sousa','#Test5','João','Sousa',918929123,24);           -- Owner of Rocinha
 INSERT INTO Users(6,'João Almeida','#Test6','João','Almeida',918929124,25);       -- Owner of Burguer King S.Mamede
-INSERT INTO Users(7,'Manuel Andrade','#Test8','Manuel','Andrade',918719124,26);   -- Owner of Burguer King S.Mamede
+INSERT INTO Users(7,'Manuel Andrade','#Test7','Manuel','Andrade',918719124,26);   -- Owner of Burguer King S.Mamede
 
 -- Different types of categories
 INSERT INTO Category VALUES(1,'Fast-Food');
@@ -118,12 +126,16 @@ INSERT INTO Address VALUES(26,'Lisboa','1300-472 ','Rua 1º de Maio');          
 
 -- Restaurant Owners
 INSERT INTO ROwner VALUES(1,'McDonalds Aliados');
-INSERT INTO ROwner VALUES(2,'Adega Soares');
-INSERT INTO ROwner VALUES(3,'Soul Food');
-INSERT INTO ROwner VALUES(4,'100culpa');
-INSERT INTO ROwner VALUES(5,'Rocinha');
+INSERT INTO ROwner VALUES(2,'KFC');
+INSERT INTO ROwner VALUES(3,'daTerra');
+INSERT INTO ROwner VALUES(4,'Extremepita');
+INSERT INTO ROwner VALUES(5,'Dunkin Donuts');
 INSERT INTO ROwner VALUES(6,'Burguer King S.Mamede');
 INSERT INTO ROwner VALUES(7,'Burguer King Colombo');
+
+-- Images 
+
+INSERT INTO Images VALUES(1,"");
 
 --  Mcdonals Aliados dishes
 INSERT INTO Dish VALUES(1,'Cheeseburguer',5.90,'simple hamburguer with cheese, pickles and ketchup',1);   --falta a foto
