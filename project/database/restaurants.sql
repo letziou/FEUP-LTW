@@ -69,8 +69,7 @@ CREATE TABLE Dish (
   name VARCHAR,                                                 -- dish's name
   price FLOAT,                                                  -- dish's price
   description VARCHAR,                                          -- dish's description
-  photo VARCHAR,                                                -- dish's photo
-  id_Restaurant INTEGER REFERENCES Restaurant,                   -- restaurant's id to identify where dish is from
+  id_Restaurant INTEGER REFERENCES Restaurant,                  -- restaurant's id to identify where dish is from
   id_Image INTEGER REFERENCES Image(id_Image)  
 );
 
@@ -188,4 +187,198 @@ INSERT INTO ROwner VALUES(7,'Burguer King Colombo');
 INSERT INTO Images VALUES(1,'PNG',readfile('../../design/Food_Images/Mac/bigmac.png'));
 
 --  Mcdonals Aliados dishes
-INSERT INTO Dish VALUES(1,'Cheeseburguer',5.90,'simple hamburguer with cheese, pickles and ketchup',1);   --falta a foto
+
+INSERT INTO Dish VALUES(1,'Big Mac',4.70,'A sanduíche dupla mais cobiçada no mundo inteiro. 
+                        Feita com dois suculentos hambúrgueres 100% carne de vaca, queijo 
+                        fundido, pepino, cebola, alface e um molho irresistível.',1);   --falta a foto
+
+INSERT INTO Dish VALUES(2,'CBO',7.00,'Era uma vez um tenro panado de frango que encontrou uma 
+                        cebola estaladiça. E um pão macio que conheceu um bacon crocante. No 
+                        CBO os melhores ingredientes combinam-se numa dança ora tenra, ora 
+                        estaladiça. Ora macia, ora crocante. Deliciosamente juntos para 
+                        proporcionar momentos de prazer.',1);   
+
+INSERT INTO Dish VALUES(3,'Double Big Tasty',6.50,'De tamanho generoso, o Big Tasty Double 
+                        agora tem um pão especial, com queijo e bacon, e um molho que não 
+                        partilha com mais nenhuma sanduíche.',1); 
+
+INSERT INTO Dish VALUES(4,'Double Cheese Burguer',6.50,'Pão quentinho, hambúrguer de carne 
+                        100% bovina, queijo, cebola, picles com ketchup e mostarda.',1);
+
+INSERT INTO Dish VALUES(5,'McChicken',6.50,'Filete de frango com uma camada de alface e 
+                        maionese, emoldurado por dois pedaços de pão. Uma sanduíche 
+                        multi-sensações que nunca passa de moda.',1);
+
+INSERT INTO Dish VALUES(6,'Kansas Steakhouse Chicken',6.50,'Um bife de frango dourado e crocante, 
+                        com um boost de confiança dado pela intensidade e irreverência
+                        do molho BBQ. É mesmo típico deste americano.',1);
+
+INSERT INTO Dish VALUES(7,'Kansas Steakhouse Single',6.50,'O Kansas Steakhouse trouxe 
+                        intensidade para todos os gostos, vais adorar a combinação da
+                        carne de vaca com os sabores tipicamente americanos.',1);
+                       
+INSERT INTO Dish VALUES(8,'McRoyal Bacon',5.50,'O Kansas Steakhouse trouxe 
+                        intensidade para todos os gostos, vais adorar a combinação da
+                        carne de vaca com os sabores tipicamente americanos.',1);  
+
+INSERT INTO Dish VALUES(9,'McRoyal Cheese',5.50,'O que mais se pode pedir? Todo o paladar 
+                        do McRoyal com uma dupla camada de queijo Cheddar fundido. Ideal 
+                        para os amantes de queijo.',1);
+
+INSERT INTO Dish VALUES(10,'McRoyal Deluxe',5.50,'Coroado com sementes de sésamo, 
+                        o McRoyal Deluxe tem todos os ingredientes para uma dentada 
+                        luxuosa: carne 100% de vaca, rodelas de tomate, queijo Cheddar
+                        fundido e maionese aveludada.',1);
+
+INSERT INTO Dish VALUES(11,'McVeggie',6.25,'Um hambúrguer à base de vegetais e quinoa combinado 
+                        com tomate, alface e um delicioso molho de alho e coentros. Contém leite e ovo.',1);
+
+INSERT INTO Dish VALUES(12,'Normal Big Tasty',6.00,'Descubra o novo Big Tasty Single e o seu novo 
+                        pão com queijo e bacon.',1);
+
+INSERT INTO Dish VALUES(13,'Rustic Chicken Mostarda e Mel',7.50,'Pedaço de frango com uma camada de alface 
+                        e mostarda & mel, emoldurado por dois pedaços de pão brioche. Uma sanduíche estaladiça 
+                        por fora e suculenta por dentro.',1); 
+
+INSERT INTO Dish VALUES(14,'Rustic Chicken Orginal',7.50,'Pedaço de frango mais alto com uma camada de alface,
+                       tomate e maionese, emoldurado por dois pedaços de pão brioche. Uma sanduíche mais suculenta 
+                       e mais crocante.',1);
+
+INSERT INTO Dish VALUES(15,'Filet-o-Fish',5.00,'Delicioso filete de peixe envolto por uma textura crocante, combinado
+                        com queijo e uma dose generosa de molho tártaro. Um tesouro do fundo do mar, que é uma forma
+                        muito saborosa de comer peixe.',1);
+
+INSERT INTO Dish VALUES(16,'Batatas Fritas Pequena',1.00,'São uma perdição. Pode tentar resistir-lhes, mas depois alguém
+                        traz para a mesa umas batatas fritas longas, loiras, estaladiças é impossível não provar
+                        uma. Ou duas. Três, se a outra pessoa não estiver a olhar.',1);
+
+INSERT INTO Dish VALUES(17,'Batatas Fritas Média',1.50,'São uma perdição. Pode tentar resistir-lhes, mas depois alguém
+                        traz para a mesa umas batatas fritas longas, loiras, estaladiças é impossível não provar
+                        uma. Ou duas. Três, se a outra pessoa não estiver a olhar.',1);
+
+INSERT INTO Dish VALUES(18,'Batatas Fritas Grande',1.65,'São uma perdição. Pode tentar resistir-lhes, mas depois alguém
+                        traz para a mesa umas batatas fritas longas, loiras, estaladiças é impossível não provar
+                        uma. Ou duas. Três, se a outra pessoa não estiver a olhar.',1);
+
+INSERT INTO Dish VALUES(19,'Chicken Nuggets',1.00,'Irresistíveis pedaços de frango panados e dourados. Mudam de cor quando
+                        mergulhados no seu molho preferido: barbecue, caril, mostarda, agridoce, maionese, ketchup... depois
+                         de começar, o difícil é parar.',1);
+
+INSERT INTO Dish VALUES(20,'Sopa de Legumes',2.50,'Um creme com cenoura, batata, repolho, cebola, espinafre e allho.',1);
+
+INSERT INTO Dish VALUES(21,'Sopa de Espinafre',2.50,'Um creme com cenoura, batata, repolho, cebola, espinafre e allho.',1);
+
+INSERT INTO Dish VALUES(22,'McFlurry Kit Kat',3.00,'Uma deliciosa sopa composta por grão de bico, cebola, cenoura, coentros, 
+                        alho e espinafres. ',1);      
+
+INSERT INTO Dish VALUES(23,'McFlurry M&M''s',3.00,'McFlurry M&M''s, com massa gelada sabor baunilha, pedaços deliciosos de 
+                        KitKat',1);
+
+INSERT INTO Dish VALUES(24,'McFlurry Oreo',3.00,'McFlurry Oreo, com massa gelada sabor baunilha, pedaços deliciosos de 
+                        Oreo',1);
+
+INSERT INTO Dish VALUES(25,'McFlurry Snickers',3.00,'McFlurry Snickers, com massa gelada sabor baunilha, pedaços deliciosos de 
+                        Snickers',1);
+
+INSERT INTO Dish VALUES(26,'Sunday Natural',2.50,'Uma montanha de neve doce e cremosa. Ensine a sua colher a fazer esqui antes 
+                        que a neve derreta.',1);
+
+INSERT INTO Dish VALUES(27,'Sunday Caramelo',2.50,'Uma montanha de neve doce e cremosa. Ensine a sua colher a fazer esqui e mergulhar
+                        no intenso sabor a caramelo, antes que a neve derreta.',1);
+
+INSERT INTO Dish VALUES(28,'Sunday Chocolate',2.50,'Uma montanha de neve doce e cremosa. Ensine a sua colher a fazer esqui e mergulhar
+                        no intenso sabor a chocolate, antes que a neve derreta.',1);    
+
+INSERT INTO Dish VALUES(29,'Sunday Morango',2.50,'Uma montanha de neve doce e cremosa. Ensine a sua colher a fazer esqui e mergulhar
+                        no intenso sabor a morango, antes que a neve derreta.',1);
+
+INSERT INTO Dish VALUES(30,'Sunday Baba de Camelo',2.50,'Uma montanha de neve doce e cremosa. Ensine a sua colher a fazer esqui e mergulhar
+                        no intenso sabor a baba de camelo, antes que a neve derreta.',1);  
+
+-- KFC dishes
+
+INSERT INTO Dish VALUES(31,'BBC Original',5.50,'BBC, a sanduíche composta por 1 Filete de Frango (Receita Original ou Zinger) marinado 
+                        e panado, 1 fatia de Queijo, 1 fatia de Bacon, molho BBQ e Maionese.',1);
+
+INSERT INTO Dish VALUES(32,'BBC Bacon Box Master Zinger',7.20,'O Boxmaster BBQ Bacon são 300 gramas de puro prazer, tortilha de trigo
+                        torrado com queijo, alface, tomate, torta de batata, filete de frango panado à maneira da KFC, tudo acompanhado
+                        com um molho de churrasco e bacon.',1);
+
+INSERT INTO Dish VALUES(33,'Double Krunch Bacon',4.20,'Duas tiras de frango marinado crocante, alface, bacon estaladiço e pão de hambúrguer.',1);
+
+INSERT INTO Dish VALUES(34,'Double Krunch Cheese',4.20,'Sanduíche composta por 2 tiras de Frango marinado e panado, alface, queijo, ketchup e
+                        maionese.',1);
+
+INSERT INTO Dish VALUES(35,'Original',4.45,'Sanduíche composta por 1 Filete de Frango marinado e panados, alface, tomate e maionese',1);
+
+INSERT INTO Dish VALUES(36,'Original Zinger',5.75,'Sanduíche composta por 1 Filete de Frango picante marinado e panados, alface, tomate
+                        e maionese',1);
+
+INSERT INTO Dish VALUES(37,'Tower Original',6.50,'Uma sanduíche completa que vem com filete de frango marinado e panado de acordo com a receita 
+                        exclusiva KFC, alface, queijo, 2 molhos e batata crocante.',1); 
+
+INSERT INTO Dish VALUES(38,'Tower Zinger',7.00,'Sanduíche composta por 1 Filete de Frango marinado e panados, alface, queijo, batata 
+                        crocante, ketchup e Maionese. Filete picante.',1);
+
+INSERT INTO Dish VALUES(39,'Twister',5.10,'Deliciosas suaves tiras de peito de frango autêntico, acompanhado por tomate, alface 
+                        e uma deliciosa maionese com molho de pimenta, tudo isto envolvido numa tortilla de trigo integral.',1);
+
+INSERT INTO Dish VALUES(40,'Menu Double BBCheese',9.95,'Menu incluí 1 Sanduíche Double BBCheese, 1 bebida e 1 complemento.',1);
+
+INSERT INTO Dish VALUES(41,'Menu Bacon Box Master',9.35,'Menu incluí 1 Bacon Box Master, 1 bebida e 1 complemento.',1);
+
+INSERT INTO Dish VALUES(42,'Menu BBC',8.45,'Menu incluí 1 BBC, 1 bebida e 1 complemento.',1);
+
+INSERT INTO Dish VALUES(43,'Menu Tenders',8.95,'Menu incluí 5 peitos de frango fritos, 1 bebida e 1 complemento.',1);
+
+INSERT INTO Dish VALUES(44,'Menu 2 Pedaços',7.30,'Menu incluí 2 pedaços de frango, 1 bebida e 1 complemento.',1);
+
+INSERT INTO Dish VALUES(45,'Menu Cochas Picantes',7.50,'Menu incluí 5 cochas de frango picantes, 1 bebida e 1 complemento.',1);
+
+INSERT INTO Dish VALUES(46,'Menu 4 Pedaços',8.30,'Menu incluí 4 peitos de frango fritos, 1 bebida e 1 complemento.',1);
+
+INSERT INTO Dish VALUES(47,'Menu Super',10.70,'A refeição MAIS completa, escolhe a tua Sanduíche ou Pedaços de Frango, 
+                        mais 3 Acompanhamentos e 1 Bebida.',1);
+
+INSERT INTO Dish VALUES(48,'Super Chick&Share 12 Crispy Strips',14.70,'12 Tiras de Frango marinados e panados.',1);    
+
+INSERT INTO Dish VALUES(49,'Menu Tower',8.95,'Menu inclui 1 sanduíche Tower, 1 bebida e 1 acompanhamento.',1);
+
+INSERT INTO Dish VALUES(50,'Menu Twister',7.85,'Menu inclui 1 sanduíche Twister, 1 bebida e 1 acompanhamento.',1);
+
+INSERT INTO Dish VALUES(51,'Menu 3 Pedaços',7.85,'Menu inclui 3 pedaços de frango, 1 bebida e 1 acompanhamento.',1);
+
+INSERT INTO Dish VALUES(52,'Menu Tudo',30.00,'Menu incluí 2 sanduíches Twister, 2 sanduíches BBQ Bacon Cheddar, 
+                        1 opção Super Chick&Share, 4 acompanhamentos e 4 bebidas.',1);
+
+INSERT INTO Dish VALUES(53,'Chicken Wings Combo',20.00,'15 Hotwings, 2 acompanhamentos e 2 bebidas.',1);     
+
+INSERT INTO Dish VALUES(54,'Mega Oferta para 3',21.00,'Incluí 6 Pedaços, 6 Hotwings, 3x 6 Aros de Cebola e 2 Kentucky Fries.',1); 
+
+INSERT INTO Dish VALUES(55,'Mega Oferta para 2',15.00,'Incluí 2 sanduíches Double Krunch Bacon, 6 Hotwings, 2 batatas e 2 maçarocas.',1);
+
+INSERT INTO Dish VALUES(56,'Pedaço de Oferta frango',1.75,'Incluí 1 pedaço de frango 1 coxa picante',1);
+
+INSERT INTO Dish VALUES(57,'Batata rústica',2.00,'Como? Ainda não experimentaste as nossas deliciosas batatas rústicas? 
+                        Acompanha o teu menu com o mini balde de batatas rústicas e diz-nos se não são espectaculares!',1);
+
+INSERT INTO Dish VALUES(58,'Maçaroca de milho',0.95,'Deliciosa maçaroca cozinhada com um toque de manteiga, ideal 
+                        para complementar um menu.',1);
+
+INSERT INTO Dish VALUES(59,'Tenders',3.00,'Autênticas tiras de peito de frango KFC, panadas na hora no restaurante. 
+                        Tão crocantes e tenras que quererás sempre repetir.',1);
+
+INSERT INTO Dish VALUES(60,'Batatas Fritas',2.00,'As clássicas, as de uma vida, as que tu tanto gostas … sim, estamos falando
+                        de nossas batatas. Acompanha o teu menu com as nossas batatas fritas e diverte-te',1);
+
+INSERT INTO Dish VALUES(61,'Kentucky Fries BBQ',3.50,'Como? Ainda não experimentaste as nossas deliciosas Kentucky Fries? 
+                        Pede-as como acompanhamento do teu menu e surpreende-te!',1);   
+
+INSERT INTO Dish VALUES(62,'Kentucky Fries BBQ Bacon',3.50,'O que já era ótimo acaba de ficar PERFEITO. Chegaram as novas Kentucky
+                        Fries BBQ, as irresistíveis batatas rústicas com bacon e o delicioso molho BBQ.',1);   
+
+INSERT INTO Dish VALUES(63,'Argolas de Cebola',3.50,'Redondos, dourados, crocantes e deliciosos. Os Aros de Cebola da KFC são
+                        irresistíveis! 6 unidades.',1);
+
+INSERT INTO Dish VALUES(63,'Argolas de Cebola',3.50,'Redondos, dourados, crocantes e deliciosos. Os Aros de Cebola da KFC são
+                        irresistíveis! 6 unidades.',1);
