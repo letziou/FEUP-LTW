@@ -1,0 +1,46 @@
+/* main layout */
+
+body {
+  background-color: #edeff0;
+
+  margin: 0 auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: [start] 1fr [end];
+  grid-template-rows: [start] auto [end];
+}
+
+body > header {
+  grid-column: start / end;
+}
+ 
+
+/* header layout */
+
+body > header {
+  display: grid;
+  grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
+  grid-template-rows: auto auto auto;
+}
+
+#logo {
+  grid-column-start: start;
+  grid-column-end: end;
+  display: block;
+  margin-left: auto;
+  margin-right: 10%;
+
+  width: 50%;
+}
+
+/* login layout */
+
+h2 , #username , #password {
+  text-align: center;
+}
+
+/*footer*/
+body > footer {
+  grid-column-start: start;
+  grid-column-end: end;
+}

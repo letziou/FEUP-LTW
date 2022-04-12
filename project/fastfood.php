@@ -9,7 +9,9 @@
   <body>
   <header>
         <div id="logo">
+        <a href="index.php">
         <img src="images/hasburgi2.png" alt="hasburgi logo">
+        </a>
         </div>
       <div id="signup">
         <button class="button">Signup</button>
