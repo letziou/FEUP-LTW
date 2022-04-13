@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
   <head>
     <title>Hasburgui</title>    
     <meta charset="UTF-8">
@@ -14,17 +14,24 @@
       </a>
     </div>
   </header>
-  <h2> Login </h2>
-    <form action="action_login.php" method="post" class="login">
+  <h2> Register </h2>
+    <form action="action_register.php" method="post" class="register">
       <input type="text" name="username" placeholder="username">
         <br>
       <input type="password" name="password" placeholder="password">
         <br>
-      <button type="submit">Login</button>
-      <a href="register.php">Register here</a>
+      <input type="password" name="confirm_password" placeholder="confirm_password">
+        <br>
+      <input type="text" name="address" placeholder="address">
+        <br>
+      <input type="tel" name="phone" placeholder="phone">
+        <br>
+      <button type="submit">Register</button>
+        <br>
+      <a href="login.php">Login here</a>
     </form>
-  <footer>
-    <p>&copy; Hasburgui Industries, 2022</p>
+    <footer>
+      <p>&copy; Hasburgui Industries, 2022</p>
   </footer>
   </body>
 </html>

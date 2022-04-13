@@ -35,7 +35,7 @@ body > header {
 
 /* login layout */
 
-h2 , #username , #password {
+h2, form{
   text-align: center;
 }
 
