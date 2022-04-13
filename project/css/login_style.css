@@ -30,19 +30,14 @@ input {
 /* button login */
 
 button {
-	outline: none;
-	border: none;
 	background: transparent;
   font-size: 16px;
   color: #FFFFFF;
-  line-height: 1.2;
   text-transform: uppercase;
-  padding: 0 20px;
-  width: 25%;
-  height: 62px;
   background-color: #6F1A0A;
-  transition: all 0.4s;
 }
+
+
 
 button:hover {
 	cursor: pointer;

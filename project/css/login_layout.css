@@ -1,13 +1,13 @@
 /* main layout */
 
 body {
-  background-color: #edeff0;
+  background-color: #EDEDED;
 
   margin: 0 auto;
   width: auto;
   display: grid;
-  grid-template-columns: [start] 1fr [end];
-  grid-template-rows: [start] auto [end];
+  grid-template-columns: [start] 1fr [middle] 1fr [end];
+  grid-template-rows: [start] auto [search] auto [categories] 1fr [footer] auto [end];
 }
 
 body > header {
@@ -28,16 +28,35 @@ body > header {
   grid-column-end: end;
   display: block;
   margin-left: auto;
-  margin-right: 10%;
-
+  margin-right: 20%;
   width: 50%;
 }
 
 /* login layout */
 
-h2, form{
+#loginbox{
+  padding-top: 10%;
+  padding-bottom: 10%;
+  display: block;
   text-align: center;
+  margin-left: 50%;
+  margin-right: auto;
+  width: 100%;
 }
+
+button {
+  vertical-align: top;
+  margin-right: 20px;
+	outline: none;
+	border: none;
+  line-height: 1.2;
+  padding: 0 20px;
+  width: 25%;
+  height: 62px;
+  transition: all 0.4s;
+  border-radius: 60px;
+}
+
 
 /*footer*/
 body > footer {

@@ -14,15 +14,21 @@
       </a>
     </div>
   </header>
+  <div id="loginbox">
   <h2> Login </h2>
-    <form action="action_login.php" method="post" class="login">
+    <form action="action_login.php" id="formlog" method="post" class="login">
       <input type="text" name="username" placeholder="username">
         <br>
       <input type="password" name="password" placeholder="password">
         <br>
-      <button type="submit">Login</button>
-      <a href="register.php">Register here</a>
-    </form>
+      </form>
+      <span id=buttons>
+      <button class="login_button" form="formlog">Login</button>
+      <a href="register.php">
+      <button class="registerbutton">Register Here</button>
+      </a>
+</span>
+</div>
   <footer>
     <p>&copy; Hasburgui Industries, 2022</p>
   </footer>
