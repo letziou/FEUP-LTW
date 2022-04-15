@@ -20,33 +20,52 @@
     <div id="searchbar">
         <input type="text" placeholder="Search Food" class="searchbar">
     </div>
-    <h2>Restaurants :</h2>
+    <h2>Restaurant's name</h2>
       <section id="foodsections">
         <article>
-          <a href="restaurant.php">
+          <a href="restaurant.php?id=1">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          Dish name</a>
         </article>
         <article>
-          <a href="restaurant.php">
+          <a href="restaurant.php?id=1">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
-        </article><article>
-          <a href="restaurant.php">
+          Dish name</a>
+        </article>
+        <article>
+          <a href="restaurant.php?id=1">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
-        </article><article>
-          <a href="restaurant.php">
+          Dish name</a>
+        </article>
+        <article>
+          <a href="restaurant.php?id=1">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
-        </article><article>
-          <a href="restaurant.php">
+          Dish name</a>
+        </article>
+        <article>
+          <a href="restaurant.php?id=1">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
-        </article><article>
-          <a href="restaurant.php">
+          Dish name</a>
+        </article>
+        <article>
+          <a href="restaurant.php?id=1">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          Dish name</a>
+        </article>
+        <article>
+          <a href="restaurant.php?id=1">
+          <img src="https://picsum.photos/418/190">
+          Dish name</a>
+        </article>
+        <article>
+          <a href="restaurant.php?id=1">
+          <img src="https://picsum.photos/418/190">
+          Dish name</a>
+        </article>
+        <article>
+          <a href="restaurant.php?id=1">
+          <img src="https://picsum.photos/418/190">
+          Dish name</a>
         </article>
       </section>
     <footer>

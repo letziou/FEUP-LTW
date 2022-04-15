@@ -24,7 +24,7 @@
       <article>
         <a href="fastfood.php">
         <img src="images/fast.png" alt="">
-        <p> Fast</p>
+        <p> Fast Food </p>
       </a>
       </article>
 

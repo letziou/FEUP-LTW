@@ -8,6 +8,10 @@ body > #searchbar{
   background-color: #7F7F7F;
 }
 
+h2 {
+  margin-left: 1em;
+}
+
 .button {
   border: none;
   background-color: #FCD07D;
@@ -28,6 +32,12 @@ body > #searchbar{
   margin-left: auto;
   margin-right: 20%;
   width: 50%;
+}
+
+a {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
 }
 
 /* footer */
