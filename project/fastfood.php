@@ -23,24 +23,30 @@
     <h2>Restaurants :</h2>
       <section id="foodsections">
         <article>
+          <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          <a href="restaurant.php?id=1">Restaurant name</a>
+          Restaurant name</a>
         </article>
         <article>
+          <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          <a href="restaurant.php?id=1">Restaurant name</a>
-        </article>
-        <article>
+          Restaurant name</a>
+        </article><article>
+          <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          <a href="restaurant.php?id=1">Restaurant name</a>
-        </article>
-        <article>
+          Restaurant name</a>
+        </article><article>
+          <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          <a href="restaurant.php?id=1">Restaurant name</a>
-        </article>
-        <article>
+          Restaurant name</a>
+        </article><article>
+          <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          <a href="restaurant.php?id=1">Restaurant name</a>
+          Restaurant name</a>
+        </article><article>
+          <a href="restaurant.php">
+          <img src="https://picsum.photos/418/190">
+          Restaurant name</a>
         </article>
       </section>
     <footer>

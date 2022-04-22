@@ -8,25 +8,29 @@
   </head>
   <body>
   <header>
-        <div id="logo">
-        <a href="index.php">
+    <div id="logo">
+      <a href="index.php">
         <img src="images/hasburgi2.png" alt="hasburgi logo">
-        </a>
-        </div>
-    </header>
-      <h2> Login </h2>
-      <form action="action_login.php" method="post" class="login">
-        <div id='username'>
-        <input type="text" name="username" placeholder="username">
-        </div>
-        <div id='password'>
-        <input type="password" name="password" placeholder="password">
-        </div>
-        <button type="submit">Login</button>
-                <a href="register.php">Register here?</a>
-        </form>
-    <footer>
-      <p>&copy; Hasburgui Industries, 2022</p>
-    </footer>
+      </a>
+    </div>
+  </header>
+  <div id="loginbox">
+  <h2> Login </h2>
+    <form action="action_login.php" id="formlog" method="post" class="login">
+      <input type="text" name="username" placeholder="username">
+        <br>
+      <input type="password" name="password" placeholder="password">
+        <br>
+      </form>
+      <span id=buttons>
+      <button class="login_button" form="formlog">Login</button>
+      <a href="register.php">
+      <button class="registerbutton">Register Here</button>
+      </a>
+</span>
+</div>
+  <footer>
+    <p>&copy; Hasburgui Industries, 2022</p>
+  </footer>
   </body>
 </html>

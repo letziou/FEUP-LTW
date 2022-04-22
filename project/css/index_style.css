@@ -1,39 +1,90 @@
+/* fonts */ 
+
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Lora", serif;
+  line-height: 1.4em;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+/*colors*/
+:root {
+  --mainHeaderColor: #6F1A04; 
+  --searchbarColor: #7F7F7F;
+  --buttonColor: #FCD07D;
+  --footerColor: #2a2f33;
+  
+  /*food section colors*/
+  --fastColor: #DD7230;
+  --casualColor:#49111C;
+  --healthyColor:#12521E;
+  --dessertsColor: #7475C6; 
+
+}
+
+ /**/
+
 body > header {
-    background-color: #6F1A04;
+    background-color: var(--mainHeaderColor);
     color: white;
     padding: 1em;
   }
 
   body > #searchbar{
-    background-color: #7F7F7F;
+    background-color: var(--searchbarColor);
+    border-radius: 0px 0px 50px 50px;
   }
 
   .button {
     border: none;
-    background-color: #FCD07D;
-    color: #7F7F7F;
+    background-color: var(--buttonColor);
+    color: var(--searchbarColor);
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 60px;
   }
 
-  #logo {
-    grid-column-start: start;
-    grid-column-end: end;
-    display: block;
-    margin-left: auto;
-    margin-right: 20%;
-    width: 50%;
+  /*foodsections*/
+
+  #foodsections > article{
+
+    font-family: "Poppins", sans-serif;
   }
+
+  #foodsections > article:nth-of-type(1) p{
+    border-bottom: 15px solid var(--fastColor);
+  }
+
+  #foodsections > article:nth-of-type(2) p{
+    border-bottom: 15px solid var(--casualColor);
+  }
+
+  #foodsections > article:nth-of-type(3) p{
+    border-bottom: 15px solid var(--healthyColor);
+  }
+
+  #foodsections > article:nth-of-type(4) p{
+    border-bottom: 15px solid var(--dessertsColor);
+  }
+
   
   /* footer */
   
   body > footer {
-    background-color: #2a2f33;
+    background-color: var(--footerColor);
     color: white;
   
     padding: 1em;
@@ -45,17 +96,7 @@ body > header {
     margin: 0;
   }
   
-  /* fonts */ 
-  
-  @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
-  
-  body {
-    font-family: "Poppins", sans-serif;
-  }
-  
-  p {
-    font-family: "Lora", serif;
-    line-height: 1.4em;
-  }
+
+
   
   

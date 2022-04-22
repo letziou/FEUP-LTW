@@ -30,13 +30,18 @@ input {
 /* button login */
 
 button {
-	outline: none !important;
-	border: none;
 	background: transparent;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: #6F1A0A;
 }
+
+
 
 button:hover {
 	cursor: pointer;
+  background-color: #441207;
 }
 
 /* footer */
