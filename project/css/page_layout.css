@@ -10,20 +10,20 @@ body {
   grid-template-rows: [start] auto [search] auto [categories] 1fr [footer] auto [end];
 }
 
-body > header {
+body>header {
   grid-column: start / end;
 }
- 
+
 
 /* header layout */
 
-body > header {
+body>header {
   display: grid;
   grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
   grid-template-rows: auto auto auto;
 }
 
-body > header #signup {
+body>header #signup {
   grid-column: end;
   grid-row: 1;
 }
@@ -43,6 +43,7 @@ h2 {
   grid-column-start: start;
   grid-column-end: end;
 }
+
 /* searchbar */
 
 #searchbar {
@@ -72,16 +73,16 @@ h2 {
   grid-template-rows: [start] auto [image] auto [title] auto [end];
 }
 
-#foodsections > article {
- margin: 0.5em 4.5em 0.5em 4.5em;
+#foodsections>article {
+  margin: 0.5em 4.5em 0.5em 4.5em;
 }
 
-#foodsections > article:nth-child(1n) {
+#foodsections>article:nth-child(1n) {
   margin-left: 7em;
- }
+}
 
 /*footer*/
-body > footer {
+body>footer {
   grid-column-start: start;
   grid-column-end: end;
 }
