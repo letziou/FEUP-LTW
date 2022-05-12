@@ -17,17 +17,13 @@ body {
   grid-template-rows: [start] auto [search] auto [categories] 1fr [footer] auto [end];
 }
 
-body>header {
-  grid-column: start / end;
-}
-
-
 /* header layout */
 
 body>header {
   display: grid;
   grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
   grid-template-rows: auto auto auto;
+  grid-column: start / end;
 }
 
 body>header #signup {

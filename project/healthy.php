@@ -21,32 +21,32 @@
         <input type="text" placeholder="Search Food" class="searchbar">
     </div>
     <h2>Restaurants :</h2>
-      <section id="foodsections">
-      <article>
+      <section id="restaurantsections">
+        <article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article>
         <article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article><article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article><article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article><article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article><article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article>
       </section>
     <footer>
