@@ -35,10 +35,15 @@ body>header .button {
 #logo {
   grid-column-start: start;
   grid-column-end: end;
-  display: block;
+  display: flex;
+  aspect-ratio: 16/9;
+  max-width: 20%;
   margin-left: auto;
-  margin-right: 20%;
-  width: 50%;
+  margin-right: auto;
+}
+
+#logo > img {
+  justify-content: center;
 }
 
 /* searchbar */
@@ -63,13 +68,12 @@ body>header .button {
 #foodsections {
   grid-column-start: start;
   grid-column-end: end;
-  flex-direction: row;
-  justify-content: space-between;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 #foodsections>article {
-
   padding: 0 5% 0 5%;
   text-align: center;
 }
