@@ -23,12 +23,12 @@
         <br>
       </form>
       <span id=buttons>
-      <button class="login_button" form="formlog">Login</button>
-      <a href="register.php">
-      <button class="registerbutton">Register Here</button>
-      </a>
-</span>
-</div>
+          <button class="login_button" form="formlog">Login</button>
+        <a href="register.php">
+          <button class="registerbutton">Register Here</button>
+        </a>
+        </span>
+  </div>
   <footer>
     <p>&copy; Hasburgui Industries, 2022</p>
   </footer>

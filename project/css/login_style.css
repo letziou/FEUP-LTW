@@ -1,3 +1,16 @@
+/* fonts */ 
+
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Lora", serif;
+  line-height: 1.4em;
+}
+
 body > header {
   background-color: #6F1A04;
   color: white;
@@ -37,8 +50,6 @@ button {
   background-color: #6F1A0A;
 }
 
-
-
 button:hover {
 	cursor: pointer;
   background-color: #441207;
@@ -57,17 +68,4 @@ body > footer {
 
 body > footer p {
   margin: 0;
-}
-
-/* fonts */ 
-
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-p {
-  font-family: "Lora", serif;
-  line-height: 1.4em;
 }
