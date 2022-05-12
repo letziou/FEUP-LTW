@@ -1,23 +1,26 @@
 /* main layout */
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background-color: #EDEDED;
 
-  margin: 0 auto;
-  width: auto;
+  margin: 0 0;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
   display: grid;
   grid-template-columns: [start] 1fr [middle] 1fr [end];
   grid-template-rows: [start] auto [search] auto [categories] 1fr [footer] auto [end];
 }
 
-body > header {
-  grid-column: start / end;
-}
- 
-
 /* header layout */
 
 body > header {
+  grid-column: start / end;
   display: grid;
   grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
   grid-template-rows: auto auto auto;
@@ -56,7 +59,6 @@ button {
   transition: all 0.4s;
   border-radius: 60px;
 }
-
 
 /*footer*/
 body > footer {
