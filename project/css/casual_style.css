@@ -25,15 +25,6 @@ h2 {
   cursor: pointer;
 }
 
-#logo {
-  grid-column-start: start;
-  grid-column-end: end;
-  display: block;
-  margin-left: auto;
-  margin-right: 20%;
-  width: 50%;
-}
-
 a {
   font-size: 18px;
   text-decoration: none;
