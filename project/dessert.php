@@ -8,45 +8,47 @@
   </head>
   <body>
   <header>
-        <div id="logo">
-        <a href="index.php">
+    <div id="logo">
+      <a href="index.php">
         <img src="images/hasburgi2.png" alt="hasburgi logo">
-        </a>
-        </div>
-      <div id="signup">
+      </a>
+    </div>
+    <div id="signup">
+      <a href="login.php">
         <button class="button">Signup</button>
-      </div>
+      </a>
+    </div>
     </header>
     <div id="searchbar">
         <input type="text" placeholder="Search Food" class="searchbar">
     </div>
     <h2>Restaurants :</h2>
-      <section id="foodsections">
-      <article>
+      <section id="restaurantsections">
+        <article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article>
         <article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article><article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article><article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article><article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article><article>
           <a href="restaurant.php">
           <img src="https://picsum.photos/418/190">
-          Restaurant name</a>
+          <p>Restaurant name</p></a>
         </article>
       </section>
     <footer>

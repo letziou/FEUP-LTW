@@ -1,19 +1,22 @@
 /* main layout */
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
 body {
   background-color: #edeff0;
 
-  margin: 0 auto;
-  width: auto;
+  margin: 0 0;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
   display: grid;
   grid-template-columns: [start] 1fr [middle] 1fr [end];
-  grid-template-rows: [start] auto [search] auto [categories] 1fr [footer] auto [end];
+  grid-template-rows: [start] auto [search] auto [categories] auto [restaurants] 1fr [footer] auto [end];
 }
-
-body>header {
-  grid-column: start / end;
-}
-
 
 /* header layout */
 
@@ -21,11 +24,16 @@ body>header {
   display: grid;
   grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
   grid-template-rows: auto auto auto;
+  grid-column: start / end;
 }
 
 body>header #signup {
   grid-column: end;
   grid-row: 1;
+}
+
+body>header .button {
+  display: inline-block;
 }
 
 #logo {
@@ -38,10 +46,8 @@ body>header #signup {
   margin-right: auto;
 }
 
-h2 {
-  height: 1em;
-  grid-column-start: start;
-  grid-column-end: end;
+#logo > a > img {
+  justify-content: center;
 }
 
 /* searchbar */
@@ -61,24 +67,33 @@ h2 {
   width: 50%;
 }
 
-/*food section*/
+/*restaurant section*/
 
-#foodsections {
-  background-color: #edeff0;
-
-  margin: 0 auto;
-  width: auto;
-  display: grid;
-  grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
-  grid-template-rows: [start] auto [image] auto [title] auto [end];
+h2 {
+  height: 1em;
+  grid-column-start: start;
+  grid-column-end: end;
+  display: block;
+  grid-row: categories;
 }
 
-#foodsections>article {
-  margin: 0.5em 4.5em 0.5em 4.5em;
+#restaurantsections {
+  grid-column-start: start;
+  grid-column-end: end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-row: restaurants;
+  margin-top: 2em;
 }
 
-#foodsections>article:nth-child(1n) {
-  margin-left: 7em;
+#restaurantsections > article{
+  text-align: center;
+}
+
+#restaurantsections > article > a > img{
+  aspect-ratio: 16/9;
+  max-width: 70%;
 }
 
 /*footer*/
