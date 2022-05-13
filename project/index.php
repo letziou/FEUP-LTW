@@ -14,7 +14,7 @@
       <div id="signup">
         <a href="login.php">
         <button class="button">Signup</button>
-</a>
+        </a>
       </div>
     </header>
     <div id="searchbar">
