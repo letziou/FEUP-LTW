@@ -46,7 +46,7 @@ body>header .button {
   margin-right: auto;
 }
 
-#logo > a > img {
+#logo>a>img {
   justify-content: center;
 }
 
@@ -87,11 +87,11 @@ h2 {
   margin-top: 2em;
 }
 
-#restaurantsections > article{
+#restaurantsections>article {
   text-align: center;
 }
 
-#restaurantsections > article > a > img{
+#restaurantsections>article>a>img {
   aspect-ratio: 16/9;
   max-width: 70%;
 }
@@ -100,4 +100,5 @@ h2 {
 body>footer {
   grid-column-start: start;
   grid-column-end: end;
+  grid-row-end: end;
 }

@@ -1,6 +1,12 @@
-/* fonts */ 
+/* fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
+
+
+html {
+  height: 100%;
+  width: 100%;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -11,7 +17,7 @@ p {
   line-height: 1.4em;
 }
 
-body > header {
+body>header {
   background-color: #6F1A04;
   color: white;
   padding: 1em;
@@ -43,7 +49,7 @@ input {
 /* button login */
 
 button {
-	background: transparent;
+  background: transparent;
   font-size: 16px;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -51,13 +57,13 @@ button {
 }
 
 button:hover {
-	cursor: pointer;
+  cursor: pointer;
   background-color: #441207;
 }
 
 /* footer */
 
-body > footer {
+body>footer {
   background-color: #2a2f33;
   color: white;
 
@@ -66,6 +72,6 @@ body > footer {
   height: 1em;
 }
 
-body > footer p {
+body>footer p {
   margin: 0;
 }
