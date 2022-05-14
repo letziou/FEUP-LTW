@@ -1,12 +1,5 @@
 /* main layout */
 
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html {
   background-color: #FAFAFA;
   height: 100%;
@@ -33,13 +26,14 @@ body>header {
   grid-template-rows: auto auto auto;
 }
 
-#logo>a {
+#logo {
   grid-column-start: start;
   grid-column-end: end;
-  display: block;
+  display: flex;
+  aspect-ratio: 16/9;
+  max-width: 20%;
   margin-left: auto;
-  margin-right: 20%;
-  width: 50%;
+  margin-right: auto;
 }
 
 /* login layout */
@@ -65,12 +59,11 @@ h1 {
 .login {
   grid-column-start: start;
   grid-column-end: end;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
   width: 100%;
   background-color: #FFF;
   padding: 1em;
-  padding-bottom: 1em;
   border-radius: 10px;
   max-width: 500px;
   display: flex;
@@ -88,7 +81,8 @@ form input {
   border-radius: 4px;
   padding: 1em;
   margin-bottom: 1.2em;
-  width: 100%;
+  width: 95%;
+  height: 5%;
 }
 
 form input:focus {
