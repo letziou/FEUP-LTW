@@ -17,15 +17,6 @@ body>header {
   padding: 1em;
 }
 
-#logo {
-  grid-column-start: start;
-  grid-column-end: end;
-  display: block;
-  margin-left: auto;
-  margin-right: 20%;
-  width: 50%;
-}
-
 /* login box */
 
 input {
