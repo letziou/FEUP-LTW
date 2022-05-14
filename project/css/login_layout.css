@@ -19,7 +19,7 @@ body {
 
 /* header layout */
 
-body > header {
+body>header {
   grid-column: start / end;
   display: grid;
   grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
@@ -37,7 +37,7 @@ body > header {
 
 /* login layout */
 
-#loginbox{
+#loginbox {
   padding-top: 10%;
   padding-bottom: 10%;
   display: block;
@@ -50,8 +50,8 @@ body > header {
 button {
   vertical-align: top;
   margin-right: 20px;
-	outline: none;
-	border: none;
+  outline: none;
+  border: none;
   line-height: 1.2;
   padding: 0 20px;
   width: 25%;
@@ -61,7 +61,8 @@ button {
 }
 
 /*footer*/
-body > footer {
+body>footer {
   grid-column-start: start;
   grid-column-end: end;
+  grid-row-end: end;
 }
