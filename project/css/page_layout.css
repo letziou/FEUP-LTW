@@ -27,6 +27,11 @@ body>header {
   grid-column: start / end;
 }
 
+body>header #goback {
+  grid-column: start;
+  grid-row: 1;
+}
+
 body>header #signup {
   grid-column: end;
   grid-row: 1;
