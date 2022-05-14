@@ -59,7 +59,6 @@ button:hover {
 
 body>footer {
   background-color: #2a2f33;
-  color: white;
 
   padding: 1em;
 
@@ -67,5 +66,6 @@ body>footer {
 }
 
 body>footer p {
+  color: white;
   margin: 0;
 }
