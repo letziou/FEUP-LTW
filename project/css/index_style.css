@@ -1,4 +1,4 @@
-/* fonts */ 
+/* fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
 
@@ -11,92 +11,87 @@ p {
   line-height: 1.4em;
 }
 
-a{
+a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
 /*colors*/
 :root {
-  --mainHeaderColor: #6F1A04; 
+  --mainHeaderColor: #6F1A04;
   --searchbarColor: #7F7F7F;
   --buttonColor: #FCD07D;
   --footerColor: #2a2f33;
-  
+
   /*food section colors*/
   --fastColor: #DD7230;
-  --casualColor:#49111C;
-  --healthyColor:#12521E;
-  --dessertsColor: #7475C6; 
+  --casualColor: #49111C;
+  --healthyColor: #12521E;
+  --dessertsColor: #7475C6;
 
 }
 
- /**/
+/**/
 
-body > header {
-    background-color: var(--mainHeaderColor);
-    color: white;
-    padding: 1em;
-  }
+body>header {
+  background-color: var(--mainHeaderColor);
+  color: white;
+  padding: 1em;
+}
 
-  body > #searchbar{
-    background-color: var(--searchbarColor);
-    border-radius: 0px 0px 50px 50px;
-  }
+body>#searchbar {
+  background-color: var(--searchbarColor);
+  border-radius: 0px 0px 50px 50px;
+}
 
-  .button {
-    border: none;
-    background-color: var(--buttonColor);
-    color: var(--searchbarColor);
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 60px;
-  }
+.button {
+  border: none;
+  background-color: var(--buttonColor);
+  color: var(--searchbarColor);
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 60px;
+}
 
-  /*foodsections*/
+/*foodsections*/
 
-  #foodsections > article{
+#foodsections>article {
 
-    font-family: "Poppins", sans-serif;
-  }
+  font-family: "Poppins", sans-serif;
+}
 
-  #foodsections > article:nth-of-type(1) p{
-    border-bottom: 15px solid var(--fastColor);
-  }
+#foodsections>article:nth-of-type(1) p {
+  border-bottom: 15px solid var(--fastColor);
+}
 
-  #foodsections > article:nth-of-type(2) p{
-    border-bottom: 15px solid var(--casualColor);
-  }
+#foodsections>article:nth-of-type(2) p {
+  border-bottom: 15px solid var(--casualColor);
+}
 
-  #foodsections > article:nth-of-type(3) p{
-    border-bottom: 15px solid var(--healthyColor);
-  }
+#foodsections>article:nth-of-type(3) p {
+  border-bottom: 15px solid var(--healthyColor);
+}
 
-  #foodsections > article:nth-of-type(4) p{
-    border-bottom: 15px solid var(--dessertsColor);
-  }
-
-  
-  /* footer */
-  
-  body > footer {
-    background-color: var(--footerColor);
-    color: white;
-  
-    padding: 1em;
-  
-    height: 1em;
-  }
-  
-  body > footer p {
-    margin: 0;
-  }
-  
+#foodsections>article:nth-of-type(4) p {
+  border-bottom: 15px solid var(--dessertsColor);
+}
 
 
-  
-  
+/* footer */
+
+body>footer {
+  background-color: var(--footerColor);
+  color: white;
+
+  padding: 1em;
+
+  height: 1em;
+}
+
+body>footer p {
+  margin: 0;
+}

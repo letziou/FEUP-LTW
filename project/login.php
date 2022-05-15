@@ -3,6 +3,7 @@
   <head>
     <title>Hasburgui</title>    
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link href="css/login_style.css" rel="stylesheet">
     <link href="css/login_layout.css" rel="stylesheet">
   </head>
@@ -14,21 +15,20 @@
       </a>
     </div>
   </header>
-  <div id="loginbox">
-  <h2> Login </h2>
-    <form action="action_login.php" id="formlog" method="post" class="login">
-      <input type="text" name="username" placeholder="username">
-        <br>
-      <input type="password" name="password" placeholder="password">
-        <br>
-      </form>
-      <span id=buttons>
-      <button class="login_button" form="formlog">Login</button>
-      <a href="register.php">
-      <button class="registerbutton">Register Here</button>
-      </a>
-</span>
-</div>
+  <form action="action_login.php" method="post" class="login">
+    <div class="signinbox">
+      <h1> Sign in </h1>
+      <div class="form-content">
+        <input id="user-name" type="text" name="username" placeholder="user name" />
+        <input id="password" type="password" name="password" placeholder="password" />
+          <button class="login_button">Login</button>
+          </br>
+          <a href="register.php">
+          <button class="registerbutton">Register</button>
+          </a>
+      </div> 
+    </div>
+  </form>  
   <footer>
     <p>&copy; Hasburgui Industries, 2022</p>
   </footer>
