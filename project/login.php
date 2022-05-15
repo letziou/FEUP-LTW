@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link href="css/login_style.css" rel="stylesheet">
     <link href="css/login_layout.css" rel="stylesheet">
+    <link href="css/page_layout.css" rel="stylesheet">
   </head>
   <body>
   <header>
-    <div id="logo">
+    <div id="logo">>
+      <img src="images/hasburgi2.png" alt="hasburgi logo">
+    </div>  
+    <div id="goback">
       <a href="index.php">
-        <img src="images/hasburgi2.png" alt="hasburgi logo">
+        <button class="button">Back</button>
       </a>
     </div>
   </header>

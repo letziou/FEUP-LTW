@@ -10,12 +10,15 @@
   <body>
   <header>
         <div id="logo">
-        <a href="index.php">
-        <img src="images/hasburgi2.png" alt="hasburgi logo">
-        </a>
+          <img src="images/hasburgi2.png" alt="hasburgi logo">
         </div>
       <div id="signup">
         <button class="button">Signup</button>
+      </div>
+      <div id="goback">
+      <a href="index.php">
+        <button class="button">Back</button>
+      </a>
       </div>
     </header>
     <div id="searchbar">

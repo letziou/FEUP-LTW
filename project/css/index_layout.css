@@ -35,6 +35,22 @@ body>header .button {
   display: inline-block;
 }
 
+@media(max-width: 500px) {
+  .button {
+    align-items: left;
+    padding-left: 8px;
+    padding-right: 10px;
+    min-width: 50px;
+    max-width: 300px;
+  }
+}
+
+@media(max-width: 3000px) {
+  #logo {
+    min-width: 200px;
+  }
+}
+
 #logo {
   grid-column-start: start;
   grid-column-end: end;

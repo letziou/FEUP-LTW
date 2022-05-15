@@ -6,35 +6,6 @@ html {
   width: 100%;
 }
 
-body {
-  background-color: #EDEDED;
-  margin: 0 0;
-  height: 100%;
-  width: 100%;
-  min-height: 100%;
-  display: grid;
-  grid-template-columns: [start] 1fr [middle] 1fr [end];
-  grid-template-rows: [start] auto [search] auto [categories] 1fr [footer] auto [end];
-}
-
-/* header layout */
-
-body>header {
-  grid-column: start / end;
-  display: grid;
-  grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
-  grid-template-rows: auto auto auto;
-}
-
-#logo {
-  grid-column-start: start;
-  grid-column-end: end;
-  display: flex;
-  aspect-ratio: 16/9;
-  max-width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /* login layout */
 
@@ -117,7 +88,5 @@ button:hover {
 
 /*footer*/
 body>footer {
-  grid-column-start: start;
-  grid-column-end: end;
   grid-row-end: end;
 }
