@@ -9,14 +9,17 @@
   </head>
   <body>
   <header>
-  <div id="logo">
-      <a href="index.php">
-        <img src="images/hasburgi2.png" alt="hasburgi logo">
-      </a>
+    <div id="logo">
+      <img src="images/hasburgi2.png" alt="hasburgi logo">
     </div>
     <div id="signup">
       <a href="login.php">
         <button class="button">Signup</button>
+      </a>
+    </div>
+    <div id="goback">
+      <a href="index.php">
+        <button class="button">Back</button>
       </a>
     </div>
     </header>
