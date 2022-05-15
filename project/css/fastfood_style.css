@@ -1,4 +1,4 @@
-/* fonts */ 
+/* fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
 
@@ -11,33 +11,33 @@ p {
   line-height: 1.4em;
 }
 
-a{
+a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 
 /*colors*/
 :root {
-  --mainHeaderColor: #6F1A04; 
+  --mainHeaderColor: #6F1A04;
   --searchbarColor: #7F7F7F;
   --buttonColor: #FCD07D;
   --footerColor: #2a2f33;
-  
+
   /*food section colors*/
   --fastColor: #DD7230;
-  --casualColor:#49111C;
-  --healthyColor:#12521E;
-  --dessertsColor: #7475C6; 
+  --casualColor: #49111C;
+  --healthyColor: #12521E;
+  --dessertsColor: #7475C6;
 }
 
 /* header */
-body > header {
+body>header {
   background-color: var(--fastColor);
   color: white;
   padding: 1em;
 }
 
-body > header > #logo > a > p{
+body>header>#logo>a>p {
   color: white;
   text-shadow: 2px 2px 4px var(--buttonColor);
   font-size: 3em;
@@ -59,11 +59,7 @@ body > header > #logo > a > p{
 }
 
 /* searchbar */
-body > #searchbar{
-  background-color: var(--searchbarColor);
-}
-
-body > #searchbar{
+body>#searchbar {
   background-color: var(--searchbarColor);
   border-radius: 0px 0px 50px 50px;
 }
@@ -75,7 +71,7 @@ h2 {
 
 /* footer */
 
-body > footer {
+body>footer {
   background-color: var(--footerColor);
   color: white;
 
@@ -84,7 +80,6 @@ body > footer {
   height: 1em;
 }
 
-body > footer p {
+body>footer p {
   margin: 0;
 }
-

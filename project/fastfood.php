@@ -19,7 +19,7 @@
     </div>
     <div id="goback">
       <a href="index.php">
-        <button class="button">Go back</button>
+        <button class="button">Back</button>
       </a>
     </div>
     </header>

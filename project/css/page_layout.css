@@ -37,9 +37,22 @@ body>header #signup {
   grid-row: 1;
 }
 
-body>header .button {
-  display: inline-block;
+.button {
+  width: auto;
 }
+
+@media only screen and (max-width: 600px) {
+  .button {
+    align-items: left;
+    padding-left: 5px;
+    width: 70%;
+  }
+
+  #goback .button {
+    padding-left: 16px;
+  }
+}
+
 
 #logo {
   grid-column-start: start;
@@ -51,9 +64,7 @@ body>header .button {
   margin-right: auto;
 }
 
-#logo>a>img {
-  justify-content: center;
-}
+
 
 /* searchbar */
 
