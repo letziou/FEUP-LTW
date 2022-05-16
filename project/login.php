@@ -10,7 +10,7 @@
   </head>
   <body>
   <header>
-    <div id="logo">>
+    <div id="logo">
       <img src="images/hasburgi2.png" alt="hasburgi logo">
     </div>  
     <div id="goback">
