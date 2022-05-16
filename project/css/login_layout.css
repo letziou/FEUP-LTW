@@ -18,6 +18,7 @@ h1 {
   margin-top: 0.2em;
 }
 
+/*
 .signinbox {
   display: flex;
   flex-wrap: wrap;
@@ -26,8 +27,9 @@ h1 {
   padding: 6%;
   margin: 0;
 }
+*/
 
-.login {
+.signinbox {
   grid-column-start: start;
   grid-column-end: end;
   margin-top: 3em;
