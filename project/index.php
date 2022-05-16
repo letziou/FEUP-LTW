@@ -21,33 +21,35 @@
     <div id="searchbar">
         <input type="text" placeholder="Search Food" class="searchbar">
       </div>
-    <section id="foodsections">
+      
+      <section id="foodsections">
       <article>
-        <a href="fastfood.php">
+        <a href="restaurant_category.php?id=1">
         <img src="images/fast.png" alt="">
         <p> Fast Food </p>
       </a>
       </article>
 
       <article>
-        <a href="casual.php">
+        <a href="restaurant_category.php?id=2">
         <img src="images/casual.png" alt="">
         <p> Casual Dining</p>
         </a>
     </article>
       <article>
-      <a href="healthy.php">
+      <a href="restaurant_category.php?id=3">
         <img src="images/healthy.png" alt="">
         <p> Healthy</p>
       </a>
       </article>
       <article>
-        <a href="dessert.php">
+        <a href="restaurant_category.php?id=4">
         <img src="images/desserts.png" alt="">
         <p> Desserts</p>
         </a>
       </article>
     </section>
+
     <footer>
       <p>&copy; Hasburgui Industries, 2022</p>
     </footer>

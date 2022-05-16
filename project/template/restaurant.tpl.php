@@ -1,13 +1,16 @@
-<?php declare(strict_types = 1); ?>
+<?php declare(strict_types = 1); 
+      require_once('database/restaurant.class.php');
+      require_once('database/dish.class.php');
+?>
 
 <?php function drawRestaurants(array $restaurants) { ?>
   <h2>Restaurants :</h2>
   <section id="restaurantsections">
     <?php foreach($restaurants as $restaurant) { ?> 
       <article>
-      <a href="restaurant.php">
-          <img src="https://picsum.photos/418/190">
-          <p><?=$restaurant['name']?></p>
+      <a href="restaurant.php?id=<?=$restaurant->id_Restaurant?>&name=<?=$restaurant->name?>">
+          <img src="images/<?=$restaurant->image_path?>">
+          <p><?=$restaurant->name?></p>
       </a>
       </article>
     <?php } ?>
@@ -20,10 +23,10 @@
     <?php foreach ($dishes as $dish) { ?>
       <article>
         <a href="restaurant.php?id=1">
-        <img src="https://picsum.photos/418/190"> 
-        <p><?=$dish['name']?> price : <?=$dish['price']?></p> 
+        <img src="images/Food_Images/<?=$dish->image_path?>"> 
+        <p><?=$dish->name?> price : <?=$dish->price?></p> 
         </a>
-        <p><?=$dish['description']?></p>
+        <p><?=$dish->description?></p>
         </article>
     <?php } ?>
   </section>

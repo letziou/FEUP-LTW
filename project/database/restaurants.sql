@@ -94,7 +94,13 @@ INSERT INTO Image VALUES('1002','PNG','categories/gourmet.png');
 INSERT INTO Image VALUES('1003','PNG','categories/healthy.png');
 
 -- Images Restaurants
-INSERT INTO Image Values('2000','PNG','restaurants/placeholder.png');
+INSERT INTO Image Values('2000','PNG','Rest_Logos/McDonalds-logo-1.png');
+INSERT INTO Image Values('2001','PNG','Rest_Logos/kfc-logo-1.png');
+INSERT INTO Image Values('2002','PNG','Rest_Logos/daterra.png');
+INSERT INTO Image Values('2003','PNG','Rest_Logos/Extremepita.png');
+INSERT INTO Image Values('2004','PNG','Rest_Logos/DunkinDonuts.png');
+INSERT INTO Image Values('2005','PNG','Rest_Logos/Burger-King-Logo.png');
+INSERT INTO Image Values('2006','PNG','Rest_Logos/Burger-King-Logo.png');
 
 -- Images MacDonalds
 INSERT INTO Image VALUES('1','PNG','Mac/bigmac.png');
@@ -137,30 +143,30 @@ INSERT INTO Image VALUES('35','JPEG','KFC/Individual/TowerOriginal.jpeg');
 INSERT INTO Image VALUES('36','JPEG','KFC/Individual/TowerZinger.jpeg');
 INSERT INTO Image VALUES('37','JPEG','KFC/Individual/Twister.jpeg');
 INSERT INTO Image VALUES('38','JPEG','KFC/Individual/Twister.jpeg');
-INSERT INTO Image VALUES('39','JPEG','KFC/Individual/MenuBaconBoxMaster.jpeg');
-INSERT INTO Image VALUES('40','JPEG','KFC/Individual/MenuBBC.jpeg');
-INSERT INTO Image VALUES('41','JPEG','KFC/Individual/MenuCrispy.jpeg');
-INSERT INTO Image VALUES('42','JPEG','KFC/Individual/MenuDoisPedacos.jpeg');
-INSERT INTO Image VALUES('43','JPEG','KFC/Individual/MenuHotWings.jpeg');
-INSERT INTO Image VALUES('44','JPEG','KFC/Individual/MenuQuatroPedacos.jpeg');
-INSERT INTO Image VALUES('45','JPEG','KFC/Individual/MenuSuper.jpeg');
-INSERT INTO Image VALUES('46','JPEG','KFC/Individual/MenuSuperChick.jpeg');
-INSERT INTO Image VALUES('47','JPEG','KFC/Individual/MenuTower.jpeg');
-INSERT INTO Image VALUES('48','JPEG','KFC/Individual/MenuTowerS.jpeg');
-INSERT INTO Image VALUES('49','JPEG','KFC/Individual/MenuTresPedacos.jpeg');
-INSERT INTO Image VALUES('50','JPEG','KFC/Individual/MenuTudo.jpeg');
-INSERT INTO Image VALUES('51','JPEG','KFC/Individual/WingsCombo.jpeg');
-INSERT INTO Image VALUES('52','JPEG','KFC/Individual/DUOKING.jpeg');
-INSERT INTO Image VALUES('53','JPEG','KFC/Individual/DUOPROMO.jpeg');
-INSERT INTO Image VALUES('54','JPEG','KFC/Individual/muitoporpouco.jpeg');
-INSERT INTO Image VALUES('55','JPEG','KFC/Individual/Chips.jpeg');
-INSERT INTO Image VALUES('56','JPEG','KFC/Individual/Corn.jpeg');
-INSERT INTO Image VALUES('57','JPEG','KFC/Individual/CrispStrips.jpeg');
-INSERT INTO Image VALUES('58','JPEG','KFC/Individual/FrenchFries.jpeg');
-INSERT INTO Image VALUES('59','JPEG','KFC/Individual/KentuckyFries.jpeg');
-INSERT INTO Image VALUES('60','JPEG','KFC/Individual/KentuckyFriesBBC.jpeg');
-INSERT INTO Image VALUES('61','JPEG','KFC/Individual/OnionRings.jpeg');
-INSERT INTO Image VALUES('62','JPEG','KFC/Individual/OnionRings.jpeg');
+INSERT INTO Image VALUES('39','JPEG','KFC/Menus/MenuBaconBoxMaster.jpeg');
+INSERT INTO Image VALUES('40','JPEG','KFC/Menus/MenuBBC.jpeg');
+INSERT INTO Image VALUES('41','JPEG','KFC/Menus/MenuCrispy.jpeg');
+INSERT INTO Image VALUES('42','JPEG','KFC/Menus/MenuDoisPedacos.jpeg');
+INSERT INTO Image VALUES('43','JPEG','KFC/Menus/MenuHotWings.jpeg');
+INSERT INTO Image VALUES('44','JPEG','KFC/Menus/MenuQuatroPedacos.jpeg');
+INSERT INTO Image VALUES('45','JPEG','KFC/Menus/MenuSuper.jpeg');
+INSERT INTO Image VALUES('46','JPEG','KFC/Menus/MenuSuperChick.jpeg');
+INSERT INTO Image VALUES('47','JPEG','KFC/Menus/MenuTower.jpeg');
+INSERT INTO Image VALUES('48','JPEG','KFC/Menus/MenuTowerS.jpeg');
+INSERT INTO Image VALUES('49','JPEG','KFC/Menus/MenuTresPedacos.jpeg');
+INSERT INTO Image VALUES('50','JPEG','KFC/Menus/MenuTudo.jpeg');
+INSERT INTO Image VALUES('51','JPEG','KFC/Promotions/WingsCombo.jpeg');
+INSERT INTO Image VALUES('52','JPEG','KFC/Promotions/DUOKING.jpeg');
+INSERT INTO Image VALUES('53','JPEG','KFC/Promotions/DUOPROMO.jpeg');
+INSERT INTO Image VALUES('54','JPEG','KFC/Promotions/muitoporpouco.jpeg');
+INSERT INTO Image VALUES('55','JPEG','KFC/Extras/Chips.jpeg');
+INSERT INTO Image VALUES('56','JPEG','KFC/Extras/Corn.jpeg');
+INSERT INTO Image VALUES('57','JPEG','KFC/Extras/CrispStrips.jpeg');
+INSERT INTO Image VALUES('58','JPEG','KFC/Extras/FrenchFries.jpeg');
+INSERT INTO Image VALUES('59','JPEG','KFC/Extras/KentuckyFries.jpeg');
+INSERT INTO Image VALUES('60','JPEG','KFC/Extras/KentuckyFriesBBC.jpeg');
+INSERT INTO Image VALUES('61','JPEG','KFC/Extras/OnionRings.jpeg');
+INSERT INTO Image VALUES('62','JPEG','KFC/Extras/OnionRings.jpeg');
 
 
 
@@ -257,13 +263,13 @@ INSERT INTO Category VALUES('3','Healthy','1002');
 INSERT INTO Category VALUES('4','Desert','1003');
 
 --Restaurants
-INSERT INTO Restaurant VALUES('1','McDonals Imperial','1','1','1','2000');
-INSERT INTO Restaurant VALUES('2','KFC','1','2','2','2000');
-INSERT INTO Restaurant VALUES('3','daTerra','3','3','3','2000');
-INSERT INTO Restaurant VALUES('4','Extremepita','3','4','4','2000');
-INSERT INTO Restaurant VALUES('5','Dunkin Donuts','4','5','5','2000');
-INSERT INTO Restaurant VALUES('6','Burguer King S.Mamede','1','6','6','2000');
-INSERT INTO Restaurant VALUES('7','Burguer King Colombo','1','7','6','2000');
+INSERT INTO Restaurant VALUES('1','McDonalds Imperial','1','1','1','2000');
+INSERT INTO Restaurant VALUES('2','KFC','1','2','2','2001');
+INSERT INTO Restaurant VALUES('3','daTerra','3','3','3','2002');
+INSERT INTO Restaurant VALUES('4','Extremepita','3','4','4','2003');
+INSERT INTO Restaurant VALUES('5','Dunkin Donuts','4','5','5','2004');
+INSERT INTO Restaurant VALUES('6','Burguer King S.Mamede','1','6','6','2005');
+INSERT INTO Restaurant VALUES('7','Burguer King Colombo','1','7','6','2006');
 
 
 --  Mcdonals Aliados dishes
