@@ -1,3 +1,11 @@
+<?php declare(strict_types =1);
+session_start();
+require_once('database/connection.db.php');
+require_once('database/restaurant.class.php');
+
+require_once('template/restaurant.tpl.php');
+$db= getDatabaseConnection();?>
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -24,54 +32,14 @@
     <div id="searchbar">
         <input type="text" placeholder="Search Food" class="searchbar">
     </div>
-    <h2>Restaurant's name</h2>
-      <section id="foodsections">
-        <article>
-          <a href="restaurant.php?id=1">
-          <img src="https://picsum.photos/418/190">
-          Dish name</a>
-        </article>
-        <article>
-          <a href="restaurant.php?id=1">
-          <img src="https://picsum.photos/418/190">
-          Dish name</a>
-        </article>
-        <article>
-          <a href="restaurant.php?id=1">
-          <img src="https://picsum.photos/418/190">
-          Dish name</a>
-        </article>
-        <article>
-          <a href="restaurant.php?id=1">
-          <img src="https://picsum.photos/418/190">
-          Dish name</a>
-        </article>
-        <article>
-          <a href="restaurant.php?id=1">
-          <img src="https://picsum.photos/418/190">
-          Dish name</a>
-        </article>
-        <article>
-          <a href="restaurant.php?id=1">
-          <img src="https://picsum.photos/418/190">
-          Dish name</a>
-        </article>
-        <article>
-          <a href="restaurant.php?id=1">
-          <img src="https://picsum.photos/418/190">
-          Dish name</a>
-        </article>
-        <article>
-          <a href="restaurant.php?id=1">
-          <img src="https://picsum.photos/418/190">
-          Dish name</a>
-        </article>
-        <article>
-          <a href="restaurant.php?id=1">
-          <img src="https://picsum.photos/418/190">
-          Dish name</a>
-        </article>
-      </section>
+
+    <?php
+    
+    $dishes = Dish::getDishes($db, intval($_GET['id']));
+
+    drawRestaurant($_GET['name'],$dishes);
+  ?>
+
     <footer>
       <p>&copy; Hasburgui Industries, 2022</p>
     </footer>
