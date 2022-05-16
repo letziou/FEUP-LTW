@@ -19,20 +19,22 @@
       </a>
     </div>
   </header>
-  <form action="action_login.php" method="post" class="login">
     <div class="signinbox">
       <h1> Sign in </h1>
+      <form action="action_login.php" id="formlog" method="post" class="login">
       <div class="form-content">
         <input id="user-name" type="text" name="username" placeholder="user name" />
         <input id="password" type="password" name="password" placeholder="password" />
-          <button class="login_button">Login</button>
+        </form> 
+        </div>
+        <span id=buttons>
+          <button class="login_button" form="formlog"> Login</button>
           </br>
           <a href="register.php">
           <button class="registerbutton">Register</button>
           </a>
-      </div> 
-    </div>
-  </form>  
+        </span> 
+    </div> 
   <footer>
     <p>&copy; Hasburgui Industries, 2022</p>
   </footer>
