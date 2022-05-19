@@ -17,7 +17,7 @@
       session_destroy();
     }
 
-    public function getId() : ?int {
+    public function getId_User() : ?int {
       return isset($_SESSION['id_User']) ? $_SESSION['id_User'] : null;    
     }
 
@@ -25,8 +25,8 @@
       return isset($_SESSION['fullname']) ? $_SESSION['fullname'] : null;
     }
 
-    public function setId(int $id_user) {
-      $_SESSION['id_user'] = $id_user;
+    public function setId_User(int $id_User) {
+      $_SESSION['id_User'] = (int)$id_user;
     }
 
     public function setName(string $fullname) {

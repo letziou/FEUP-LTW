@@ -1,6 +1,25 @@
 <?php declare(strict_types = 1); 
   require_once('util/session.php');?>
 
+<?php function drawNamedButton(Session $session) { ?>
+
+  <div id="signup">
+        <a href="login.php">
+        <button class="button"><?=$session->getName();?></button>
+        </a>
+  </div>
+<?php } ?>
+
+<?php function drawSignupButton(Session $session) { ?>
+   
+<div id="signup">
+      <a href="login.php">
+      <button class="button">Sign Up</button>
+      </a>
+</div>
+<?php } ?>
+
+
 <?php function drawHeaderIndex(Session $session) { ?>
   <!DOCTYPE html>
 <html lang="en-US">
@@ -16,11 +35,12 @@
         <div id="logo">
         <img src="images/hasburgi.png" alt="">
         </div>
-      <div id="signup">
-        <a href="login.php">
-        <button class="button">Signup</button>
-        </a>
-      </div>
+
+        <?php 
+        if ($session->isLoggedIn()) drawNamedButton($session);
+        else drawSignupButton($session);
+      ?>
+
     </header>
     <div id="searchbar">
         <input type="text" placeholder="Search Food" class="searchbar">
@@ -43,11 +63,10 @@
   <div id="logo">
       <img src="images/hasburgi2.png" alt="hasburgi logo">
     </div>
-    <div id="signup">
-      <a href="login.php">
-        <button class="button">Signup</button>
-      </a>
-    </div>
+    <?php 
+        if ($session->isLoggedIn()) drawNamedButton($session);
+        else drawSignupButton($session);
+      ?>
     <div id="goback">
       <a href="index.php">
         <button class="button">Back</button>

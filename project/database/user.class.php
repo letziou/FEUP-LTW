@@ -32,25 +32,26 @@
     }
     
     static function getUserWithPassword(PDO $db, string $username, string $password) : ?User {
-      $stmt = $db->prepare('SELECT id_User, fname, lname, phone, id_Address
+      $stmt = $db->prepare('SELECT id_User, username, fname, lname, phone, id_Address
                             FROM User 
-                            WHERE lower(username) = ? AND password = ?');
+                            WHERE username = ? AND password = ?');
 
-      $stmt->execute(array(strtolower($username), sha1($password))); //TODO: Improve security!
+      $stmt->execute(array($username, $password)); //TODO: Improve security! lowercase email
   
       if ($user = $stmt->fetch()) {
         return new User(
-          $user['id_User'],
-          $user['fname'],
-          $user['lame'],
-          $user['phone'],
-          $user['id_Address']
+          (int)$user['id_User'],
+          (string)$user['username'],
+          (string)$user['fname'],
+          (string)$user['lname'],
+          (int)$user['phone'],
+          (int)$user['id_Address']
         );
       } else return null;
     }
 
     static function getUser(PDO $db, int $id_User) : User {
-      $stmt = $db->prepare('SELECT id_User, fname, lname, phone, id_Address                            
+      $stmt = $db->prepare('SELECT id_User, username, fname, lname, phone, id_Address                            
                             FROM User 
                             WHERE id_User = ?');
 
@@ -58,11 +59,12 @@
       $customer = $stmt->fetch();
       
       return new User(
-        $user['id_User'],
-        $user['fname'],
-        $user['lame'],
-        $user['phone'],
-        $user['id_Address']
+        (int)$user['id_User'],
+        (string)$user['username'],
+        (string)$user['fname'],
+        (string)$user['lname'],
+        (int)$user['phone'],
+        (int)$user['id_Address']
       );
     }
   }
