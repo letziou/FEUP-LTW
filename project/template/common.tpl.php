@@ -1,29 +1,90 @@
-<?php declare(strict_types = 1); ?>
+<?php declare(strict_types = 1); 
+  require_once('util/session.php');?>
 
-<?php function drawHeaderIndex() { ?>
+<?php function drawHeaderIndex(Session $session) { ?>
   <!DOCTYPE html>
-  <html lang="en-US">
-    <head>
-      <title>Hasburgui</title>    
-      <meta charset="UTF-8">
-      <link href="css/index_style.css" rel="stylesheet">
-      <link href="css/index_layout.css" rel="stylesheet">
-    </head>
-    <body>
-    <header>
-      <div id="logo">
-      <a href="index.php">
-        <p>Hasburgi</p>
-      </a>
-      </div>
+<html lang="en-US">
+  <head>
+    <title>Hasburgui</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="css/index_style.css" rel="stylesheet">
+    <link href="css/index_layout.css" rel="stylesheet">
+  </head>
+  <body>
+  <header>
+        <div id="logo">
+        <img src="images/hasburgi.png" alt="">
+        </div>
       <div id="signup">
+        <a href="login.php">
         <button class="button">Signup</button>
+        </a>
       </div>
     </header>
     <div id="searchbar">
         <input type="text" placeholder="Search Food" class="searchbar">
-    </div>
+      </div>
+
 <?php } ?>
+
+<?php function drawHeaderRestaurant(Session $session) { ?>
+  <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hasburgui</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="css/fastfood_style.css" rel="stylesheet">
+    <link href="css/page_layout.css" rel="stylesheet">
+  </head>
+  <body>
+  <header>
+  <div id="logo">
+      <img src="images/hasburgi2.png" alt="hasburgi logo">
+    </div>
+    <div id="signup">
+      <a href="login.php">
+        <button class="button">Signup</button>
+      </a>
+    </div>
+    <div id="goback">
+      <a href="index.php">
+        <button class="button">Back</button>
+      </a>
+    </div>
+    </header>
+    <div id="searchbar">
+        <input type="text" placeholder="Search Food" class="searchbar">
+    </div>
+
+<?php } ?>
+
+<?php function drawHeaderLogin(Session $session) { ?>
+  <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hasburgui</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="css/login_style.css" rel="stylesheet">
+    <link href="css/login_layout.css" rel="stylesheet">
+    <link href="css/page_layout.css" rel="stylesheet">
+  </head>
+  <body>
+  <header>
+    <div id="logo">
+      <img src="images/hasburgi2.png" alt="hasburgi logo">
+    </div>  
+    <div id="goback">
+      <a href="index.php">
+        <button class="button">Back</button>
+      </a>
+    </div>
+  </header>
+<?php } ?>
+
+
 
 <?php function drawHeaderCasual() { ?>
   <!DOCTYPE html>
