@@ -72,6 +72,9 @@
         <button class="button">Back</button>
       </a>
     </div>
+    <div id="cart">
+      <button class="button">Cart</button>
+    </div>
     </header>
     <div id="searchbar">
         <input type="text" placeholder="Search Food" class="searchbar">
