@@ -1,0 +1,78 @@
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Lora", serif;
+  line-height: 1.4em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*colors*/
+:root {
+  --mainHeaderColor: #6F1A04;
+  --searchbarColor: #7F7F7F;
+  --buttonColor: #FCD07D;
+  --footerColor: #2a2f33;
+
+  /*food section colors*/
+  --fastColor: #DD7230;
+  --casualColor: #49111C;
+  --healthyColor: #12521E;
+  --dessertsColor: #7475C6;
+
+}
+
+/**/
+
+body>header {
+  background-color: var(--mainHeaderColor);
+  color: white;
+  padding: 1em;
+}
+
+/*buttons*/
+.button {
+  border: none;
+  background-color: var(--buttonColor);
+  color: var(--searchbarColor);
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 60px;
+}
+
+.userInfo {
+  width: 100%;
+  background-color: #FFF;
+  padding: 1em;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+/* footer */
+
+body>footer {
+  background-color: var(--footerColor);
+  color: white;
+
+  padding: 1em;
+
+  height: 1em;
+}
+
+body>footer p {
+  margin: 0;
+}

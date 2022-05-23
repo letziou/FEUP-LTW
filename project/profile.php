@@ -6,7 +6,7 @@ $session = new Session();
 
 drawHeaderProfile($session);
 ?>
-  <div id="userInfo">
+  <div class="userInfo">
     <h1>Account Information</h1>
     <h2>Name: <?=$session->getName();?></h2>
     <h2>Phone: 999999999</h2>
