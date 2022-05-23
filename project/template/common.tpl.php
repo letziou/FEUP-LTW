@@ -4,7 +4,7 @@
 <?php function drawNamedButton(Session $session) { ?>
 
   <div id="signup">
-        <a href="login.php">
+        <a href="profile.php">
         <button class="button"><?=$session->getName();?></button>
         </a>
   </div>
@@ -45,6 +45,35 @@
     <div id="searchbar">
         <input type="text" placeholder="Search Food" class="searchbar">
       </div>
+
+<?php } ?>
+
+<?php function drawHeaderProfile(Session $session) { ?>
+  <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hasburgui</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="css/index_style.css" rel="stylesheet">
+    <link href="css/page_layout.css" rel="stylesheet">
+  </head>
+  <body>
+  <header>
+        <div id="logo">
+        <img src="images/hasburgi.png" alt="">
+        </div>
+
+        <?php 
+        if ($session->isLoggedIn()) drawNamedButton($session);
+        else drawSignupButton($session);
+      ?>
+    <div id="goback">
+      <a href="index.php">
+        <button class="button">Back</button>
+      </a>
+    </div>
+    </header>
 
 <?php } ?>
 
