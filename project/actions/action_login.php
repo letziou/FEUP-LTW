@@ -19,5 +19,5 @@
     $session->addMessage('Error', 'Wrong Password');
   }
 
-  header('Location: ' . $_SERVER['HTTP_REFERER']);
+  header('Location: /../index.php');
 ?>
