@@ -19,7 +19,6 @@
 </div>
 <?php } ?>
 
-
 <?php function drawHeaderIndex(Session $session) { ?>
   <!DOCTYPE html>
 <html lang="en-US">
