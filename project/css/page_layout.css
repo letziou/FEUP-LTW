@@ -14,7 +14,7 @@ body {
   width: 100%;
   min-height: 100%;
   display: grid;
-  grid-template-columns: [start] 1fr [middle] 1fr [end];
+  grid-template-columns: [start] 1fr [middle1] 2fr [middle2] 1fr [end];
   grid-template-rows: [start] auto [search] auto [categories] auto [restaurants] 1fr [footer] auto [end];
 }
 
@@ -22,7 +22,7 @@ body {
 
 body>header {
   display: grid;
-  grid-template-columns: [start] 1fr [middle1] 1fr [middle2] 1fr [end];
+  grid-template-columns: [start] 1fr [middle1] 2fr [middle2] 1fr [end];
   grid-template-rows: auto auto auto;
   grid-column: start / end;
 }
@@ -41,7 +41,7 @@ body>header #cart {
   grid-column: end;
   grid-row: 2;
   margin: auto;
-  position:relative; 
+  position: relative;
   top: 40%;
 }
 
@@ -57,6 +57,10 @@ body>header #cart {
     min-width: 50px;
     max-width: 300px;
   }
+
+  #logo {
+    padding-left: 3em;
+  }
 }
 
 @media(max-width: 3000px) {
@@ -65,11 +69,11 @@ body>header #cart {
   }
 }
 
-
 #logo {
   grid-column-start: start;
   grid-column-end: end;
   display: flex;
+  padding-right: 5em;
   aspect-ratio: 16/9;
   max-width: 20%;
   margin-left: auto;
