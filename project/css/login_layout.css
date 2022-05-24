@@ -32,8 +32,7 @@ h1 {
 .signinbox {
   grid-column-start: middle1;
   grid-column-end: middle2;
-  margin-top: 6em;
-  margin-bottom: 3em;
+  margin: 6em auto 3em auto;
   width: 90%;
   background-color: #FFF;
   padding: 1em;
