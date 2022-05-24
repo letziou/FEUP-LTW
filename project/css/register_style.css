@@ -1,0 +1,12 @@
+html {
+  background-color: #FAFAFA;
+  height: 100%;
+  width: 100%;
+}
+
+#loginbox {
+  grid-column-start: middle1;
+  grid-column-end: middle2;
+  margin-right: 5em;
+  margin-left: 5em;
+}
