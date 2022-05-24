@@ -2,6 +2,22 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
 
+/*colors*/
+
+:root {
+  --mainHeaderColor: #6F1A04;
+  --hoverButtonColor: #441207;
+  --searchbarColor: #7F7F7F;
+  --buttonColor: #FCD07D;
+  --footerColor: #2a2f33;
+
+  /*food section colors*/
+  --fastColor: #DD7230;
+  --casualColor: #49111C;
+  --healthyColor: #12521E;
+  --dessertsColor: #7475C6;
+
+}
 
 html {
   height: 100%;
@@ -18,12 +34,9 @@ p {
 }
 
 body>header {
-  background-color: #6F1A04;
-  color: white;
+  background-color: var(--mainHeaderColor);
   padding: 1em;
 }
-
-
 
 /* login box */
 
@@ -41,17 +54,29 @@ input {
 
 /* button login */
 
-button {
-  background: transparent;
-  font-size: 16px;
-  color: #FFFFFF;
+#buttons>a>button,
+#buttons>button {
   text-transform: uppercase;
-  background-color: #6F1A0A;
+  background-color: var(--mainHeaderColor);
 }
 
-button:hover {
+#buttons>a>button:hover,
+#buttons>button:hover {
   cursor: pointer;
-  background-color: #441207;
+  background-color: var(--hoverButtonColor);
+}
+
+#goback>a>button {
+  border: none;
+  background-color: var(--buttonColor);
+  color: var(--searchbarColor);
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 60px;
 }
 
 /* footer */

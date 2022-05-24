@@ -34,6 +34,7 @@ h1 {
   grid-column-end: end;
   margin-top: 3em;
   margin-bottom: 3em;
+  padding: 6%;
   width: 100%;
   background-color: #FFF;
   padding: 1em;
@@ -63,7 +64,8 @@ form input:focus {
 }
 
 
-button {
+#buttons>a>button,
+#buttons>button {
   font-weight: 600;
   text-align: center;
   font-size: 19px;
@@ -83,7 +85,8 @@ button {
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-button:hover {
+#buttons>a>button:hover,
+#buttons>button:hover {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(-4px);
 }
