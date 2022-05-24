@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS Image;
 
 CREATE TABLE User (
     id_User INTEGER PRIMARY KEY,                            -- unique id given by the website to each new user
-    username VARCHAR UNIQUE,                                -- user's unique username
+    username VARCHAR UNIQUE,                                -- user's unique username/Password
     password VARCHAR,                                       -- user's password
     fname VARCHAR,                                          -- user's first name
     lname VARCHAR,                                          -- user's last name
