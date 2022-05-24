@@ -74,7 +74,9 @@
       </a>
     </div>
     <div id="logout">
+      <a href="/actions/action_logout.php">
       <button class="button">Logout</button>
+      </a>
     </div>
     </header>
 
