@@ -13,7 +13,7 @@ require_once('template/restaurant.tpl.php');
 $db= getDatabaseConnection();
 $dishes = Dish::getDishes($db, intval($_GET['id']));
 
-    drawHeaderRestaurant($session);
+    drawHeaderRestaurant($session, intval($_GET['id']));
     drawRestaurant($_GET['name'],$dishes);
     drawFooter();
   ?>

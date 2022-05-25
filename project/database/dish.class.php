@@ -21,6 +21,9 @@
       $this->image_path =$image_path;
     }
 
+    /*function save_newDish($db) {}*/
+    
+
     static function getDishes(PDO $db, int $id_rest) : array {
         $stmt = $db->prepare('SELECT id_dish, name, price, description, id_Restaurant, id_Image, image as image_path
           FROM Dish JOIN Image using (id_image)

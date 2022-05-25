@@ -24,13 +24,14 @@
       return $this->fname . ' ' . $this->lname;
     }
 
-    function save($db) {
-      $stmt = $db->prepare('UPDATE Customer SET fname = ?, lname = ?
+    function save_editUser($db) {
+      $stmt = $db->prepare('UPDATE Customer SET fname = ?, lname = ?, phone = ?
                             WHERE id_User = ?');
 
-      $stmt->execute(array($this->fname, $this->lname, $this->id_User));
+      $stmt->execute(array($this->fname, $this->lname, $this->phone, $this->id_User));
     }
-    
+
+   
     static function getUserWithPassword(PDO $db, string $username, string $password) : ?User {
       $stmt = $db->prepare('SELECT id_User, username, fname, lname, phone, id_Address
                             FROM User 
@@ -56,7 +57,7 @@
                             WHERE id_User = ?');
 
       $stmt->execute(array($id_User));
-      $customer = $stmt->fetch();
+      $user = $stmt->fetch();
       
       return new User(
         (int)$user['id_User'],

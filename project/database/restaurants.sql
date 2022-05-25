@@ -80,8 +80,9 @@ CREATE TABLE Dish (
 
 CREATE TABLE OOrder (
     id_Order INTEGER PRIMARY KEY,                                   -- id for each order given by the website
-    price INTEGER,                                                  -- order's price
+    price FLOAT,                                                  -- order's price
     description VARCHAR,                                            -- order's description with everything ordered and quantities
+    /*adicionar status - ordered/sent/delivered*/
     id_Restaurant INTEGER REFERENCES Restaurant(id_Restaurant)      -- id's user for orders's history
 );
 
