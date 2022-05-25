@@ -15,9 +15,11 @@
     $session->setId_User($user->id_User);
     $session->setName($user->fullName());
     $session->addMessage('Success', 'Welcome Back!');
+    header('Location: /../index.php');
   } else {
     $session->addMessage('Error', 'Wrong Password');
+    header('Location: /../login.php');
   }
 
-  header('Location: /../index.php');
+
 ?>

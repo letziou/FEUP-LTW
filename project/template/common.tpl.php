@@ -19,6 +19,10 @@
 </div>
 <?php } ?>
 
+<?php function pickCSSType(int $id_Category) { ?>
+  <link href="css/fastfood_style.css" rel="stylesheet">  
+<?php } ?>
+
 <?php function drawHeaderIndex(Session $session) { ?>
   <!DOCTYPE html>
 <html lang="en-US">
@@ -81,14 +85,16 @@
 
 <?php } ?>
 
-<?php function drawHeaderRestaurant(Session $session) { ?>
+<?php function drawHeaderRestaurant(Session $session, int $id_Category) { ?>
   <!DOCTYPE html>
 <html lang="en-US">
   <head>
     <title>Hasburgui</title>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link href="css/fastfood_style.css" rel="stylesheet">
+
+    <?php pickCSSType($id_Category)?>
+    
     <link href="css/page_layout.css" rel="stylesheet">
   </head>
   <body>

@@ -26,7 +26,7 @@
     }
 
     public function setId_User(int $id_User) {
-      $_SESSION['id_User'] = (int)$id_user;
+      $_SESSION['id_User'] = $id_User;
     }
 
     public function setName(string $fullname) {
