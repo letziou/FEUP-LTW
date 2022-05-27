@@ -16,7 +16,7 @@ body {
   display: grid;
   grid-template-columns: [start] 1fr [middle1] 2fr [middle2] 1fr [end];
   grid-template-rows: [start] auto [search] auto [categories] auto [restaurants] 1fr [footer] auto [end];
-} 
+}
 
 /* header layout */
 
@@ -121,6 +121,18 @@ h2 {
 
 #restaurantsections>article {
   text-align: center;
+}
+
+#dishsection {
+  grid-column-start: start;
+  grid-column-end: end;
+  display: flex;
+  align-items: center;
+  width: 59%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-row: restaurants;
+  margin-top: 2em;
 }
 
 #restaurantsections>article>a>img {

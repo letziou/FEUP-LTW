@@ -23,7 +23,7 @@
     <?php foreach ($dishes as $dish) { ?>
       <article>
         <a href="restaurant.php?id=1">
-        <img src="images/Food_Images/<?=$dish->image_path?>"> 
+        <img src="images/Food_images/<?=$dish->image_path?>"> 
         <p><?=$dish->name?> price : <?=$dish->price?></p> 
         </a>
         <p><?=$dish->description?></p>
