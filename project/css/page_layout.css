@@ -16,7 +16,7 @@ body {
   display: grid;
   grid-template-columns: [start] 1fr [middle1] 2fr [middle2] 1fr [end];
   grid-template-rows: [start] auto [search] auto [categories] auto [restaurants] 1fr [footer] auto [end];
-}
+} 
 
 /* header layout */
 
