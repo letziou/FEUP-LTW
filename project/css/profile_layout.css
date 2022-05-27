@@ -80,7 +80,7 @@ body>header #logout {
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  margin: 8% auto 3em auto;
+  margin: 5em auto 3em auto;
 }
 
 .userInfo > h1{
