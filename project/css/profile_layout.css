@@ -80,11 +80,19 @@ body>header #logout {
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  margin: 3em auto 3em auto;
+  margin: 8% auto 3em auto;
+}
+
+.userInfo > h1{
+  padding-left: 16%;
 }
 
 /*footer*/
 body>footer {
   grid-column-start: start;
   grid-column-end: end;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }

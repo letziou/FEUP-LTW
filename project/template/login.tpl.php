@@ -15,7 +15,7 @@
       <h1> Sign in </h1>
       <form action="/actions/action_login.php" id="formlog" method="post" class="login">
       <div class="form-content">
-        <input id="username" type="username" name="username" placeholder="user name" />
+        <input id="username" type="username" name="username" placeholder="email" />
         <input id="password" type="password" name="password" placeholder="password" />
         </form> 
         </div>
