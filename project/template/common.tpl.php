@@ -115,9 +115,45 @@
       </a>
     </div>
     <div id="cart">
-      <a href="index.php">
+      <a href="cart.php">
         <button class="button">Cart</button>
       </a>  
+    </div>
+    </header>
+    <div id="searchbar">
+        <input type="text" placeholder="Search Food" class="searchbar">
+    </div>
+
+<?php } ?>
+
+<?php function drawHeaderRestaurantCat(Session $session, int $id_Category) { ?>
+  <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hasburgui</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="javascript/add_cart.js"></script> 
+    
+    <?php pickCSSType($id_Category)?>
+    
+    <link href="css/page_layout.css" rel="stylesheet">
+    <link href="css/cart.css" rel="stylesheet">
+    
+  </head>
+  <body>
+  <header>
+  <div id="logo">
+      <img src="images/hasburgi2.png" alt="hasburgi logo">
+    </div>
+    <?php 
+        if ($session->isLoggedIn()) drawNamedButton($session);
+        else drawSignupButton($session);
+      ?>
+    <div id="goback">
+      <a href="index.php">
+        <button class="button">Back</button>
+      </a>
     </div>
     </header>
     <div id="searchbar">
@@ -168,7 +204,7 @@
       <img src="images/hasburgi2.png" alt="hasburgi logo">
     </div>
     <div id="goback">
-      <a href="login.php">
+      <a href="restaurant_category.php">
         <button class="button">Back</button>
       </a>
     </div>

@@ -15,7 +15,7 @@ require_once('template/restaurant.tpl.php');
   $restaurants = Restaurant::getRestaurants($db, intval($_GET['id']));
 
 
-  drawHeaderRestaurant($session,intval($_GET['id']));
+  drawHeaderRestaurantCat($session,intval($_GET['id']));
   drawRestaurants($restaurants);
   drawFooter();
 
