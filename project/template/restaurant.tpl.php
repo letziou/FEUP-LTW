@@ -19,15 +19,21 @@
 
 <?php function drawRestaurant(string $restaurantName, array $dishes) { ?>
   <h2><?=$restaurantName?></h2>
-  <section id="dishsection">
-    <?php foreach ($dishes as $dish) { ?>
-      <article>
-        <a href="restaurant.php?id=1">
-        <img src="images/Food_images/<?=$dish->image_path?>"> 
-        <p><?=$dish->name?> price : <?=$dish->price?></p> 
-        </a>
-        <p><?=$dish->description?></p>
-        </article>
+  <section id="dish-container">
+    <ul class="menu-items">
+      <?php foreach ($dishes as $dish) { ?>
+        <li class="menu-item">
+          <img src="images/Food_images/<?=$dish->image_path?>"> 
+          <div class="menu-item-dets">
+            <p class="menu-item-heading"><?=$dish->name?></p>
+            <p class="g-price"><?=$dish->price?></p> 
+            <p class="menu-item-decription"><?=$dish->description?></p>
+          </div>
+          <button class="add-button" data-title="<?=$dish->description?>" data-price="<?=$dish->price?>">
+            Add to Cart
+          </button>  
+        </li>
     <?php } ?>
+    </ul>  
   </section>
 <?php } ?>
