@@ -135,8 +135,7 @@ h2 {
 }
 
 #restaurantsections>article>a>img {
-  aspect-ratio: 16/9;
-  max-width: 70%;
+  width: 250px;
 }
 
 /*footer*/
