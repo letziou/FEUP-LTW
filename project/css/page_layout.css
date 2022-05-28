@@ -59,7 +59,8 @@ body>header #cart {
   }
 
   #logo {
-    padding-left: 3em;
+    padding-right: 3em;
+    padding-left: 2em;
   }
 }
 
