@@ -3,12 +3,13 @@
 }
 
 body {
-  background-image: url('../img/background.webp');
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
+}
+
+#food {
+  grid-template-columns: [start] 1fr [middle] 1fr [end];
 }
 
 h2,
@@ -22,17 +23,19 @@ h2,
   margin: 8px 0;
 }
 
-.container {
+#dish-container {
   width: 90%;
   max-width: 780px;
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 0 0;
   display: flex;
   justify-content: space-between;
+  grid-column-start: start;
+  grid-column-end: middle;
 }
 
 @media (max-width: 950px) {
-  .container {
+  #dish-container {
     display: block;
   }
 }
@@ -40,8 +43,8 @@ h2,
 .screen-togo,
 .screen-cart {
   position: fixed;
-  left: 750px;
-  top: 450px;
+  left: 1000px;
+  top: 470px;
   width: 375px;
   max-height: 770px;
   overflow: scroll;
@@ -56,6 +59,7 @@ h2,
 ul {
   padding: 0;
   list-style: none;
+  margin-left: 40px;
 }
 
 .menu-item {

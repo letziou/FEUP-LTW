@@ -100,7 +100,7 @@
     <link href="css/cart.css" rel="stylesheet">
     
   </head>
-  <body>
+  <body id="food">
   <header>
   <div id="logo">
       <img src="images/hasburgi2.png" alt="hasburgi logo">
