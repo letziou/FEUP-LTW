@@ -19,11 +19,6 @@
 
 }
 
-html {
-  height: 100%;
-  width: 100%;
-}
-
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -86,8 +81,6 @@ body>footer {
   color: white;
 
   padding: 1em;
-
-  height: 1em;
 }
 
 body>footer p {

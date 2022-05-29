@@ -2,8 +2,6 @@
 
 html {
   background-color: #FAFAFA;
-  height: 100%;
-  width: 100%;
 }
 
 
@@ -16,17 +14,6 @@ h1 {
   margin-bottom: 1.2em;
   margin-top: 0.2em;
 }
-
-/*
-.signinbox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  padding: 6%;
-  margin: 0;
-}
-*/
 
 #loginbox {
   padding: 0.4em;
