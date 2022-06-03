@@ -1,0 +1,129 @@
+function addToCart(dish) {
+  console.log(dish);
+  
+  let body = document.getElementById("#cart_");
+  let new_Item = document.createElement("p");
+  new_Item.innerHTML = dish[1];
+  body.appendChild(new_Item);
+
+
+}
+
+/*const addCart = document.querySelector('.add-button')
+if (addCart) {
+  addCart.addEventListener('click', async function() {
+    const response = await fetch('../api/api_dishes.php?id_Dishes=' + this.value)
+    const dishes = await response.json()
+    console.log(response)
+
+    const section = document.querySelector('.menu-item')
+    section.innerHTML = ''
+/*
+    //continuar depois ... não sei como chegar ao path da imagem através do dish
+    for (const dish of dishes) {
+      const article = document.createElement('article')
+      const img = document.createElement('img')
+      img.src = 'dish.'
+      const link = document.createElement('a')
+      link.href = '../pages/artist.php?id=' + artist.id
+      link.textContent = artist.name
+      article.appendChild(img)
+      article.appendChild(link)
+      section.appendChild(article)
+    }
+  })
+}*/
+
+
+
+
+/*let subtotal = 0;
+
+const calculateTax = subtotal => {
+  const tax = subtotal * 0.22;
+  const formattedTax = tax.toFixed(2);
+  return formattedTax;
+};
+
+const calculateTotal = subtotal => {
+  const tax = calculateTax(subtotal);
+  const total = parseFloat(subtotal) + parseFloat(tax);
+  const formattedTotal = total.toFixed(2);
+  return formattedTotal;
+};
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  console.log(this.responseText);
+  const myObj = JSON.parse(this.responseText);
+  console.log(myObj[0]);
+  document.getElementByClassName("menu-item-heading").innerHTML = myObj[0];
+  document.getElementByClassName("g-price").innerHTML = myObj[1];
+}
+xmlhttp.open("GET", "restaurant.tpl.php");
+xmlhttp.send();
+
+const getImgLink = title => {
+  let imgLink;
+  
+  switch (title) {
+    case 'French Fies with Ketchup':
+      imgLink = 'https://assets.codepen.io/687837/plate__french-fries.png';
+      break;
+    case 'Salmon and Vegetables':
+      imgLink = 'https://assets.codepen.io/687837/plate__salmon-vegetables.png';
+      break;
+    case 'Spaghetti with Sauce':
+      imgLink = 'https://assets.codepen.io/687837/plate__spaghetti-meat-sauce.png';
+      break;
+    case 'Tortellini':
+      imgLink = 'https://assets.codepen.io/687837/plate__tortellini.png';
+      break;
+    case 'Chicken Salad':
+      imgLink = 'https://assets.codepen.io/687837/plate__chicken-salad.png';
+      break;
+    default:
+      imgLink = 'https://assets.codepen.io/687837/plate__chicken-salad.png';}
+
+  return imgLink;
+};
+
+$('.add-button').on('click', function () {
+  const title = $(this).data('title');
+  const price = $(this).data('price');
+  const imgLink = getImgLink(title);
+
+  const element = `
+    <li class="cart-item">
+      <img src="${imgLink}" alt="${title}">
+      <div class="cart-item-dets">
+        <p class="cart-item-heading">${title}</p>
+        <p class="g-price">$${price}</p>
+      </div>
+    </li>
+  `;
+  $('.cart-items').append(element);
+
+  subtotal = subtotal + price;
+
+  const formattedSubtotal = subtotal.toFixed(2);
+  const tax = calculateTax(subtotal);
+  const total = calculateTotal(subtotal);
+
+  $('.cart-math').html(`
+    <p class="cart-math-item">
+      <span class="cart-math-header">Subtotal:</span>
+      <span class="g-price subtotal">$${formattedSubtotal}</span>
+    </p>
+    <p class="cart-math-item">
+      <span class="cart-math-header">Tax:</span>
+      <span class="g-price tax">$${tax}</span>
+    </p>
+    <p class="cart-math-item">
+      <span class="cart-math-header">Total:</span>
+      <span class="g-price total">$${total}</span>
+    </p>
+  `);
+});
+
+*/
