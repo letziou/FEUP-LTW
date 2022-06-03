@@ -48,8 +48,16 @@ body>header #cart {
   width: auto;
 }
 
+@media only screen and (max-device-height: 360px) and (max-device-width: 760px) {
+  #logo {
+    background: green;
+    padding-top: 20px;
+  }
+}
+
 @media(max-width: 500px) {
   .button {
+    background: green;
     align-items: left;
     padding-left: 8px;
     padding-right: 10px;
@@ -58,9 +66,10 @@ body>header #cart {
   }
 
   #logo {
-    padding-left: 3em;
+    padding-right: 5em;
   }
 }
+
 
 @media(max-width: 3000px) {
   #logo {

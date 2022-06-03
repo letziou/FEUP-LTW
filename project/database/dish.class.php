@@ -23,6 +23,25 @@
 
     /*function save_newDish($db) {}*/
     
+    
+    static function getDish(PDO $db, int $id_dish) : Dish {
+      $stmt = $db->prepare('SELECT id_dish, name, price, description, id_Restaurant, id_Image, image as image_path
+      FROM Dish JOIN Image using (id_image)
+      WHERE id_Dish= ?');
+      $stmt->execute(array($id));
+  
+      $dish = $stmt->fetch();
+  
+      return new Dish(
+        (int)$dish['id_dish'],
+        (string)$dish['name'],
+        (float)$dish['price'],
+        (string)$dish['description'],
+        (int)$dish['id_Restaurant'],
+        (int)$dish['id_Image'],
+        (string)$dish['image_path']
+      );
+    }  
 
     static function getDishes(PDO $db, int $id_rest) : array {
         $stmt = $db->prepare('SELECT id_dish, name, price, description, id_Restaurant, id_Image, image as image_path
@@ -30,9 +49,6 @@
           WHERE id_Restaurant= ?');
         $stmt->execute(array($id_rest));
         
-
-        
-    
         $dishes = array();
         while ($dish = $stmt->fetch()) {
           $dishes[] = new Dish(

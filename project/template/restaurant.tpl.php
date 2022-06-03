@@ -27,21 +27,18 @@
           <div class="menu-item-dets">
             <p class="menu-item-heading"><?=$dish->name?></p>
             <p class="g-price"><?=$dish->price?>€</p> 
-            <p class="menu-item-decription"><?=$dish->description?></p>
+            <p class="menu-item-decription"><?=$dish->description?></p>        
           </div>
-          <button class="add-button" data-title="<?=$dish->description?>" data-price="<?=$dish->price?>">
+          <button onclick="addToCart(['<?=$dish->image_path?>','<?=$dish->name?>',<?=$dish->price?>])"  class="add-button" data-title="<?=$dish->description?>" data-price="<?=$dish->price?>">
             Add to Cart
           </button>  
         </li>  
     <?php } ?>
     </ul> 
-    <div class="screen-cart">
+    <div id="#cart_"class="screen-cart">
     <h2>Your Cart</h2>
     <ul class="cart-items">
     </ul>
-    
-    <div class="cart-math">
-      <p>Add items to cart</p>
     </div>
   </div> 
   </section>
