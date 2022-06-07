@@ -50,14 +50,12 @@ body>header #cart {
 
 @media only screen and (max-device-height: 360px) and (max-device-width: 760px) {
   #logo {
-    background: green;
     padding-top: 20px;
   }
 }
 
 @media(max-width: 500px) {
   .button {
-    background: green;
     align-items: left;
     padding-left: 8px;
     padding-right: 10px;

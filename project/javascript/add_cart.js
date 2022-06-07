@@ -1,10 +1,34 @@
+/*const getImgLink(link) {
+  let imgLink = "images/Food_images" + link;
+  return imgLink;
+}*/
+
 function addToCart(dish) {
+  const title = dish[1];
+  const price = dish[2];
+  const imgLink = dish[0];
   console.log(dish);
-  
+
+  const element = `
+    <li class="cart-item">
+      <img src="images/Food_images/${imgLink}" alt="${title}">
+      <div class="cart-item-dets">
+        <p class="cart-item-heading">${title}</p>
+        <p class="g-price">${price}€</p>
+      </div>
+    </li>
+  `;
+
   let body = document.getElementById("#cart_");
+  let newItem = document.createElement("ul");
+  newItem.innerHTML= element; 
+  body.appendChild(newItem);
+
+  
+  /*let body = document.getElementById("#cart_");
   let new_Item = document.createElement("p");
-  new_Item.innerHTML = dish[1];
-  body.appendChild(new_Item);
+  new_Item.innerHTML = dish[2];
+  body.appendChild(new_Item);*/
 
 
 }

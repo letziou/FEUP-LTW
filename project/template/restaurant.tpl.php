@@ -23,7 +23,7 @@
     <ul class="menu-items">
       <?php foreach ($dishes as $dish) { ?>
         <li class="menu-item">
-          <img src="images/Food_images/<?=$dish->image_path?>"> 
+          <img src="images/Food_images/<?=$dish->image_path?>" id="myImage"> 
           <div class="menu-item-dets">
             <p class="menu-item-heading"><?=$dish->name?></p>
             <p class="g-price"><?=$dish->price?>€</p> 
