@@ -33,9 +33,9 @@
 <!-- FOR TESTING PURPOSES. TODO:IMPROVE-->
 <?php function drawLogoutBox(Session $session) { ?>
     <div class="signinbox">
-      <h1> Sign OUT </h1>
+      <h1> Sign Out </h1>
           <a href="/actions/action_logout.php">
-            <button class="signoutbutton">SIGNOUT</button>
+            <button class="signoutbutton">SIGN OUT</button>
           </a>
     </div> 
 

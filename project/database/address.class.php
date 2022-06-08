@@ -15,16 +15,22 @@
       $this->street = $street;
     }
 
-    /*function save_newAddress($db) {}*/
+    static function save_newAddress(PDO $db, string $city, string $postalCode, string $street) {
+      $stmt = $db->prepare('INSERT INTO Address (city, postalCode, street) 
+                            VALUES (?,?,?)');
 
-      static function save_AddressEdit(PDO $db) {
+      $stmt->execute(array($city, $postalCode, $street));
+
+    }
+
+    static function save_AddressEdit(PDO $db) {
         $stmt = $db->prepare('UPDATE Address SET city = ?, postalCode = ?, street = ?
                               WHERE id_Address = ?');
   
         $stmt->execute(array($this->id_Address, $this->city, $this->postalCode, $this->street));
       }
 
-      static function getAddressFromID(PDO $db, int $id_Address) : Address {
+    static function getAddressFromID(PDO $db, int $id_Address) : Address {
         $stmt = $db->prepare('SELECT id_Address, city, postalCode, street
                             FROM Address
                             WHERE id_Address = ?');
