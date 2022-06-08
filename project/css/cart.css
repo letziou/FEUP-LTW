@@ -172,7 +172,7 @@ ul {
 
 .cart-math-item span {
   display: inline-block;
-  text-align: right;
+  text-align: left;
 }
 
 .cart-math-item .cart-math-header {

@@ -39,8 +39,19 @@
     <h2>Your Cart</h2>
     <ul id="#cart_" class="cart-items">
     </ul>
-    <p>Add items to cart</p>
     <div id="#cart_m" class="cart-math">
+      <p class="cart-math-item">
+        <span class="cart-math-header">Subtotal:</span>
+        <span id="#subtotal_tax" class="g-price subtotal"></span>
+      </p>
+      <p class="cart-math-item">
+        <span class="cart-math-header">Tax:</span>
+        <span id="#total_tax" class="g-price tax"></span>
+      </p>
+      <p class="cart-math-item">
+        <span class="cart-math-header">Total:</span>
+        <span id="#total" class="g-price total"></span>
+      </p>
     </div>
     </div>
   </div> 
