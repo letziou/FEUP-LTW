@@ -24,7 +24,15 @@
       return $this->fname . ' ' . $this->lname;
     }
 
-    function save_editUser($db) {
+    static function save_newUser(PDO $db, $username, $password, $fname, $lname, $phone, $id_Address ) {
+      $stmt = $db->prepare('INSERT INTO User (username, password, fname, lname, phone, id_Address) 
+                            VALUES (?,?,?,?,?,?)');
+
+      $stmt->execute(array($username, $password, $fname, $lname, $phone, $id_Address));
+
+    }
+
+    static function save_editUser($db) {
       $stmt = $db->prepare('UPDATE Customer SET fname = ?, lname = ?, phone = ?
                             WHERE id_User = ?');
 

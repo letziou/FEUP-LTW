@@ -87,7 +87,7 @@ body>header #logout {
   padding-left: 16%;
 }
 
-/*footer*/
+/*
 body>footer {
   grid-column-start: start;
   grid-column-end: end;
@@ -95,4 +95,10 @@ body>footer {
   left: 0;
   bottom: 0;
   width: 100%;
+}
+*/
+/*footer*/
+body>footer {
+  grid-column-start: start;
+  grid-column-end: end;
 }
