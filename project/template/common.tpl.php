@@ -19,9 +19,24 @@
 </div>
 <?php } ?>
 
-<?php function pickCSSType(int $id_Category) { ?>
-  <link href="css/fastfood_style.css" rel="stylesheet">  
-<?php } ?>
+<?php function pickCSSType(int $id_Category) { 
+  switch ($id_Category){ 
+    case 1: ?>
+       <link href="css/fastfood_style.css" rel="stylesheet">
+       <?php break; 
+    case 2: ?>
+         <link href="css/casual_style.css" rel="stylesheet">
+        <?php break; 
+    case 3: ?>
+        <link href="css/healthy_style.css" rel="stylesheet">
+        <?php break; 
+    case 4: ?>
+        <link href="css/dessert_style.css" rel="stylesheet">
+        <?php break; 
+    default: ?>    
+        <link href="css/fastfood_style.css" rel="stylesheet">
+     <?php break;  }
+ } ?>
 
 <?php function drawHeaderIndex(Session $session) { ?>
   <!DOCTYPE html>
@@ -110,7 +125,7 @@
         else drawSignupButton($session);
       ?>
     <div id="goback">
-      <a href="restaurant_category.php">
+      <a href="restaurant_category.php?id=<?=$id_Category?>">
         <button class="button">Back</button>
       </a>
     </div>
