@@ -110,7 +110,7 @@
         else drawSignupButton($session);
       ?>
     <div id="goback">
-      <a href="index.php">
+      <a href="restaurant_category.php">
         <button class="button">Back</button>
       </a>
     </div>

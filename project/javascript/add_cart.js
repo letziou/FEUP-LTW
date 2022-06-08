@@ -1,7 +1,46 @@
-/*const getImgLink(link) {
-  let imgLink = "images/Food_images" + link;
-  return imgLink;
-}*/
+let subtotal = 0;
+
+const calculateTax = subtotal => {
+  const tax = subtotal * 0.22;
+  const formattedTax = tax.toFixed(2);
+  return formattedTax;
+};
+
+const calculateTotal = subtotal => {
+  const tax = calculateTax(subtotal);
+  const total = parseFloat(subtotal) + parseFloat(tax);
+  const formattedTotal = total.toFixed(2);
+  return formattedTotal;
+};
+
+
+function sumTotal(price) {
+  subtotal = subtotal + price;
+  const formattedSubtotal = subtotal.toFixed(2);
+  const tax = calculateTax(subtotal);
+  const total = calculateTotal(subtotal);
+
+ 
+  const totalP = `
+    <p class="cart-math-item">
+      <span class="cart-math-header">Subtotal:</span>
+      <span class="g-price subtotal">${formattedSubtotal}€</span>
+    </p>
+    <p class="cart-math-item">
+      <span class="cart-math-header">Tax:</span>
+      <span class="g-price tax">${tax}€</span>
+    </p>
+    <p class="cart-math-item">
+      <span class="cart-math-header">Total:</span>
+      <span class="g-price total">${total}€</span>
+    </p>
+  `;
+
+  let myTotal = document.getElementById("#cart_m");
+  let newTotal = document.createElement("p");
+  newTotal.innerHTML = totalP;
+  myTotal.appendChild(newTotal);
+}
 
 function addToCart(dish) {
   const title = dish[1];
@@ -9,7 +48,7 @@ function addToCart(dish) {
   const imgLink = dish[0];
   console.log(dish);
 
-  const element = `
+  const Dish = `
     <li class="cart-item">
       <img src="images/Food_images/${imgLink}" alt="${title}">
       <div class="cart-item-dets">
@@ -19,18 +58,13 @@ function addToCart(dish) {
     </li>
   `;
 
-  let body = document.getElementById("#cart_");
-  let newItem = document.createElement("ul");
-  newItem.innerHTML= element; 
-  body.appendChild(newItem);
 
-  
-  /*let body = document.getElementById("#cart_");
-  let new_Item = document.createElement("p");
-  new_Item.innerHTML = dish[2];
-  body.appendChild(new_Item);*/
+  let myCart = document.getElementById("#cart_");
+  let newDish = document.createElement("ul");
+  newDish.innerHTML= Dish; 
+  myCart.appendChild(newDish);
 
-
+  sumTotal(dish[2]);
 }
 
 /*const addCart = document.querySelector('.add-button')
@@ -61,93 +95,3 @@ if (addCart) {
 
 
 
-/*let subtotal = 0;
-
-const calculateTax = subtotal => {
-  const tax = subtotal * 0.22;
-  const formattedTax = tax.toFixed(2);
-  return formattedTax;
-};
-
-const calculateTotal = subtotal => {
-  const tax = calculateTax(subtotal);
-  const total = parseFloat(subtotal) + parseFloat(tax);
-  const formattedTotal = total.toFixed(2);
-  return formattedTotal;
-};
-
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onload = function() {
-  console.log(this.responseText);
-  const myObj = JSON.parse(this.responseText);
-  console.log(myObj[0]);
-  document.getElementByClassName("menu-item-heading").innerHTML = myObj[0];
-  document.getElementByClassName("g-price").innerHTML = myObj[1];
-}
-xmlhttp.open("GET", "restaurant.tpl.php");
-xmlhttp.send();
-
-const getImgLink = title => {
-  let imgLink;
-  
-  switch (title) {
-    case 'French Fies with Ketchup':
-      imgLink = 'https://assets.codepen.io/687837/plate__french-fries.png';
-      break;
-    case 'Salmon and Vegetables':
-      imgLink = 'https://assets.codepen.io/687837/plate__salmon-vegetables.png';
-      break;
-    case 'Spaghetti with Sauce':
-      imgLink = 'https://assets.codepen.io/687837/plate__spaghetti-meat-sauce.png';
-      break;
-    case 'Tortellini':
-      imgLink = 'https://assets.codepen.io/687837/plate__tortellini.png';
-      break;
-    case 'Chicken Salad':
-      imgLink = 'https://assets.codepen.io/687837/plate__chicken-salad.png';
-      break;
-    default:
-      imgLink = 'https://assets.codepen.io/687837/plate__chicken-salad.png';}
-
-  return imgLink;
-};
-
-$('.add-button').on('click', function () {
-  const title = $(this).data('title');
-  const price = $(this).data('price');
-  const imgLink = getImgLink(title);
-
-  const element = `
-    <li class="cart-item">
-      <img src="${imgLink}" alt="${title}">
-      <div class="cart-item-dets">
-        <p class="cart-item-heading">${title}</p>
-        <p class="g-price">$${price}</p>
-      </div>
-    </li>
-  `;
-  $('.cart-items').append(element);
-
-  subtotal = subtotal + price;
-
-  const formattedSubtotal = subtotal.toFixed(2);
-  const tax = calculateTax(subtotal);
-  const total = calculateTotal(subtotal);
-
-  $('.cart-math').html(`
-    <p class="cart-math-item">
-      <span class="cart-math-header">Subtotal:</span>
-      <span class="g-price subtotal">$${formattedSubtotal}</span>
-    </p>
-    <p class="cart-math-item">
-      <span class="cart-math-header">Tax:</span>
-      <span class="g-price tax">$${tax}</span>
-    </p>
-    <p class="cart-math-item">
-      <span class="cart-math-header">Total:</span>
-      <span class="g-price total">$${total}</span>
-    </p>
-  `);
-});
-
-*/

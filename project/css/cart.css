@@ -44,7 +44,7 @@ h2,
 .screen-cart {
   position: fixed;
   left: 1000px;
-  top: 470px;
+  top: 370px;
   width: 375px;
   max-height: 770px;
   overflow: scroll;
@@ -59,7 +59,7 @@ h2,
 ul {
   padding: 0;
   list-style: none;
-  margin-left: 40px;
+  margin-left: 0;
 }
 
 .menu-item {

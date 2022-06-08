@@ -35,10 +35,13 @@
         </li>  
     <?php } ?>
     </ul> 
-    <div id="#cart_"class="screen-cart">
+    <div class="screen-cart">
     <h2>Your Cart</h2>
-    <ul class="cart-items">
+    <ul id="#cart_" class="cart-items">
     </ul>
+    <p>Add items to cart</p>
+    <div id="#cart_m" class="cart-math">
+    </div>
     </div>
   </div> 
   </section>
