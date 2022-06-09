@@ -159,7 +159,7 @@ INSERT INTO Image VALUES('50','JPEG','KFC/Menus/MenuTudo.jpeg');
 INSERT INTO Image VALUES('51','JPEG','KFC/Promotions/WingsCombo.jpeg');
 INSERT INTO Image VALUES('52','JPEG','KFC/Promotions/DUOKING.jpeg');
 INSERT INTO Image VALUES('53','JPEG','KFC/Promotions/DUOPROMO.jpeg');
-INSERT INTO Image VALUES('54','JPEG','KFC/Promotions/muitoporpouco.jpeg');
+INSERT INTO Image VALUES('54','JPEG','KFC/Promotions/muitoporpouco.jpg');
 INSERT INTO Image VALUES('55','JPEG','KFC/Extras/Chips.jpeg');
 INSERT INTO Image VALUES('56','JPEG','KFC/Extras/Corn.jpeg');
 INSERT INTO Image VALUES('57','JPEG','KFC/Extras/CrispStrips.jpeg');
