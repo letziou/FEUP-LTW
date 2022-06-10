@@ -144,6 +144,10 @@ ul {
   }
 }
 
+#cart_m {
+  padding-top: 50px;
+}
+
 .cart-item {
   display: flex;
   align-items: flex-start;
