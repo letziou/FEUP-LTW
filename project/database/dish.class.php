@@ -21,7 +21,20 @@
       $this->image_path =$image_path;
     }
 
-    /*function save_newDish($db) {}*/
+    static function save_newDish(PDO $db, $name, $price,  $description,  $id_Restaurant, $id_Image, $image_path) {
+      $stmt = $db->prepare('INSERT INTO Dish (name, price, description, id_Restaurant, id_Image, image_path) 
+                            VALUES (?,?,?,?,?,?)');
+
+      $stmt->execute(array($name, $id_category, $id_Address, $id_Owner, $id_Image, $image_path));
+
+    }
+
+    static function save_editDish($db) {
+      $stmt = $db->prepare('UPDATE Dish SET name = ?, price = ?, description =?, id_Restaurant = ?, id_Image = ?, image_path = ?
+                            WHERE id_Dish = ?');
+
+      $stmt->execute(array($this->name, $this->price, $this->description, $this->id_Restaurant, $this->id_Image, $this->image_path));
+    }
     
     
     static function getDish(PDO $db, int $id_dish) : Dish {
