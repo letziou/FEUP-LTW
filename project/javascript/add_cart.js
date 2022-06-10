@@ -1,3 +1,5 @@
+let subtotal = 0;
+
 function getNewDish(imgURL, title, price){
   let ul = document.createElement("ul");
   let li = document.createElement("li");
@@ -9,7 +11,7 @@ function getNewDish(imgURL, title, price){
   pricee.className = "g-price";
   header.className = "cart-item-heading";
   pricee.id = title;
-  pricee.innerHTML = price;
+  pricee.innerHTML = price + "€";
   header.innerHTML = title;
   holder.className = "cart-item-dets";
   img.src = "images/Food_images/" + imgURL;
@@ -23,10 +25,10 @@ function getNewDish(imgURL, title, price){
 }
 
 function updateTotal(price) {
-  let subtotal = price;
-  let tax = price * 0.22;
+  subtotal = subtotal + price;
+  let tax = subtotal * 0.22;
   tax = tax.toFixed(2);
-  let total = parseFloat(price) + parseFloat(tax);
+  let total = parseFloat(subtotal) + parseFloat(tax);
   total = total.toFixed(2);
   document.getElementById("#subtotal_tax").innerHTML = subtotal + "€";
   document.getElementById("#total_tax").innerHTML = tax + "€";
