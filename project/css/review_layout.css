@@ -125,6 +125,10 @@ h2 {
   float: right;
 }
 
+#review-container>article .score:after {
+  content: ' stars!!';
+}
+
 #review-container>article p{
   margin-top: 2.5em;
 }
@@ -133,4 +137,5 @@ h2 {
 body>footer {
   grid-column-start: start;
   grid-column-end: end;
+  grid-row-end: end;
 }
