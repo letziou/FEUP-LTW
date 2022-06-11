@@ -6,9 +6,11 @@
   <h2>Reviews about <?=$restaurantName?></h2>
   <section id="review-container">
       <?php foreach ($reviews as $review) { ?>
-        <article class="menu-item">
-          <p><?=$review->id_User?></p>
-          <p><?=$review->comment?></p>       
+        <article class="review">
+          <span class="user"><?=$review->id_User?></span>
+          <span class="date"><?=$review->published?></span>
+          <p><?=$review->comment?></p>
+          <span class="score"><?=$review->score?></span>       
       </article>  
     <?php } ?> 
   </section>
