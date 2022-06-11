@@ -7,7 +7,7 @@
   <section id="review-container">
       <?php foreach ($reviews as $review) { ?>
         <article class="review">
-          <span class="user"><?=$review->id_User?></span>
+          <span class="user"><?=$review->fname?> <?=$review->lname?></span>
           <span class="date"><?=$review->published?></span>
           <p><?=$review->comment?></p>
           <span class="score"><?=$review->score?></span>       
