@@ -100,7 +100,7 @@
 
 <?php } ?>
 
-<?php function drawHeaderRestaurant(Session $session, int $id_Category) { ?>
+<?php function drawHeaderRestaurant(Session $session, int $id_Category, int $id_Restaurant, string $name) { ?>
   <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -130,8 +130,8 @@
       </a>
     </div>
     <div id="cart">
-      <a href="cart.php">
-        <button class="button">Cart</button>
+      <a href="review.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$name?>">
+        <button class="button">Reviews</button>
       </a>  
     </div>
     </header>
@@ -139,6 +139,36 @@
         <input type="text" placeholder="Search Food" class="searchbar">
     </div>
 
+<?php } ?>
+
+<?php function drawHeaderReviews(Session $session, int $id_Category, int $id_Restaurant, string $name) { ?>
+  <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hasburgui</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <?php pickCSSType($id_Category)?>
+    
+    <link href="css/page_layout.css" rel="stylesheet">
+    
+  </head>
+  <body id="food">
+  <header>
+  <div id="logo">
+      <img src="images/hasburgi2.png" alt="hasburgi logo">
+    </div>
+    <?php 
+        if ($session->isLoggedIn()) drawNamedButton($session);
+        else drawSignupButton($session);
+      ?>
+    <div id="goback">
+      <a href="restaurant.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$name?>">
+        <button class="button">Back</button>
+      </a>
+    </div>
+    </header>
 <?php } ?>
 
 <?php function drawHeaderRestaurantCat(Session $session, int $id_Category) { ?>
