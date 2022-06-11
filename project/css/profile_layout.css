@@ -41,7 +41,7 @@ body>header #logout {
   grid-column: end;
   grid-row: 2;
   margin: auto;
-  position:relative; 
+  position: relative;
   top: 40%;
 }
 
@@ -72,7 +72,7 @@ body>header #logout {
 }
 
 /*Information box*/
-.userInfo{
+.userInfo {
   grid-column-start: start;
   grid-column-end: end;
   display: flex;
@@ -83,11 +83,11 @@ body>header #logout {
   margin: 5em auto 3em auto;
 }
 
-.userInfo > h1{
+.userInfo>h1 {
   padding-left: 16%;
 }
 
-/*
+
 body>footer {
   grid-column-start: start;
   grid-column-end: end;
@@ -96,7 +96,7 @@ body>footer {
   bottom: 0;
   width: 100%;
 }
-*/
+
 /*footer*/
 body>footer {
   grid-column-start: start;
