@@ -10,7 +10,7 @@ require_once('template/common.tpl.php');
 require_once('template/review.tpl.php');
 
 $db= getDatabaseConnection();
-//$reviews = Review::getReviewsFromRes($db, intval($_GET['id']));
+$reviews = Review::getReviewsFromRes($db, intval($_GET['id']));
 
 drawHeaderReviews($session, intval($_GET['cat']), intval($_GET['id']), $_GET['name']);
 //drawReviews($session, $_GET['name'], $reviews);
