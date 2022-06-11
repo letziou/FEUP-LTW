@@ -18,6 +18,24 @@
     }
 
     /*static function getReviewFromIDOrder(PDO $db, int $id_Order) : Order {}*/
+    static function getReviewFromRes(PDO $db, int $id_dish) : Dish {
+      $stmt = $db->prepare('SELECT id_dish, name, price, description, id_Restaurant, id_Image, image as image_path
+      FROM Dish JOIN Image using (id_image)
+      WHERE id_Dish= ?');
+      $stmt->execute(array($id));
+  
+      $dish = $stmt->fetch();
+  
+      return new Dish(
+        (int)$dish['id_dish'],
+        (string)$dish['name'],
+        (float)$dish['price'],
+        (string)$dish['description'],
+        (int)$dish['id_Restaurant'],
+        (int)$dish['id_Image'],
+        (string)$dish['image_path']
+      );
+    }
       
 }
 
