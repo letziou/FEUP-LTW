@@ -121,8 +121,9 @@ h2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
   grid-row: restaurants;
-  margin-top: 2em;
+  margin: 2em;
 }
 
 #restaurantsections>article {
@@ -142,7 +143,8 @@ h2 {
 }
 
 #restaurantsections>article>a>img {
-  width: 250px;
+  margin: 3em;
+  width: 300px;
 }
 
 /*footer*/
