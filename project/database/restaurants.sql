@@ -63,6 +63,7 @@ CREATE TABLE Category (
 CREATE TABLE Review (
     id_Order INTEGER REFERENCES OOrder(id_Order),               -- review's id
     id_User INTEGER REFERENCES User(id_User),                   -- user that wrote the review
+    id_Restaurant INTEGER REFERENCES Restaurant(id_Restaurant), -- restaurant where the review is related
     published DATE,                                             -- date when the review was posted
     text VARCHAR,                                               -- comment text
     score INTEGER,                                              -- review's score of the restaurant
@@ -467,4 +468,4 @@ INSERT INTO Dish VALUES('62','Argolas de Cebola','3.50','Redondos, dourados, cro
 INSERT INTO OOrder VALUES('1','14.40','2x BBC Bacon Box Master Zinger','2');
 
 --Reviews
-INSERT INTO Review VALUES('1','70','2022-05-03','Excellent service, yummy food!','5');
+INSERT INTO Review VALUES('1','70','3','2022-05-03','Excellent service, yummy food!','5');
