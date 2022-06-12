@@ -23,7 +23,6 @@
       $this->lname = $lname;
     }
 
-    /*static function getReviewFromIDOrder(PDO $db, int $id_Order) : Order {}*/
     static function getReviewFromRes(PDO $db, int $id_Order) : Review {
       $stmt = $db->prepare('SELECT id_order, id_User, id_Restaurant, published, text, score, fname, lname
       FROM Review JOIN User using (id_User)
