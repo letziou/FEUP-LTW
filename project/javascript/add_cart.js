@@ -1,8 +1,7 @@
-let subtotal = 0; 
-
-
+let subtotal = 0;
 
 function getNewDish(imgURL, title, price){
+  let value = 1;
   let ul = document.createElement("ul");
   let li = document.createElement("li");
   let img = document.createElement("img");
@@ -11,7 +10,7 @@ function getNewDish(imgURL, title, price){
   let pricee = document.createElement("p");
   let remove = document.createElement("button");
   //let quantity = document.createElement("input");
-  //quantity.className = "quantity-item";
+  // quantity.className = "quantity-item";
   li.className = "cart-item";
   remove.className = "remove-item";
   pricee.className = "g-price";
@@ -24,11 +23,6 @@ function getNewDish(imgURL, title, price){
   pricee.innerHTML = price + "€";
   header.innerHTML = title;
 
-  remove.addEventListener("click", function(event) {
-    var buttonClicked = event.target;
-    buttonClicked.parentElement.parentElement.remove();
-  });
-
   img.src = "images/Food_images/" + imgURL;
   img.alt = title;
   holder.appendChild(header);
@@ -38,16 +32,42 @@ function getNewDish(imgURL, title, price){
   li.appendChild(remove);
   //li.appendChild(quantity);
   ul.appendChild(li);
+
+  /*quantity.addEventListener("input", function(event) {
+    var quantityChanged = event.target;
+    value = price * quantityChanged.value;
+    //updateTotal(price,value);
+  });*/
+
+  remove.addEventListener("click", function(event) {
+    var buttonClicked = event.target;
+    buttonClicked.parentElement.parentElement.remove();
+    updateRemoveTotal(price);
+  });
+  
+  updateTotal(price, 1);
+
   return ul;
 }
 
-function updateTotal(price) {
-  subtotal = parseFloat(subtotal) + parseFloat(price);
+function updateTotal(price, value) {
+  subtotal = parseFloat(subtotal) + (value * parseFloat(price));
   subtotal = subtotal.toFixed(2);
   let tax = parseFloat(subtotal) * 0.22;
   tax = tax.toFixed(2);
   let total = parseFloat(subtotal) + parseFloat(tax);
   total = total.toFixed(2);
+  document.getElementById("#subtotal_tax").innerHTML = subtotal + "€";
+  document.getElementById("#total_tax").innerHTML = tax + "€";
+  document.getElementById("#total").innerHTML = total + "€";
+}
+
+function updateRemoveTotal(price) {
+  subtotal = parseFloat(subtotal) - parseFloat(price);
+  subtotal = subtotal.toFixed(2);
+  let tax = parseFloat(subtotal) * 0.22;
+  tax = tax.toFixed(2);
+  let total = parseFloat(subtotal) + parseFloat(tax);
   document.getElementById("#subtotal_tax").innerHTML = subtotal + "€";
   document.getElementById("#total_tax").innerHTML = tax + "€";
   document.getElementById("#total").innerHTML = total + "€";
@@ -60,7 +80,6 @@ function addToCart(dish){
   let imgURL = dish[0];
   let cart = document.getElementById("#cart_");
   cart.appendChild(getNewDish(imgURL, title, price));
-  updateTotal(price);
 }
 
 
