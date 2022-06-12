@@ -108,6 +108,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <script src="javascript/add_cart.js"></script> 
+    <script src="https://kit.fontawesome.com/4c012e79c3.js" crossorigin="anonymous"></script>
     
     <?php pickCSSType($id_Category)?>
     

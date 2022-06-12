@@ -8,18 +8,18 @@ function getNewDish(imgURL, title, price){
   let holder = document.createElement("div");
   let header = document.createElement("p");
   let pricee = document.createElement("p");
-  let remove = document.createElement("button");
+  let remove = document.createElement("i");
   //let quantity = document.createElement("input");
-  // quantity.className = "quantity-item";
+  //quantity.className = "quantity-item";
   li.className = "cart-item";
-  remove.className = "remove-item";
+  remove.className = "fa-solid fa-trash-can fa-lg";
   pricee.className = "g-price";
   header.className = "cart-item-heading";
   holder.className = "cart-item-dets";
   //quantity.type = "number";
   //quantity.value = "1";
+  remove.style = "color: red";
   pricee.id = title;
-  remove.innerHTML = "REMOVE"
   pricee.innerHTML = price + "€";
   header.innerHTML = title;
 
@@ -33,25 +33,46 @@ function getNewDish(imgURL, title, price){
   //li.appendChild(quantity);
   ul.appendChild(li);
 
-  /*quantity.addEventListener("input", function(event) {
-    var quantityChanged = event.target;
-    value = price * quantityChanged.value;
-    //updateTotal(price,value);
-  });*/
-
   remove.addEventListener("click", function(event) {
     var buttonClicked = event.target;
     buttonClicked.parentElement.parentElement.remove();
     updateRemoveTotal(price);
   });
   
-  updateTotal(price, 1);
+  updateTotal(price);
+
+  /*quantity.addEventListener("change", function(event) {
+    var quantityChanged = event.target;
+    if(isNaN(quantityChanged.value) || quantityChanged.value <= 0) {
+      quantityChanged.value = 1;
+    }
+    value = quantityChanged.value;
+    console.log(value);
+    value =  (value * price);
+    console.log(price,value);
+    updateTotalSub(price,value);
+  });*/
 
   return ul;
 }
 
-function updateTotal(price, value) {
-  subtotal = parseFloat(subtotal) + (value * parseFloat(price));
+/*function updateTotalSub(price,value) {
+  sub = parseFloat(value);
+  if(value > sub)
+  subtotal = parseFloat(subtotal) + parseFloat(value);
+  subtotal = subtotal.toFixed(2);
+  let tax = parseFloat(subtotal) * 0.22;
+  tax = tax.toFixed(2);
+  let total = parseFloat(subtotal) + parseFloat(tax);
+  total = total.toFixed(2);
+  document.getElementById("#subtotal_tax").innerHTML = subtotal + "€";
+  document.getElementById("#total_tax").innerHTML = tax + "€";
+  document.getElementById("#total").innerHTML = total + "€";
+
+}*/
+
+function updateTotal(price) {
+  subtotal = parseFloat(subtotal) + parseFloat(price);
   subtotal = subtotal.toFixed(2);
   let tax = parseFloat(subtotal) * 0.22;
   tax = tax.toFixed(2);

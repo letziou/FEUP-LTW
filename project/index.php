@@ -8,7 +8,7 @@ drawHeaderIndex($session);
 ?>
 
       <section id="foodsections">
-      <article>
+      <article class="container">
         <a href="restaurant_category.php?id=1">
         <img src="images/fast.png" alt="">
         <p> Fast Food </p>
