@@ -47,6 +47,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link href="css/index_style.css" rel="stylesheet">
     <link href="css/index_layout.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c012e79c3.js" crossorigin="anonymous"></script>
   </head>
   <body>
   <header>
@@ -75,6 +76,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link href="css/profile_style.css" rel="stylesheet">
     <link href="css/profile_layout.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c012e79c3.js" crossorigin="anonymous"></script>
   </head>
   <body>
   <header>
@@ -88,7 +90,7 @@
       ?>
     <div id="goback">
       <a href="index.php">
-        <button class="button">Back</button>
+        <i class="fa-solid fa-arrow-left button"></i>
       </a>
     </div>
     <div id="logout">
@@ -127,7 +129,7 @@
       ?>
     <div id="goback">
       <a href="restaurant_category.php?id=<?=$id_Category?>">
-        <button class="button">Back</button>
+        <i class="fa-solid fa-arrow-left button"></i>
       </a>
     </div>
     <div id="cart">
@@ -149,6 +151,7 @@
     <title>Hasburgui</title>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="https://kit.fontawesome.com/4c012e79c3.js" crossorigin="anonymous"></script>
     
     <?php pickCSSType($id_Category)?>
     
@@ -166,7 +169,7 @@
       ?>
     <div id="goback">
       <a href="restaurant.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$name?>">
-        <button class="button">Back</button>
+        <i class="fa-solid fa-arrow-left button"></i>
       </a>
     </div>
     </header>
@@ -180,6 +183,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <script src="javascript/add_cart.js"></script> 
+    <script src="https://kit.fontawesome.com/4c012e79c3.js" crossorigin="anonymous"></script>
     
     <?php pickCSSType($id_Category)?>
     
@@ -198,7 +202,7 @@
       ?>
     <div id="goback">
       <a href="index.php">
-        <button class="button">Back</button>
+        <i class="fa-solid fa-arrow-left button"></i>
       </a>
     </div>
     </header>
@@ -219,6 +223,7 @@
     <link href="css/login_layout.css" rel="stylesheet">
     <link href="css/page_layout.css" rel="stylesheet">
     <script src="javascript/add_cart.js"></script> 
+    <script src="https://kit.fontawesome.com/4c012e79c3.js" crossorigin="anonymous"></script>
   </head>
   <body>
   <header>
@@ -227,7 +232,7 @@
     </div>  
     <div id="goback">
       <a href="index.php">
-        <button class="button">Back</button>
+        <i class="fa-solid fa-arrow-left button"></i>
       </a>
     </div>
   </header>
@@ -243,6 +248,7 @@
     <link href="css/register_layout.css" rel="stylesheet">
     <link href="css/register_style.css" rel="stylesheet">
     <link href="css/page_layout.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c012e79c3.js" crossorigin="anonymous"></script>
   </head>
   <body>
   <header>
@@ -251,7 +257,7 @@
     </div>
     <div id="goback">
       <a href="login.php">
-        <button class="button">Back</button>
+        <i class="fa-solid fa-arrow-left button"></i>
       </a>
     </div>
   </header>
@@ -267,6 +273,7 @@
     <link href="css/register_layout.css" rel="stylesheet">
     <link href="css/register_style.css" rel="stylesheet">
     <link href="css/page_layout.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c012e79c3.js" crossorigin="anonymous"></script>
   </head>
   <body>
   <header>
@@ -275,7 +282,7 @@
     </div>
     <div id="goback">
       <a href="restaurant_category.php">
-        <button class="button">Back</button>
+        <i class="fa-solid fa-arrow-left button"></i>
       </a>
     </div>
   </header>
