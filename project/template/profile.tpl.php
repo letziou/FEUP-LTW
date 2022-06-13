@@ -14,4 +14,9 @@
       <li>Street: <?=$address->street?></li>
     </ul>
   </div>
+  <div class="restButton">
+  <a href="">
+    <button>Checkout your restaurants!</button>
+  </a>
+  </div>
 <?php } ?>
