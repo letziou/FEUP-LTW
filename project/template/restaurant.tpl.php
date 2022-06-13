@@ -17,6 +17,20 @@
   </section>
 <?php } ?>
 
+<?php function drawRestaurantsFromOwner(array $restaurants) { ?>
+  <h2>Restaurants :</h2>
+  <section id="restaurantsections">
+    <?php foreach($restaurants as $restaurant) { ?> 
+      <article>
+      <a href="restaurant.php?cat=<?=$restaurant->id_category?>&id=<?=$restaurant->id_Restaurant?>&name=<?=$restaurant->name?>">
+          <img src="images/<?=$restaurant->image_path?>">
+          <p><?=$restaurant->name?></p>
+      </a>
+      </article>
+    <?php } ?>
+  </section>
+<?php } ?>
+
 <?php function drawRestaurant(string $restaurantName, array $dishes, int $id_Category, int $id_Restaurant) { ?>
   <h2><?=$restaurantName?></h2>
   <section id="dish-container">

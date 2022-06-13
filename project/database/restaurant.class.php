@@ -54,10 +54,30 @@
                               FROM Restaurant JOIN Image using (id_image)
                               WHERE id_Category= ?');
         $stmt->execute(array($id_cat));
-        
-
-        
+         
+        $restaurants = array();
+        while ($restaurant = $stmt->fetch()) {
+          $restaurants[] = new Restaurant(
+            (int)$restaurant['id_Restaurant'],
+            (string)$restaurant['name'],
+            (int)$restaurant['id_category'],
+            (int)$restaurant['id_Address'],
+            (int)$restaurant['id_Owner'],
+            (int)$restaurant['id_Image'],
+            (string)$restaurant['image_path']
+            
+          );
+        }
     
+        return $restaurants;
+      }
+
+      static function getRestaurantsFromOwner(PDO $db, int $id_Own) : array {
+        $stmt = $db->prepare('SELECT id_Restaurant, name, id_category, id_Address, id_Owner, id_Image, image as image_path
+                              FROM Restaurant JOIN Image using (id_image)
+                              WHERE id_Owner= ?');
+        $stmt->execute(array($id_Own));
+        
         $restaurants = array();
         while ($restaurant = $stmt->fetch()) {
           $restaurants[] = new Restaurant(

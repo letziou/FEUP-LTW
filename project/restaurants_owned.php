@@ -9,13 +9,10 @@ require_once('database/restaurant.class.php');
 require_once('template/common.tpl.php');
 require_once('template/restaurant.tpl.php');
 
-  $db= getDatabaseConnection();
+$db= getDatabaseConnection();
+$restaurants = Restaurant::getRestaurantsFromOwner($db, intval($_GET['id']));
 
-
-  $restaurants = Restaurant::getRestaurants($db, intval($_GET['id']));
-
-
-  drawHeaderProfile($session);
-  drawFooter();
-
-?>
+    drawHeaderProfileRes($session);
+    drawRestaurantsFromOwner($restaurants);
+    drawFooter();
+  ?>

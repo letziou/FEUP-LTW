@@ -15,7 +15,7 @@
     </ul>
   </div>
   <div class="restButton">
-    <a href="restaurants_owned?id=<?=$user->id_User?>">
+    <a href="restaurants_owned.php?id=<?=$user->id_User?>">
     <button>Checkout your restaurants!</button>
   </a>
   </div>
