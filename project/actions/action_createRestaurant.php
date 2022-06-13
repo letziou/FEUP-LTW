@@ -12,7 +12,7 @@
   $db = getDatabaseConnection();
 
     $name = $_POST['name'];
-    $category = $_GET['category'];
+    $category = $_POST['category'];
     $street = $_POST['street'];
     $city = $_POST['city'];
     $postalCode = $_POST['postalCode'];

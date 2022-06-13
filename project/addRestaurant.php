@@ -10,7 +10,7 @@ require_once('template/addOn.tpl.php');
 
 $db= getDatabaseConnection();
 
-drawHeaderAddOnDish($session, intval($_GET['cat']), intval($_GET['id']), $_GET['name']);
-drawAddOnDish($_GET['name'],intval($_GET['id']));
+drawHeaderAddOnRestaurant($session, intval($_GET['id']));
+drawAddOnRestaurant();
 drawFooter();
  ?>

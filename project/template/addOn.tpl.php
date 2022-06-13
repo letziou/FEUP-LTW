@@ -30,6 +30,7 @@
     <form action="/actions/action_createRestaurant.php" id="formlog" method="post" class="addOn">
     <div class="form-content">
       <input id="name" type="name" name="name" placeholder="Name of restaurant" />
+      <input id="category" type="category" name="category" placeholder="Category of restaurant" />
       <input id="street" type="street" name="street" placeholder="Street of restaurant" />
       <input id="city" type="city" name="city" placeholder="City of restaurant" />
       <input id="postalcode" type="postalcode" name="postalcode" placeholder="Postal code of restaurant" />
