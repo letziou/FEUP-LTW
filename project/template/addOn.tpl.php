@@ -1,25 +1,22 @@
 <?php declare(strict_types = 1);?>
 
-
 <?php function drawAddOnDish(string $restaurantName, int $id_Restaurant) { ?>
   <<div class="addOnbox">
 
-    <h1> Add dish to <?=$restaurantName?> </h1>
-    <form action="/actions/action_createDish.php" id="formlog" method="post" class="addOn" enctype="multipart/form-data>
-    <div class="form-content">
-      <input id="name" type="name" name="name" placeholder="Name of Dish" />
-      <input id="price" type="price" name="price" placeholder="Price of Dish" />
-      <input id="description" type="description" name="description" placeholder="Description of Dish" />        
-      <label>Upload Image:
-        <input type="file" name="image" >
-      </label>
-      <input type="hidden" id="id_Restaurant" type="id_Restaurant" name="id_Restaurant" value=<?=$id_Restaurant?>  />
-      </form> 
-      </div>
-      <span id=buttons>
-        <button class="addOn_button" form="formlog"> Add</button>
-      </span> 
-  </div> 
+<h1> Add dish to <?=$restaurantName?> </h1>
+<form action="/actions/action_test.php" method="post" enctype="multipart/form-data">
+  <input id="name" type="name" name="name" placeholder="Name of Dish" />
+  <input id="price" type="price" name="price" placeholder="Price of Dish" />
+  <input id="description" type="description" name="description" placeholder="Description of Dish" />
+    <label>Upload Image:
+    <input type="file" name="image">
+    </label>
+    <input type="hidden" id="id_Restaurant" type="id_Restaurant" name="id_Restaurant" value=<?=$id_Restaurant?>/>
+    <span id=buttons>
+    <button class="addOn_button" input type= "submit"> Add</button>
+  </span> 
+  </form>
+</div> 
 <?php } ?>
 
 
