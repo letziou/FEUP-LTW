@@ -36,6 +36,14 @@
       $stmt->execute(array($this->name, $this->id_category, $this->id_Address, $this->id_Image,$this->image_path));
     }
 
+    function getRestaurant_Category(){
+      return $this->id_category;
+    }
+
+    function getResName(){
+      return $this->name;
+    }
+
     
     function getAddress_ID(){
       return $this->id_Address;
@@ -69,9 +77,9 @@
   
       static function getRestaurant(PDO $db, int $id_Rest) : Restaurant {
         $stmt = $db->prepare('SELECT id_Restaurant, name, id_category, id_Address, id_Owner, id_Image, image as image_path
-                              FROM Restaurant
+                              FROM Restaurant JOIN Image using (id_image)
                               WHERE id_Restaurant = ?');
-        $stmt->execute(array($id_Restaurant));
+        $stmt->execute(array($id_Rest));
     
         $restaurant = $stmt->fetch();
     
@@ -79,6 +87,7 @@
             (int)$restaurant['id_Restaurant'],
             (string)$restaurant['name'],
             (int)$restaurant['id_category'],
+            (int)$restaurant['id_Address'],
             (int)$restaurant['id_Owner'],
             (int)$restaurant['id_Image'],
             (string)$restaurant['image_path']

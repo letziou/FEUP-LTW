@@ -7,6 +7,7 @@
   require_once(__DIR__ . '/../database/connection.db.php');
   require_once(__DIR__ . '/../database/user.class.php');
   require_once(__DIR__ . '/../database/review.class.php');
+  require_once(__DIR__ . '/../database/restaurant.class.php');
 
   $db = getDatabaseConnection();
 
@@ -20,7 +21,11 @@
     $published= date('Y-m-d');
     $id_Restaurant = $_POST['id_Restaurant'];
 
-  
+    $restaurant = Restaurant:: getRestaurant($db, (int)$id_Restaurant);
+    $id_Cat = $restaurant->getRestaurant_Category();
+    $rName = $restaurant->getResName();
+
+      
     Review:: save_newReview($db, (int)$id_User, (int)$id_Restaurant, $published, $text, (int)$score);
     
     $id_Review = $db -> lastInsertId();
@@ -29,7 +34,7 @@
 
     if ($newReview) {
         $session->addMessage('Success', 'Review Submitted');
-        header('Location: /../profile.php');
+        header('Location: /../review.php?cat='.$id_Cat.'&id='.$id_Restaurant.'&name='.$rName);
       } 
 
 ?>

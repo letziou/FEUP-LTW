@@ -23,8 +23,15 @@
       <h3> Write your review: </h3>
       <form action="/actions/action_createReview.php" id="formReview" method="post" class="postReview">
       <div class="form-content">
-        <input id="Comment" type="comment" name="comment" placeholder="Write your thoughts" />
-        <input id="Score" type="score" name="score" placeholder="score" />
+        <input id="Comment" type="comment" name="comment" placeholder="Write your thoughts"/>
+        <p>Rating: 
+          <select name="score" id="score">
+            <option value="1">1/5</option>
+            <option value="2">2/5</option>
+            <option value="3">3/5</option>
+            <option value="4">4/5</option>
+            <option value="5">5/5</option>
+          </select> 
         <input type="hidden" id="id_Restaurant" type="id_Restaurant" name="id_Restaurant" value=<?=$id_Restaurant?>  />
         </form> 
         </div>
