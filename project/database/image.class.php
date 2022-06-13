@@ -13,33 +13,33 @@
       $this->image = $image;
     }
 
-    static function save_newAddress(PDO $db, string $type, string $image) {
-      $stmt = $db->prepare('INSERT INTO Address (type, image) 
+    static function save_newImage(PDO $db, string $type, string $image) {
+      $stmt = $db->prepare('INSERT INTO Image (type, image) 
                             VALUES (?,?)');
 
       $stmt->execute(array($type, $image));
 
     }
 
-    static function save_AddressEdit(PDO $db) {
-        $stmt = $db->prepare('UPDATE Address SET type = ?, image = ?
+    static function save_ImageEdit(PDO $db) {
+        $stmt = $db->prepare('UPDATE Image SET type = ?, image = ?
                               WHERE id_Image = ?');
   
         $stmt->execute(array($this->id_Image, $this->type, $this->image));
       }
 
-    static function getAddressFromID(PDO $db, int $id_Image) : Image {
+    static function getImagesFromID(PDO $db, int $id_Image) : Image {
         $stmt = $db->prepare('SELECT id_Image, type, image
-                            FROM Address
+                            FROM Image
                             WHERE id_Image = ?');
         $stmt->execute(array($id_Image));
     
         $address = $stmt->fetch();
     
-        return new Address(
-            (int)$address['id_Image'],
-            (string)$address['type'],
-            (string)$address['image']
+        return new Image(
+            (int)$image['id_Image'],
+            (string)$image['type'],
+            (string)$image['image']
         );
       }  
     }
