@@ -39,7 +39,7 @@
     <h2>Your Cart</h2>
     <ul id="#cart_" class="cart-items">
     </ul>
-    <div id="#cart_m" class="cart-math" style="padding-top: 50px;">
+    <div id="#cart_m" class="cart-math" style="padding-top: 20px;">
       <p class="cart-math-item">
         <span class="cart-math-header">Subtotal:</span>
         <span id="#subtotal_tax" class="g-price subtotal"></span>
