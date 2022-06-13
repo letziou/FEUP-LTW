@@ -17,7 +17,7 @@
   </section>
 <?php } ?>
 
-<?php function drawRestaurant(string $restaurantName, array $dishes, int $id_Category) { ?>
+<?php function drawRestaurant(string $restaurantName, array $dishes, int $id_Category, int $id_Restaurant) { ?>
   <h2><?=$restaurantName?></h2>
   <section id="dish-container">
     <ul class="menu-items">
@@ -35,7 +35,7 @@
         </li>  
     <?php } ?>
     <li>
-      <a href="newDish.php">
+      <a href="addDish.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$restaurantName?>">
       <p class="add">Add new Dish</p>
       <i class="fa-regular fa-circle-plus"></i>
     </a>
