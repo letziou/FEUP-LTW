@@ -16,17 +16,17 @@
     $id_Restaurant = $_POST['id_Restaurant'];
     //$type = $_POST['type'];
     $type = ".jpg";
-    $image = $_POST['image']; 
+    $image_path = $_POST['image']; 
 
-    if (!is_dir('images')) mkdir('images');
-    if (!is_dir('images/Food_Images')) mkdir('images/Food_Images');
+    if (!is_dir('../images')) mkdir('../images');
+    if (!is_dir('../images/Food_Images')) mkdir('../images/Food_Images');
     
-    $originalFileName = "images/originals/$image";
+    //$image_path = "images/Food_images/$image";
 
 
-    Image::save_newImage($db, $type, $image);
+    Image::save_newImage($db, $type, $image_path);
     $id_Image = $db -> lastInsertId();
-    Dish::save_newDish($db, $name, (float)$price, $description, (int)$id_Restaurant, (int)$id_Image, $image);
+    Dish::save_newDish($db, $name, (float)$price, $description, (int)$id_Restaurant, (int)$id_Image, $image_path);
     $id_Dish = $db -> lastInsertId();
 
     $newDish = Dish:: getDish($db, (int)$id_Dish);
