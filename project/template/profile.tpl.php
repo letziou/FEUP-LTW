@@ -14,4 +14,9 @@
       <li>Street: <?=$address->street?></li>
     </ul>
   </div>
+  <div class="restButton">
+    <a href="restaurants_owned.php?id=<?=$user->id_User?>">
+    <button>Checkout your restaurants!</button>
+  </a>
+  </div>
 <?php } ?>

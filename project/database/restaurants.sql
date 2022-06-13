@@ -250,7 +250,7 @@ INSERT INTO User VALUES('6','João Almeida','#Test6','João','Almeida','91892912
 INSERT INTO User VALUES('7','Manuel Andrade','#Test7','Manuel','Andrade','918719124','26');   -- Owner of Burguer King S.Mamede
 
 -- Restaurant Owners
-INSERT INTO ROwner VALUES('1','McDonalds Aliados');
+INSERT INTO ROwner VALUES('50','McDonalds Aliados');
 INSERT INTO ROwner VALUES('2','KFC');
 INSERT INTO ROwner VALUES('3','daTerra');
 INSERT INTO ROwner VALUES('4','Extremepita');
@@ -265,7 +265,7 @@ INSERT INTO Category VALUES('3','Healthy','1002');
 INSERT INTO Category VALUES('4','Desert','1003');
 
 --Restaurants
-INSERT INTO Restaurant VALUES('1','McDonalds Imperial','1','1','1','2000');
+INSERT INTO Restaurant VALUES('1','McDonalds Imperial','1','1','50','2000');
 INSERT INTO Restaurant VALUES('2','KFC','1','2','2','2001');
 INSERT INTO Restaurant VALUES('3','daTerra','3','3','3','2002');
 INSERT INTO Restaurant VALUES('4','Extremepita','3','4','4','2003');

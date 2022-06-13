@@ -36,6 +36,14 @@ body>header #signup {
   grid-row: 1;
 }
 
+body>header #logout {
+  grid-column: end;
+  grid-row: 2;
+  margin: auto;
+  position: relative;
+  top: 40%;
+}
+
 body>header #cart {
   grid-column: end;
   grid-row: 2;
@@ -112,7 +120,7 @@ h2 {
   grid-column-start: start;
   grid-column-end: end;
   display: block;
-  grid-row: categories;
+  margin-left: 1em;
 }
 
 #restaurantsections {
@@ -122,7 +130,6 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  grid-row: restaurants;
   margin: 2em;
 }
 
@@ -138,7 +145,6 @@ h2 {
   width: 59%;
   flex-direction: row;
   flex-wrap: wrap;
-  grid-row: restaurants;
   margin-top: 2em;
 }
 
@@ -152,4 +158,5 @@ h2 {
 body>footer {
   grid-column-start: start;
   grid-column-end: end;
+  grid-row: end;
 }

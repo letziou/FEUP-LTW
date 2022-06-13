@@ -102,6 +102,41 @@
 
 <?php } ?>
 
+<?php function drawHeaderProfileRes(Session $session) { ?>
+  <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hasburgui</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="css/profile_style.css" rel="stylesheet">
+    <link href="css/page_layout.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c012e79c3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <header>
+        <div id="logo">
+        <img src="images/hasburgi.png" alt="">
+        </div>
+
+        <?php 
+        if ($session->isLoggedIn()) drawNamedButton($session);
+        else drawSignupButton($session);
+      ?>
+    <div id="goback">
+      <a href="profile.php">
+        <i class="fa-solid fa-arrow-left button"></i>
+      </a>
+    </div>
+    <div id="logout">
+      <a href="/actions/action_logout.php">
+      <button class="button">Logout</button>
+      </a>
+    </div>
+    </header>
+
+<?php } ?>
+
 <?php function drawHeaderRestaurant(Session $session, int $id_Category, int $id_Restaurant, string $name) { ?>
   <!DOCTYPE html>
 <html lang="en-US">
