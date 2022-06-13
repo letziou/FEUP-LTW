@@ -13,12 +13,26 @@
     $name = $_POST['name'];
     $price = $_POST['price'];
     $description = $_POST['description'];
-    $id_Restaurant = $_GET['id_Restaurant'];
-    $type = $_POST['type'];
+    $id_Restaurant = $_POST['id_Restaurant'];
+    //$type = $_POST['type'];
+    $type = ".jpg";
     $image = $_POST['image']; 
+
+    echo $image;
+
+
 
     Image::save_newImage($db, $type, $image);
     $id_Image = $db -> lastInsertId();
-    Dish::save_newDish($db, $name, $price, $description, $id_Restaurant, (int)$id_Image, $image);
+    Dish::save_newDish($db, $name, (float)$price, $description, (int)$id_Restaurant, (int)$id_Image, $image);
+    $id_Dish = $db -> lastInsertId();
+
+    $newDish = Dish:: getDish($db, (int)$id_Dish);
+
+    if ($newDish) {
+      
+        $session->addMessage('Success', 'Dish Created');
+        header('Location: /../index.php');
+      } 
 
 ?>

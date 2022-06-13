@@ -1,17 +1,19 @@
 <?php declare(strict_types = 1);?>
 
 
-<?php function drawAddOnDish(string $restaurantName) { ?>
+<?php function drawAddOnDish(string $restaurantName, int $id_Restaurant) { ?>
   <<div class="addOnbox">
 
     <h1> Add dish to <?=$restaurantName?> </h1>
-    <form action="/actions/action_createDish.php" id="formlog" method="post" class="addOn">
+    <form action="/actions/action_createDish.php" id="formlog" method="post" class="addOn" enctype="multipart/form-data>
     <div class="form-content">
       <input id="name" type="name" name="name" placeholder="Name of Dish" />
       <input id="price" type="price" name="price" placeholder="Price of Dish" />
-      <input id="description" type="description" name="description" placeholder="Description of Dish" />
-      <input id="type" type="type" name="type" placeholder="Type of picture of Dish" />
-      <input id="image" type="image" name="image" placeholder="File of Dish image" />
+      <input id="description" type="description" name="description" placeholder="Description of Dish" />        
+      <label>Upload Image:
+        <input type="file" name="image" >
+      </label>
+      <input type="hidden" id="id_Restaurant" type="id_Restaurant" name="id_Restaurant" value=<?=$id_Restaurant?>  />
       </form> 
       </div>
       <span id=buttons>
