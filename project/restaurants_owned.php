@@ -13,6 +13,6 @@ $db= getDatabaseConnection();
 $restaurants = Restaurant::getRestaurantsFromOwner($db, intval($_GET['id']));
 
     drawHeaderProfileRes($session);
-    drawRestaurantsFromOwner($restaurants);
+    drawRestaurantsFromOwner($restaurants, intval($_GET['id']));
     drawFooter();
   ?>

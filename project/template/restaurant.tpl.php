@@ -17,7 +17,7 @@
   </section>
 <?php } ?>
 
-<?php function drawRestaurantsFromOwner(array $restaurants) { ?>
+<?php function drawRestaurantsFromOwner(array $restaurants, int $id_Owner) { ?>
   <h2>Restaurants :</h2>
   <section id="restaurantsections">
     <?php foreach($restaurants as $restaurant) { ?> 
@@ -28,6 +28,12 @@
       </a>
       </article>
     <?php } ?>
+    <article>
+      <a href="addRestaurant.php?id=<?=$id_Owner?>">
+      <p class="add">Add new Restaurant</p>
+      <i class="fa-regular fa-circle-plus"></i>
+      </a>
+    </article>
   </section>
 <?php } ?>
 
@@ -52,7 +58,7 @@
       <a href="addDish.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$restaurantName?>">
       <p class="add">Add new Dish</p>
       <i class="fa-regular fa-circle-plus"></i>
-    </a>
+      </a>
     </li>
     </ul> 
     <div class="screen-cart">

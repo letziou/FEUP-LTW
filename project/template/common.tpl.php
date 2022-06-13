@@ -210,7 +210,7 @@
     </header>
 <?php } ?>
 
-<?php function drawHeaderAddOns(Session $session, int $id_Category, int $id_Restaurant, string $name) { ?>
+<?php function drawHeaderAddOnDish(Session $session, int $id_Category, int $id_Restaurant, string $name) { ?>
   <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -235,6 +235,35 @@
       ?>
     <div id="goback">
       <a href="restaurant.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$name?>">
+        <i class="fa-solid fa-arrow-left button"></i>
+      </a>
+    </div>
+    </header>
+<?php } ?>
+
+<?php function drawHeaderAddOnRestaurant(Session $session, int $id_Owner) { ?>
+  <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Hasburgui</title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="https://kit.fontawesome.com/4c012e79c3.js" crossorigin="anonymous"></script>
+    <link href="css/profile_style.css" rel="stylesheet">    
+    <link href="css/addOn_layout.css" rel="stylesheet">
+    
+  </head>
+  <body id="food">
+  <header>
+  <div id="logo">
+      <img src="images/hasburgi2.png" alt="hasburgi logo">
+    </div>
+    <?php 
+        if ($session->isLoggedIn()) drawNamedButton($session);
+        else drawSignupButton($session);
+      ?>
+    <div id="goback">
+      <a href="restaurants_owned.php?id=<?=$id_Owner?>">
         <i class="fa-solid fa-arrow-left button"></i>
       </a>
     </div>
