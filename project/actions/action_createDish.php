@@ -18,8 +18,10 @@
     $type = ".jpg";
     $image = $_POST['image']; 
 
-    echo $image;
-
+    if (!is_dir('images')) mkdir('images');
+    if (!is_dir('images/Food_Images')) mkdir('images/Food_Images');
+    
+    $originalFileName = "images/originals/$image";
 
 
     Image::save_newImage($db, $type, $image);
