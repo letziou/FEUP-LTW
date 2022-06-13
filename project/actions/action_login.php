@@ -13,6 +13,8 @@
 
   if ($user) {
     $session->setId_User($user->id_User);
+    $session->setFirstName($user->firstName());
+    $session->setLastName($user->lastName());
     $session->setName($user->fullName());
     $session->addMessage('Success', 'Welcome Back!');
     header('Location: /../index.php');

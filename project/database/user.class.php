@@ -24,6 +24,14 @@
       return $this->fname . ' ' . $this->lname;
     }
 
+    function firstName() {
+      return $this->fname;
+    }
+
+    function lastName() {
+      return $this->lname;
+    }
+
     static function save_newUser(PDO $db, $username, $password, $fname, $lname, $phone, $id_Address ) {
       $stmt = $db->prepare('INSERT INTO User (username, password, fname, lname, phone, id_Address) 
                             VALUES (?,?,?,?,?,?)');
