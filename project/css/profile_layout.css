@@ -87,6 +87,16 @@ body>header #logout {
   padding-left: 16%;
 }
 
+.restButton {
+  grid-column-start: start;
+  grid-column-end: end;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  margin: auto auto auto auto;
+}
 
 body>footer {
   grid-column-start: start;
