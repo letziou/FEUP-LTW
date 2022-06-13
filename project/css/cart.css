@@ -140,14 +140,19 @@ ul {
 
 @media (min-width: 360px) {
   .screen-cart {
-    left: -10px;
-    width: auto;
+    left: -20px;
   }
 }
 
 @media (min-width: 376px) {
   .screen-cart {
     left: -10px;
+  }
+}
+
+@media (min-width: 412px) {
+  .screen-cart {
+    left: -5px;
   }
 }
 
