@@ -25,12 +25,28 @@
       return isset($_SESSION['fullname']) ? $_SESSION['fullname'] : null;
     }
 
+    public function getFirstName() : ?string {
+      return isset($_SESSION['fname']) ? $_SESSION['fname'] : null;
+    }
+
+    public function getLastName() : ?string {
+      return isset($_SESSION['lname']) ? $_SESSION['lname'] : null;
+    }
+
     public function setId_User(int $id_User) {
       $_SESSION['id_User'] = $id_User;
     }
 
     public function setName(string $fullname) {
       $_SESSION['fullname'] = $fullname;
+    }
+
+    public function setFirstName(string $fname) {
+      $_SESSION['fname'] = $fname;
+    }
+
+    public function setLastName(string $lname) {
+      $_SESSION['lname'] = $lname;
     }
 
     public function addMessage(string $type, string $text) {

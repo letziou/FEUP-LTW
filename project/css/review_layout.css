@@ -126,7 +126,7 @@ h2 {
 }
 
 #review-container>article .score:after {
-  content: ' stars!!';
+  content: '/5 stars!!';
 }
 
 #review-container>article p{
