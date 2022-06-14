@@ -31,7 +31,7 @@
             header('Location: /../edit_profile.php');
         }
         else{
-            $user->password = $password_new;
+            $user->save_NewPassword($db, $password_new);
         }
     }
 
