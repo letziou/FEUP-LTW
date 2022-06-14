@@ -63,7 +63,7 @@
 
     static function getOrdersFromRestaurant(PDO $db, int $id_Restaurant) : array {
         $stmt = $db->prepare('SELECT id_Order, price, description, order_status, id_Restaurant, id_User, name as restaurant_name 
-                              FROM Order JOIN Restaurant using (id_Restaurant)
+                              FROM OOrder JOIN Restaurant using (id_Restaurant)
                               WHERE id_Restaurant= ?');
         $stmt->execute(array($id_Restaurant));      
     

@@ -447,6 +447,7 @@ INSERT INTO Dish VALUES('62','Argolas de Cebola','3.50','Redondos, dourados, cro
 --Orders
 INSERT INTO OOrder VALUES('1','14.40','2x BBC Bacon Box Master Zinger','Preparing','2','1');
 INSERT INTO OOrder VALUES('2','4.40','1x Glazed Donut','Preparing','5','50');
+INSERT INTO OOrder VALUES('3','6.40','1x Big Mac','Preparing','1','2');
 
 --Reviews
 INSERT INTO Review VALUES('1','70','1','2022-05-03','Excellent service, yummy food!','5');

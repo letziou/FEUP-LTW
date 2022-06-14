@@ -4,6 +4,15 @@
       require_once(__DIR__ . '/../database/dish.class.php');
 ?>
 
+<?php function drawAnswerOrders(int $id_Restaurant) { ?>
+  <li class="menu-item">
+     <a href="restaurant_orders.php?id=<?=$id_Restaurant?>">
+     <span style="margin-top: 11px; padding: 0.5em;"><i class="fa-solid fa-plus"></i></span>
+     <p class="menu-item-add">Answer Orders</p>
+      </a>
+    </li>
+    <?php } ?>
+
 <?php function drawAddDish(int $id_Category, int $id_Restaurant, string $restaurantName) { ?>
     <li class="menu-item">
       <a href="addDish.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$restaurantName?>"  id="flexy">
@@ -91,7 +100,9 @@
         </li>  
     <?php } 
       if($restaurant->id_Owner == $session->getId_User()) 
-      drawAddDish($restaurant->id_category, $restaurant->id_Restaurant, $restaurant->name);?>
+      drawAddDish($restaurant->id_category, $restaurant->id_Restaurant, $restaurant->name);
+      if($restaurant->id_Owner == $session->getId_User()) 
+      drawAnswerOrders($restaurant->id_Restaurant);?>
     </ul> 
     <?php if($restaurant->id_Owner != $session->getId_User())
             drawCart(); ?>
