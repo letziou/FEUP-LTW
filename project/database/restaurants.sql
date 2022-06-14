@@ -246,7 +246,7 @@ INSERT INTO Category VALUES('4','Desert','1003');
 
 --Restaurants
 INSERT INTO Restaurant VALUES('1','McDonalds Imperial','1','1','50','2000');
-INSERT INTO Restaurant VALUES('2','KFC','1','2','50','2001');
+INSERT INTO Restaurant VALUES('2','KFC','1','2','3','2001');
 INSERT INTO Restaurant VALUES('3','daTerra','3','3','3','2002');
 INSERT INTO Restaurant VALUES('4','Extremepita','3','4','4','2003');
 INSERT INTO Restaurant VALUES('5','Dunkin Donuts','4','5','5','2004');
@@ -446,6 +446,7 @@ INSERT INTO Dish VALUES('62','Argolas de Cebola','3.50','Redondos, dourados, cro
 
 --Orders
 INSERT INTO OOrder VALUES('1','14.40','2x BBC Bacon Box Master Zinger','Preparing','2','1');
+INSERT INTO OOrder VALUES('2','4.40','1x Glazed Donut','Preparing','5','50');
 
 --Reviews
 INSERT INTO Review VALUES('1','70','1','2022-05-03','Excellent service, yummy food!','5');

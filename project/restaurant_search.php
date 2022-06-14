@@ -16,7 +16,6 @@
    
 
     $restaurants = Restaurant::searchRestaurants($db, $search);
-    echo sizeof($restaurants);
     
     drawHeaderRestaurantCat($session,1);
     drawRestaurants($restaurants);

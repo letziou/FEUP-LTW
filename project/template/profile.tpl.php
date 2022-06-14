@@ -21,6 +21,9 @@
     <a href="restaurants_owned.php?id=<?=$user->id_User?>">
       <button>Checkout your restaurants!</button>
     </a>
+    <a href="user_orders.php?id=<?=$user->id_User?>">
+      <button>Check your orders!</button>
+    </a>
   </div>
 <?php } ?>
 
