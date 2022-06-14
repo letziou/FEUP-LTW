@@ -4,7 +4,7 @@
   <<div class="addOnbox">
 
 <h1> Add dish to <?=$restaurantName?> </h1>
-<form action="/actions/action_test.php" method="post" enctype="multipart/form-data">
+<form action="/actions/action_createDish.php" method="post" enctype="multipart/form-data">
   <input id="name" type="name" name="name" placeholder="Name of Dish" />
   <input id="price" type="price" name="price" placeholder="Price of Dish" />
   <input id="description" type="description" name="description" placeholder="Description of Dish" />

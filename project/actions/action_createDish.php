@@ -14,27 +14,29 @@
     $price = $_POST['price'];
     $description = $_POST['description'];
     $id_Restaurant = $_POST['id_Restaurant'];
-    //$type = $_POST['type'];
     $type = ".jpg";
-    $image = $_POST['image']; 
+    $image_path = $name.$type; 
 
-    if (!is_dir('images')) mkdir('images');
-    if (!is_dir('images/Food_Images')) mkdir('images/Food_Images');
-    
-    $originalFileName = "images/originals/$image";
-
-
-    Image::save_newImage($db, $type, $image);
+    Image::save_newImage($db, $type, $image_path);
     $id_Image = $db -> lastInsertId();
-    Dish::save_newDish($db, $name, (float)$price, $description, (int)$id_Restaurant, (int)$id_Image, $image);
+
+    if (!is_dir('../images')) mkdir('../images');
+    if (!is_dir('../images/Food_Images')) mkdir('../images/Food_Images');
+    
+    $originalFileName = "../images/Food_images/$image_path";
+    
+    move_uploaded_file($_FILES['image']['tmp_name'], $originalFileName);
+
+    Dish::save_newDish($db, $name, (float)$price, $description, (int)$id_Restaurant, (int)$id_Image);
     $id_Dish = $db -> lastInsertId();
 
     $newDish = Dish:: getDish($db, (int)$id_Dish);
-
+    
     if ($newDish) {
       
         $session->addMessage('Success', 'Dish Created');
         header('Location: /../index.php');
       } 
+      
 
 ?>
