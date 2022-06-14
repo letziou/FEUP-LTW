@@ -39,7 +39,7 @@
       $stmt = $db->prepare('INSERT INTO User (username, password, fname, lname, phone, id_Address) 
                             VALUES (?,?,?,?,?,?)');
 
-      $stmt->execute(array($username, password_hash($password, PASSWORD_DEFAULT, $options), $fname, $lname, $phone, $id_Address));
+      $stmt->execute(array(strtolower($username), password_hash($password, PASSWORD_DEFAULT, $options), $fname, $lname, $phone, $id_Address));
 
     }
 

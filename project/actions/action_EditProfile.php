@@ -22,7 +22,7 @@
     $phone_new = $_POST['phone'];  
 
     if (!empty($_POST['email'])) {
-        $user->email = $email_new;
+        $user->email = strtolower($email_new);
     }
 
     if (!empty($_POST['password'])) {
