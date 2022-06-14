@@ -13,15 +13,14 @@
       <li>Postal Code: <?=$address->postalCode?> </li>
       <li>Street: <?=$address->street?></li>
     </ul>
-    <span id=buttons>
-    <a href="edit_profile.php">
-    <button class="edit_button"> Edit Profile</button>
-  </span> 
   </div>
   <div class="restButton">
+    <a href="edit_profile.php">
+      <button class="edit_button"> Edit Profile</button>
+    </a>  
     <a href="restaurants_owned.php?id=<?=$user->id_User?>">
-    <button>Checkout your restaurants!</button>
-  </a>
+      <button>Checkout your restaurants!</button>
+    </a>
   </div>
 <?php } ?>
 
