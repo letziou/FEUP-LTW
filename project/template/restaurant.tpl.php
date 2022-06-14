@@ -57,7 +57,7 @@
             <p class="g-price"><?=$dish->price?>€</p> 
             <p class="menu-item-decription"><?=$dish->description?></p>        
           </div>
-          <button onclick="addToCart(['<?=$dish->image_path?>','<?=$dish->name?>',<?=$dish->price?>])"  class="add-button" data-title="<?=$dish->description?>" data-price="<?=$dish->price?>">
+          <button onclick="addToCart(['<?=$dish->image_path?>','<?=$dish->name?>',<?=$dish->price?>,<?=$dish->id_Dish?>])"  class="add-button" data-title="<?=$dish->description?>" data-price="<?=$dish->price?>">
             Add to Cart
           </button>  
         </li>  
@@ -83,6 +83,8 @@
         <span id="#total" class="g-price total"></span>
       </p>
     </div>
+    <?php $inputJSON = file_get_contents('php://input');
+$input = json_decode($inputJSON, TRUE); echo($input);?>
     </div>
   </div> 
   </section>
