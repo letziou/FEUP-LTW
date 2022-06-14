@@ -26,7 +26,7 @@
 
 <?php function drawEditProfile(Session $session, User $user, Address $address) { ?>
   <div id="loginbox">
-  <h2> Edit Profile </h2>
+  <h2> Edit Profile: </h2>
     <form action="/actions/action_EditProfile.php" id="formedit" method="post" class="edit">
       <input id="email" type="text" name="email" placeholder="e-mail">
         <br>
