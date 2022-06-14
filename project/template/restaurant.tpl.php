@@ -95,8 +95,11 @@
             <p class="g-price"><?=$dish->price?>€</p> 
             <p class="menu-item-decription"><?=$dish->description?></p>        
           </div>
+          <button onclick="addToCart(['<?=$dish->image_path?>','<?=$dish->name?>',<?=$dish->price?>,<?=$dish->id_Dish?>])"  class="add-button" data-title="<?=$dish->description?>" data-price="<?=$dish->price?>">
+            Add to Cart
+          </button>
           <?php if($restaurant->id_Owner != $session->getId_User())
-            drawAddtoCart($dish); ?>  
+            drawAddtoCart($dish); ?> 
         </li>  
     <?php } 
       if($restaurant->id_Owner == $session->getId_User()) 
@@ -104,8 +107,58 @@
       if($restaurant->id_Owner == $session->getId_User()) 
       drawAnswerOrders($restaurant->id_Restaurant);?>
     </ul> 
+    <div id="#clean" class="screen-cart">
+    <h2>Your Cart</h2>
+    <ul id="#cart_" class="cart-items">
+    </ul>
+    <div id="#cart_m" class="cart-math" style="padding-top: 20px;">
+      <p class="cart-math-item">
+        <span class="cart-math-header">Subtotal:</span>
+        <span id="#subtotal_tax" class="g-price subtotal"></span>
+      </p>
+      <p class="cart-math-item">
+        <span class="cart-math-header">Tax:</span>
+        <span id="#total_tax" class="g-price tax"></span>
+      </p>
+      <p class="cart-math-item">
+        <span class="cart-math-header">Total:</span>
+        <span id="#total" class="g-price total"></span>
+      </p>
+    </div>
+      <button onclick="purchaseSession()" class="add-prch"> PURCHASE </button>
+    </div>
     <?php if($restaurant->id_Owner != $session->getId_User())
             drawCart(); ?>
   </div> 
   </section>
+  <script type="text/javascript">
+    
+    function purchaseSession() {
+
+      
+      let cart = document.getElementById("#clean")
+      let meter = document.createElement("div");
+      let title = document.createElement("p");
+      let s_time = document.createElement("p");
+      let time = document.createElement("p");      
+      let request = document.createElement("p");
+      cart.innerHTML = ""
+
+      title.className = "title"
+      meter.className = "meter"
+      s_time.className = "s_time"
+      time.className = "time"
+      request.className = "request"
+      title.innerHTML = "Confirming your order..."
+      s_time.innerHTML = "Arrival time:"
+      time.innerHTML = "9:33PM"
+      request.innerHTML = "Thank you so much for your choice! "
+
+      cart.appendChild(meter)
+      cart.appendChild(title)
+      cart.appendChild(s_time)
+      cart.appendChild(time)
+      cart.appendChild(request)
+    }
+  </script>
 <?php } ?>
