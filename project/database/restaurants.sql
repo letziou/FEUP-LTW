@@ -48,7 +48,7 @@ CREATE TABLE Address (
 CREATE TABLE Restaurant (
     id_Restaurant INTEGER PRIMARY KEY,                          -- id for each id_Restaurant
     name VARCHAR,                                               -- restaurant's name
-    id_Category INTEGER REFERENCES Category(id_Category),       -- restaurants's category
+    id_category INTEGER REFERENCES Category(id_Category),       -- restaurants's category
     id_Address INTEGER REFERENCES Address(id_Address),          -- id of
     id_Owner INTEGER REFERENCES ROwner(id_Owner),               -- owner's id of restaurant
     id_Image INTEGER REFERENCES Image(id_Image)                 -- image id of restaurant
