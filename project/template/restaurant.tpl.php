@@ -65,7 +65,7 @@
       if($restaurant->id_Owner == $session->getId_User()) 
       drawAddDish($restaurant->id_category, $restaurant->id_Restaurant, $restaurant->name);?>
     </ul> 
-    <div class="screen-cart">
+    <div id="#clean" class="screen-cart">
     <h2>Your Cart</h2>
     <ul id="#cart_" class="cart-items">
     </ul>
@@ -83,9 +83,38 @@
         <span id="#total" class="g-price total"></span>
       </p>
     </div>
-    <?php $inputJSON = file_get_contents('php://input');
-$input = json_decode($inputJSON, TRUE); echo($input);?>
+      <button onclick="purchaseSession()" class="add-prch"> PURCHASE </button>
     </div>
   </div> 
   </section>
+  <script type="text/javascript">
+    
+    function purchaseSession() {
+
+      
+      let cart = document.getElementById("#clean")
+      let meter = document.createElement("div");
+      let title = document.createElement("p");
+      let s_time = document.createElement("p");
+      let time = document.createElement("p");      
+      let request = document.createElement("p");
+      cart.innerHTML = ""
+
+      title.className = "title"
+      meter.className = "meter"
+      s_time.className = "s_time"
+      time.className = "time"
+      request.className = "request"
+      title.innerHTML = "Confirming your order..."
+      s_time.innerHTML = "Arrival time:"
+      time.innerHTML = "9:33PM"
+      request.innerHTML = "Thank you so much for your choice! "
+
+      cart.appendChild(meter)
+      cart.appendChild(title)
+      cart.appendChild(s_time)
+      cart.appendChild(time)
+      cart.appendChild(request)
+    }
+  </script>
 <?php } ?>

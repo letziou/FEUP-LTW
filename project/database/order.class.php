@@ -9,7 +9,7 @@
     public int $id_Restaurant;
     public int $id_User;
 
-    public function __construct(int $id_Order, float $price, string $description, string $order_status int $id_Restaurant, int $id_User)
+    public function __construct(int $id_Order, float $price, string $description, string $order_status ,int $id_Restaurant, int $id_User)
     {
       $this->id_Order = $id_Order;
       $this->price = $price;
