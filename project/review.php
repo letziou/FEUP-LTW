@@ -13,7 +13,6 @@ $db= getDatabaseConnection();
 $reviews = Review::getReviewsFromRes($db, intval($_GET['id']));
 
 drawHeaderReviews($session, intval($_GET['cat']), intval($_GET['id']), $_GET['name']);
-drawReviews($_GET['name'], $reviews);
-drawReviewForm($session, intval($_GET['id']));
+drawReviews($session, intval($_GET['id']), $_GET['name'], $reviews);
 drawFooter();
  ?>

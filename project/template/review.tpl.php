@@ -3,7 +3,7 @@
       require_once('util/session.php');
 ?>
 
-<?php function drawReviews(string $restaurantName, array $reviews) { ?>
+<?php function drawReviews(Session $session, int $id_Restaurant, string $restaurantName, array $reviews) { ?>
   <h2>Reviews about <?=$restaurantName?></h2>
   <section id="review-container">
       <?php foreach ($reviews as $review) { ?>
@@ -15,7 +15,8 @@
       </article>  
     <?php } ?> 
   </section>
-<?php } ?>
+  <?php if (!$session->isLoggedIn()) drawReviewForm($session, $id_Restaurant);
+    } ?>
 
 <?php function drawReviewForm(Session $session, int $id_Restaurant) { ?>
     <div class="reviewForm">
