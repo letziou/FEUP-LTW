@@ -1,6 +1,36 @@
 <?php declare(strict_types = 1); 
   require_once('util/session.php');?>
 
+<?php function drawIndex() { ?>
+  <section id="foodsections">
+      <article class="container">
+        <a href="restaurant_category.php?id=1">
+        <img src="images/fast.png" alt="">
+        <p> Fast Food </p>
+      </a>
+      </article>
+
+      <article>
+        <a href="restaurant_category.php?id=2">
+        <img src="images/casual.png" alt="">
+        <p> Casual Dining</p>
+        </a>
+    </article>
+      <article>
+      <a href="restaurant_category.php?id=3">
+        <img src="images/healthy.png" alt="">
+        <p> Healthy</p>
+      </a>
+      </article>
+      <article>
+        <a href="restaurant_category.php?id=4">
+        <img src="images/desserts.png" alt="">
+        <p> Desserts</p>
+        </a>
+      </article>
+    </section>
+<?php } ?>
+
 <?php function drawNamedButton(Session $session) { ?>
 
   <div id="signup">
@@ -18,6 +48,15 @@
       </a>
 </div>
 <?php } ?>
+
+<?php function drawSearchBar() { ?>
+  <div id="searchbar">
+        <form action="restaurant_search.php" method="GET" class="searchbarFlex">
+        <input type="text" name="search" placeholder="Search Restaurant" class="searchbar">
+      </div>
+ 
+   <?php } ?>
+
 
 <?php function pickCSSType(int $id_Category) { 
   switch ($id_Category){ 
@@ -61,11 +100,10 @@
       ?>
 
     </header>
-    <div id="searchbar">
-        <input type="text" placeholder="Search Food" class="searchbar">
-      </div>
+    
+<?php drawSearchBar();
 
-<?php } ?>
+ } ?>
 
 <?php function drawHeaderProfile(Session $session) { ?>
   <!DOCTYPE html>
@@ -173,11 +211,9 @@
       </a>  
     </div>
     </header>
-    <div id="searchbar">
-        <input type="text" placeholder="Search Food" class="searchbar">
-    </div>
+    <?php drawSearchBar();
 
-<?php } ?>
+  } ?>
 
 <?php function drawHeaderReviews(Session $session, int $id_Category, int $id_Restaurant, string $name) { ?>
   <!DOCTYPE html>
@@ -301,11 +337,9 @@
       </a>
     </div>
     </header>
-    <div id="searchbar">
-        <input type="text" placeholder="Search Food" class="searchbar">
-    </div>
+    <?php drawSearchBar();
 
-<?php } ?>
+} ?>
 
 <?php function drawHeaderLogin(Session $session) { ?>
   <!DOCTYPE html>

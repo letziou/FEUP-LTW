@@ -21,6 +21,29 @@
       $this->image_path =$image_path;
     }
 
+    static function searchRestaurants(PDO $db, string $search) : array {
+      $num = 1;
+      $stmt = $db->prepare('SELECT id_Restaurant, name, id_category, id_Address, id_Owner, id_Image, image as image_path
+                            FROM Restaurant JOIN Image using (id_Image)
+                            WHERE name LIKE ? ');
+      $stmt->execute(array('%'. $search .'%'));
+  
+      $restaurants = array();
+      while ($restaurant = $stmt->fetch()) {
+        $restaurants[] = new Restaurant(
+          (int)$restaurant['id_Restaurant'],
+          (string)$restaurant['name'],
+          (int)$restaurant['id_category'],
+          (int)$restaurant['id_Address'],
+          (int)$restaurant['id_Owner'],
+          (int)$restaurant['id_Image'],
+          (string)$restaurant['image_path']         
+        );
+      }
+  
+      return $restaurants;
+    }
+
     static function save_newRestaurant(PDO $db, $name, $id_category,  $id_Address,  $id_Owner, $id_Image) {
       $stmt = $db->prepare('INSERT INTO Restaurant (name, id_category, id_Address, id_Owner, id_Image) 
                             VALUES (?,?,?,?,?)');
@@ -52,7 +75,7 @@
 
     static function getRestaurantsFromOwner(PDO $db, int $id_Own) : array {
       $stmt = $db->prepare('SELECT id_Restaurant, name, id_category, id_Address, id_Owner, id_Image, image as image_path
-                            FROM Restaurant JOIN Image using (id_image)
+                            FROM Restaurant JOIN Image using (id_Image)
                             WHERE id_Owner= ?');
       $stmt->execute(array($id_Own));
       
@@ -65,8 +88,7 @@
           (int)$restaurant['id_Address'],
           (int)$restaurant['id_Owner'],
           (int)$restaurant['id_Image'],
-          (string)$restaurant['image_path']
-          
+          (string)$restaurant['image_path']          
         );
       }
   

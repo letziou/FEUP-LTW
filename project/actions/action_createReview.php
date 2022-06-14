@@ -12,8 +12,7 @@
   $db = getDatabaseConnection();
 
 
-
-    $text = $_POST['comment'];
+    $text = htmlentities($_POST['comment']);
     $score = $_POST['score'];
     $id_User = $session -> getId_User();
     $fname = $session -> getFirstName();

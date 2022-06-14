@@ -10,9 +10,9 @@
 
   $db = getDatabaseConnection();
 
-    $name = $_POST['name'];
+    $name = htmlentities($_POST['name']);
     $price = $_POST['price'];
-    $description = $_POST['description'];
+    $description = htmlentities($_POST['description']);
     $id_Restaurant = $_POST['id_Restaurant'];
     $type = ".jpg";
     $image_path = $name.$type; 

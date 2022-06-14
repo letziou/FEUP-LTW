@@ -133,9 +133,33 @@ h2 {
   margin-top: 2.5em;
 }
 
+.block,
+.reviewForm{
+  grid-column-start: start;
+  grid-column-end: end;
+  grid-row: footer;
+  position: relative;
+  text-align: center;
+  max-width: 15em;
+  max-height: 15em;
+  margin: 2em;
+  width: 100%;
+  background-color: #FFF;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
+  transition: width 20s;
+}
+
+@media(max-width: 500px) {
+  .reviewForm {
+    margin: 2em auto 2em auto;
+  }
+}
+
 /*footer*/
 body>footer {
   grid-column-start: start;
   grid-column-end: end;
-  grid-row-end: end;
+  grid-row: end;
 }

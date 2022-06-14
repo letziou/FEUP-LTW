@@ -7,7 +7,6 @@ DROP TABLE IF EXISTS Dish;
 DROP TABLE IF EXISTS Review;
 DROP TABLE IF EXISTS OOrder;
 DROP TABLE IF EXISTS Restaurant;
-DROP TABLE IF EXISTS ROwner;
 DROP TABLE IF EXISTS User;
 
 
@@ -23,13 +22,6 @@ CREATE TABLE User (
     lname VARCHAR,                                          -- user's last name
     phone INTEGER,                                          -- user's phone number
     id_Address INTEGER REFERENCES Address(id_Address)       -- user's address
-);
-
-
-CREATE TABLE ROwner (
-    id_Owner INTEGER REFERENCES User(id_User),              -- restaurant owner id given by website
-    companyName VARCHAR,                                    -- company who's owner owns
-    PRIMARY KEY(id_Owner)
 );
 
 CREATE TABLE Image (
@@ -49,8 +41,8 @@ CREATE TABLE Restaurant (
     id_Restaurant INTEGER PRIMARY KEY,                          -- id for each id_Restaurant
     name VARCHAR,                                               -- restaurant's name
     id_category INTEGER REFERENCES Category(id_Category),       -- restaurants's category
-    id_Address INTEGER REFERENCES Address(id_Address),          -- id of
-    id_Owner INTEGER REFERENCES ROwner(id_Owner),               -- owner's id of restaurant
+    id_Address INTEGER REFERENCES Address(id_Address),          -- id of address
+    id_Owner INTEGER REFERENCES User(id_User),               -- id of restaurant Owner
     id_Image INTEGER REFERENCES Image(id_Image)                 -- image id of restaurant
 );
 
@@ -217,46 +209,34 @@ INSERT INTO Address VALUES('90','Lisboa','1300-110','Rua Cabo Manuel Leitão');
 
 -- Normal Users
 
-INSERT INTO User VALUES('50','Manuel Ferreira','#Test50','Manuel','Ferreira','911129898','70');
-INSERT INTO User VALUES('51','Manuel Pinho','#Test51','Manuel','Pinho','911229898','71');
-INSERT INTO User VALUES('52','Ricardo Ferreira','#Test52','Ricardo','Ferreira','921129898','72');
-INSERT INTO User VALUES('53','José Teles','#Test53','José','Teles','931129898','73');
-INSERT INTO User VALUES('54','Gustavo Alves','#Test54','Gustavo','Alves','913229898','74');
-INSERT INTO User VALUES('55','Mateus Alves','#Test55','Mateus','Alves','913339898','75');
-INSERT INTO User VALUES('56','Alexandre Bessa','#Test56','Alexandre','Bessa','914429898','76');
-INSERT INTO User VALUES('57','Luis Henrique','#Test57','Luis','Henrique','915529898','77');
-INSERT INTO User VALUES('58','Laéticia Almeida','#Test58','Laéticia','Almeida','911129448','78');
-INSERT INTO User VALUES('59','Maria Pinho','#Test59','Maria','Pinho','917729898','79');
-INSERT INTO User VALUES('60','Marcia Almeida','#Test60','Marcia','Almeida','971129898','80');
-INSERT INTO User VALUES('61','Catarina Silva','#Test61','Catarina','Silva','911128828','81');
-INSERT INTO User VALUES('62','Pedro Ferreira','#Test62','Pedro','Ferreira','911129863','82');
-INSERT INTO User VALUES('63','João Esteves','#Test63','João','Esteves','984129898','83');
-INSERT INTO User VALUES('64','Miralis Pin','#Test64','Miralis','Pin','911519898','84');
-INSERT INTO User VALUES('65','John Lopes','#Test65','John','Lopes','911555598','85');
-INSERT INTO User VALUES('66','Micael Carreira','#Test66','Micael','Carreira','916669898','86');
-INSERT INTO User VALUES('67','Vladimir Rip','#Test67','Vladimir','Rip','911100098','87');
-INSERT INTO User VALUES('68','Jenifer Lopes','#Test68','Jenifer','Lopes','910000008','88');
-INSERT INTO User VALUES('69','Brad Pit','#Test69','Brad','Pit','910983898','89');
-INSERT INTO User VALUES('70','Mila Reguila','#Test70','Mila','Reguila','915555558','90');
-
-
--- Users (Restaurant Owners)
-INSERT INTO User VALUES('1','Joana Valente','#Test1','Joana','Valente','918929898','20');     -- Owner of Macdonalds Circunvalação
-INSERT INTO User VALUES('2','Diogo Almeida','#Test2','Diogo','Almeida','918929892','21');     -- Owner of Adega Soares
-INSERT INTO User VALUES('3','Jorge Duarte','#Test3','Jorge','Duarte','918929843','22');       -- Owner of Soul Food
-INSERT INTO User VALUES('4','Carlos Sousa','#Test4','Carlos','Sousa','918929223','23');       -- Owner of 100culpa
-INSERT INTO User VALUES('5','João Sousa','#Test5','João','Sousa','918929123','24');           -- Owner of Rocinha
-INSERT INTO User VALUES('6','João Almeida','#Test6','João','Almeida','918929124','25');       -- Owner of Burguer King S.Mamede
-INSERT INTO User VALUES('7','Manuel Andrade','#Test7','Manuel','Andrade','918719124','26');   -- Owner of Burguer King S.Mamede
-
--- Restaurant Owners
-INSERT INTO ROwner VALUES('50','McDonalds Aliados');
-INSERT INTO ROwner VALUES('2','KFC');
-INSERT INTO ROwner VALUES('3','daTerra');
-INSERT INTO ROwner VALUES('4','Extremepita');
-INSERT INTO ROwner VALUES('5','Dunkin Donuts');
-INSERT INTO ROwner VALUES('6','Burguer King S.Mamede');
-INSERT INTO ROwner VALUES('7','Burguer King Colombo');
+INSERT INTO User VALUES('50','manuelferreira@teste.com','$2y$12$q2RXhFJBc8CemAwb.JBRw.lRspWu5W86eML6PGAwzlhoz9ynWtKVu','Manuel','Ferreira','911129898','70');
+INSERT INTO User VALUES('51','manuelpinho','#Test51','Manuel','Pinho','911229898','71');
+INSERT INTO User VALUES('52','ricardoferreira','#Test52','Ricardo','Ferreira','921129898','72');
+INSERT INTO User VALUES('53','joseteles','#Test53','José','Teles','931129898','73');
+INSERT INTO User VALUES('54','gustavoalves','#Test54','Gustavo','Alves','913229898','74');
+INSERT INTO User VALUES('55','mateusalves','#Test55','Mateus','Alves','913339898','75');
+INSERT INTO User VALUES('56','alexandrebessa','#Test56','Alexandre','Bessa','914429898','76');
+INSERT INTO User VALUES('57','luishenrique','#Test57','Luis','Henrique','915529898','77');
+INSERT INTO User VALUES('58','laeticiaalmeida','#Test58','Laéticia','Almeida','911129448','78');
+INSERT INTO User VALUES('59','mariapinho','#Test59','Maria','Pinho','917729898','79');
+INSERT INTO User VALUES('60','marciaalmeida','#Test60','Marcia','Almeida','971129898','80');
+INSERT INTO User VALUES('61','catarinasilva','#Test61','Catarina','Silva','911128828','81');
+INSERT INTO User VALUES('62','pedroferreira','#Test62','Pedro','Ferreira','911129863','82');
+INSERT INTO User VALUES('63','joaoesteves','#Test63','João','Esteves','984129898','83');
+INSERT INTO User VALUES('64','miralispin','#Test64','Miralis','Pin','911519898','84');
+INSERT INTO User VALUES('65','johnlopes','#Test65','John','Lopes','911555598','85');
+INSERT INTO User VALUES('66','micaelcarreira','#Test66','Micael','Carreira','916669898','86');
+INSERT INTO User VALUES('67','vladimirrip','#Test67','Vladimir','Rip','911100098','87');
+INSERT INTO User VALUES('68','jeniferlopes','#Test68','Jenifer','Lopes','910000008','88');
+INSERT INTO User VALUES('69','bradpit','#Test69','Brad','Pit','910983898','89');
+INSERT INTO User VALUES('70','milareguila','#Test70','Mila','Reguila','915555558','90');
+INSERT INTO User VALUES('1','joanavalente','#Test1','Joana','Valente','918929898','20');      
+INSERT INTO User VALUES('2','diogoalmeida','#Test2','Diogo','Almeida','918929892','21');      
+INSERT INTO User VALUES('3','jorgeduarte','#Test3','Jorge','Duarte','918929843','22');        
+INSERT INTO User VALUES('4','carlossousa','#Test4','Carlos','Sousa','918929223','23');       
+INSERT INTO User VALUES('5','joaosousa','#Test5','João','Sousa','918929123','24');           
+INSERT INTO User VALUES('6','joaoalmeida','#Test6','João','Almeida','918929124','25');        
+INSERT INTO User VALUES('7','manuelandrade','#Test7','Manuel','Andrade','918719124','26'); 
 
 -- Different types of categories
 INSERT INTO Category VALUES('1','Fast-Food','1000');
@@ -266,7 +246,7 @@ INSERT INTO Category VALUES('4','Desert','1003');
 
 --Restaurants
 INSERT INTO Restaurant VALUES('1','McDonalds Imperial','1','1','50','2000');
-INSERT INTO Restaurant VALUES('2','KFC','1','2','2','2001');
+INSERT INTO Restaurant VALUES('2','KFC','1','2','3','2001');
 INSERT INTO Restaurant VALUES('3','daTerra','3','3','3','2002');
 INSERT INTO Restaurant VALUES('4','Extremepita','3','4','4','2003');
 INSERT INTO Restaurant VALUES('5','Dunkin Donuts','4','5','5','2004');
@@ -466,6 +446,8 @@ INSERT INTO Dish VALUES('62','Argolas de Cebola','3.50','Redondos, dourados, cro
 
 --Orders
 INSERT INTO OOrder VALUES('1','14.40','2x BBC Bacon Box Master Zinger','Preparing','2','1');
+INSERT INTO OOrder VALUES('2','4.40','1x Glazed Donut','Preparing','5','50');
+INSERT INTO OOrder VALUES('3','6.40','1x Big Mac','Preparing','1','2');
 
 --Reviews
 INSERT INTO Review VALUES('1','70','1','2022-05-03','Excellent service, yummy food!','5');

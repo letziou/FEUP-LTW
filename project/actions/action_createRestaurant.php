@@ -12,11 +12,11 @@
   $db = getDatabaseConnection();
 
     $id_Owner=$session->getId_User();
-    $name = $_POST['name'];
+    $name = htmlentities($_POST['name']);
     $category = $_POST['category'];
-    $street = $_POST['street'];
-    $city = $_POST['city'];
-    $postalCode = $_POST['postalCode'];
+    $street = htmlentities($_POST['street']);
+    $city = htmlentities($_POST['city']);
+    $postalCode = htmlentities($_POST['postalCode']);
     $type = ".jpg";
     $image_path = $name.$type;
 

@@ -95,20 +95,97 @@ body>header #logout {
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  margin: auto auto auto auto;
+  margin: auto auto 1em auto;
 }
 
-body>footer {
+.restButton > a {
+  margin: 0 auto 0 auto;
+}
+
+#loginbox {
   grid-column-start: start;
   grid-column-end: end;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  margin: 5em auto 3em auto;
+  width: 90%;
+  background-color: #FFF;
+  padding: 1em;
+  border-radius: 10px;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+#order-container {
+  grid-column-start: start;
+  grid-column-end: end;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  margin: 5em auto 1em auto;
+}
+
+@media(max-width: 540px) {
+  #loginbox {
+    max-width: 300px;
+  }
+}
+
+form input {
+  color: #354047;
+  background-color: #e8eeef;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  border: none;
+  vertical-align: top;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 1em;
+  margin-bottom: 1.2em;
+  margin-left: 19px;
+  width: 83%;
+  height: 5%;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form input:last-child {
+  margin-top: 10px;
+}
+
+#buttons {
+  margin-top: 8px;
+}
+
+#buttons>button {
+  font-weight: 600;
+  text-align: center;
+  font-size: 19px;
+  color: #FFF;
+  vertical-align: top;
+  margin: 1.5em 0 0.8em 0.8em; 
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  line-height: 1.2;
+  padding: 1em;
+  width: 90%;
+  height: 62px;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  background-color: #354047;
 }
 
 /*footer*/
 body>footer {
   grid-column-start: start;
   grid-column-end: end;
+  grid-row: end;
 }
