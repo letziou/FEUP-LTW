@@ -49,6 +49,7 @@
       return $this->id_Address;
     }
 
+
     static function getRestaurantsFromOwner(PDO $db, int $id_Own) : array {
       $stmt = $db->prepare('SELECT id_Restaurant, name, id_category, id_Address, id_Owner, id_Image, image as image_path
                             FROM Restaurant JOIN Image using (id_image)
@@ -77,8 +78,6 @@
                               FROM Restaurant JOIN Image using (id_image)
                               WHERE id_Category= ?');
         $stmt->execute(array($id_cat));
-        
-
         
     
         $restaurants = array();

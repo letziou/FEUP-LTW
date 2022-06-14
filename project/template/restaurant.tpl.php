@@ -3,6 +3,15 @@
       require_once('database/dish.class.php');
 ?>
 
+<?php function drawAddDish(int $id_Category, int $id_Restaurant, string $restaurantName) { ?>
+    <li>
+      <a href="addDish.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$restaurantName?>">
+      <p class="add">Add new Dish</p>
+      <i class="fa-regular fa-circle-plus"></i>
+      </a>
+    </li>
+<?php } ?>
+
 <?php function drawRestaurants(array $restaurants) { ?>
   <h2>Restaurants :</h2>
   <section id="restaurantsections">
@@ -37,8 +46,8 @@
   </section>
 <?php } ?>
 
-<?php function drawRestaurant(string $restaurantName, array $dishes, int $id_Category, int $id_Restaurant) { ?>
-  <h2><?=$restaurantName?></h2>
+<?php function drawRestaurant(Session $session, array $dishes, Restaurant $restaurant) { ?>
+  <h2><?=$restaurant->name?></h2>
   <section id="dish-container">
     <ul class="menu-items">
       <?php foreach ($dishes as $dish) { ?>
@@ -53,13 +62,9 @@
             Add to Cart
           </button>  
         </li>  
-    <?php } ?>
-    <li>
-      <a href="addDish.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$restaurantName?>">
-      <p class="add">Add new Dish</p>
-      <i class="fa-regular fa-circle-plus"></i>
-      </a>
-    </li>
+    <?php } 
+      if($restaurant->id_Owner == $session->getId_User()) 
+      drawAddDish($restaurant->id_category, $restaurant->id_Restaurant, $restaurant->name);?>
     </ul> 
     <div class="screen-cart">
     <h2>Your Cart</h2>
