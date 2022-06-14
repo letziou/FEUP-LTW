@@ -13,12 +13,12 @@
   $user = User::getUser($db, $session->getId_User());
   $address = Address::getAddressFromID($db, (int)$user->id_Address);
 
-    $email_new = $_POST['email'];
+    $email_new = htmlentities($_POST['email']);
     $password_new = $_POST['password'];
     $password2_new = $_POST['confirm_password'];
-    $street_new = $_POST['street'];
-    $city_new = $_POST['city'];
-    $postalCode_new = $_POST['postalCode'];
+    $street_new = htmlentities($_POST['street']);
+    $city_new = htmlentities($_POST['city']);
+    $postalCode_new = htmlentities($_POST['postalCode']);
     $phone_new = $_POST['phone'];  
 
     if (!empty($_POST['email'])) {

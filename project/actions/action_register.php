@@ -12,14 +12,14 @@
 
 
 
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
+    $fname = htmlentities($_POST['fname']);
+    $lname = htmlentities($_POST['lname']);
     $email = $_POST['email'];
     $password = $_POST['password'];
     $password2 = $_POST['confirm_password'];
-    $street = $_POST['street'];
-    $city = $_POST['city'];
-    $postalCode = $_POST['postalCode'];
+    $street = htmlentities($_POST['street']);
+    $city = htmlentities($_POST['city']);
+    $postalCode = htmlentities($_POST['postalCode']);
     $phone = $_POST['phone'];  
 
     if($password != $password2 ){
@@ -38,10 +38,7 @@
         $session->setId_User($newUser->id_User);
         $session->setName($newUser->fullName());
         $session->addMessage('Success', 'Account Created');
-        $options = ['cost' =>12];
-        echo password_hash($password, PASSWORD_DEFAULT,$options);
-
-        //header('Location: /../profile.php');
+        header('Location: /../profile.php');
       } 
 
 ?>
