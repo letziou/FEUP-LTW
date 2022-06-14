@@ -209,7 +209,7 @@ INSERT INTO Address VALUES('90','Lisboa','1300-110','Rua Cabo Manuel Leitão');
 
 -- Normal Users
 
-INSERT INTO User VALUES('50','Manuel Ferreira','#Test50','Manuel','Ferreira','911129898','70');
+INSERT INTO User VALUES('50','manuelferreira@teste.com','$2y$12$q2RXhFJBc8CemAwb.JBRw.lRspWu5W86eML6PGAwzlhoz9ynWtKVu','Manuel','Ferreira','911129898','70');
 INSERT INTO User VALUES('51','Manuel Pinho','#Test51','Manuel','Pinho','911229898','71');
 INSERT INTO User VALUES('52','Ricardo Ferreira','#Test52','Ricardo','Ferreira','921129898','72');
 INSERT INTO User VALUES('53','José Teles','#Test53','José','Teles','931129898','73');

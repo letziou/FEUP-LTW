@@ -38,7 +38,10 @@
         $session->setId_User($newUser->id_User);
         $session->setName($newUser->fullName());
         $session->addMessage('Success', 'Account Created');
-        header('Location: /../profile.php');
+        $options = ['cost' =>12];
+        echo password_hash($password, PASSWORD_DEFAULT,$options);
+
+        //header('Location: /../profile.php');
       } 
 
 ?>

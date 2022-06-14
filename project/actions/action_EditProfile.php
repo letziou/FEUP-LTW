@@ -22,7 +22,7 @@
     $phone_new = $_POST['phone'];  
 
     if (!empty($_POST['email'])) {
-        $user->email = $email_new;
+        $user->email = strtolower($email_new);
     }
 
     if (!empty($_POST['password'])) {
@@ -31,7 +31,7 @@
             header('Location: /../edit_profile.php');
         }
         else{
-            $user->password = $password_new;
+            $user->save_NewPassword($db, $password_new);
         }
     }
 
