@@ -15,7 +15,7 @@
       </article>  
     <?php } ?> 
   </section>
-  <?php if (!$session->isLoggedIn()) drawReviewForm($session, $id_Restaurant);
+  <?php if ($session->isLoggedIn()) drawReviewForm($session, $id_Restaurant);
     } ?>
 
 <?php function drawReviewForm(Session $session, int $id_Restaurant) { ?>
