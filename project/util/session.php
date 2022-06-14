@@ -1,10 +1,11 @@
 <?php
   class Session {
     private array $messages;
+    private array $cart;
 
     public function __construct() {
       session_start();
-
+      $_SESSION['cart']=array();
       $this->messages = isset($_SESSION['messages']) ? $_SESSION['messages'] : array();
       unset($_SESSION['messages']);
     }
@@ -52,6 +53,21 @@
     public function addMessage(string $type, string $text) {
       $_SESSION['messages'][] = array('type' => $type, 'text' => $text);
     }
+
+    public function addCart(int $id) {
+      array_push($_SESSION['cart'], $id);
+      echo $id;
+    }
+
+    /*public function printCart() {
+      $max=sizeof($_SESSION['cart']);
+      for($i=0; $i<$max; $i++) { 
+      while (list ($key, $val) = each ($_SESSION['cart'][$i])) { 
+        echo "$key -> $val ,"; 
+      } // inner array while loop
+      echo "<br>";  
+      } 
+    }*/
 
     public function getMessages() {
       return $this->messages;

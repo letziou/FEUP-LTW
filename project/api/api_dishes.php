@@ -9,8 +9,18 @@
 
   $db = getDatabaseConnection();
 
-  // continuar get dish quando, o resto das cenas fica no script.js, e no api ( seguir restivo) 
-  $dish = Dish::getDish($db, intval($_GET['id_Dish']));
+  $json = file_get_contents('php://input');
+  $data = json_decode($json, TRUE);
+  foreach($data["ids"] as $dish_id){
+    $dish = Dish::getDish($db, intval($dish_id));
+    //echo intval($dish);
+    $session->addCart(intval($dish->dish_id));
+  }   
 
+  
+
+  //echo($data);
   echo json_encode($dish);
+  
+  
 ?>
