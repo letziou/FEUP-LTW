@@ -40,11 +40,11 @@
 
     }
 
-    static function save_editUser($db) {
-      $stmt = $db->prepare('UPDATE Customer SET fname = ?, lname = ?, phone = ?
+    function save_editUser($db) {
+      $stmt = $db->prepare('UPDATE User SET username = ?, password = ?, phone = ?
                             WHERE id_User = ?');
 
-      $stmt->execute(array($this->fname, $this->lname, $this->phone, $this->id_User));
+      $stmt->execute(array($this->username, $this->password, $this->phone, $this->id_User));
     }
 
    

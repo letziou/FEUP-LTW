@@ -23,11 +23,11 @@
 
     }
 
-    static function save_AddressEdit(PDO $db) {
+    function save_AddressEdit(PDO $db) {
         $stmt = $db->prepare('UPDATE Address SET city = ?, postalCode = ?, street = ?
                               WHERE id_Address = ?');
   
-        $stmt->execute(array($this->id_Address, $this->city, $this->postalCode, $this->street));
+        $stmt->execute(array($this->city, $this->postalCode, $this->street, $this->id_Address));
       }
 
     static function getAddressFromID(PDO $db, int $id_Address) : Address {
