@@ -123,6 +123,10 @@ body>header #cart {
   box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
+.addOnbox > h1 {
+  text-align: center;
+}
+
 form input {
   color: #354047;
   background-color: #e8eeef;
@@ -133,12 +137,35 @@ form input {
   border-radius: 4px;
   padding: 1em;
   margin-bottom: 1.2em;
-  margin-left: 1em;
+  margin-left: 19px;
   width: 83%;
   height: 5%;
 }
 
 form input:focus {
+  outline: none;
+}
+
+form input:last-child {
+  margin-top: 10px;
+}
+
+form select {
+  color: #354047;
+  background-color: #e8eeef;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  border: none;
+  vertical-align: top;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 1em;
+  margin-bottom: 1.2em;
+  margin-left: 19px;
+  width: 88%;
+  height: 5%;
+}
+
+form select:focus {
   outline: none;
 }
 

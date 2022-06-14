@@ -21,13 +21,18 @@
 
 
 <?php function drawAddOnRestaurant() { ?>
-  <<div class="addOnbox">
+  <div class="addOnbox">
 
     <h1> Add Restaurant</h1>
     <form action="/actions/action_createRestaurant.php" method="post" class="addOn" enctype="multipart/form-data">
     <div class="form-content">
       <input id="name" type="name" name="name" placeholder="Name of restaurant" />
-      <input id="category" type="category" name="category" placeholder="category" />
+      <select name="category">
+        <option value="1" selected>Fast-Food</option>
+        <option value="2">Casual Dining</option>
+        <option value="3">Healthy</option>
+        <option value="4">Desert</option>
+      </select>
       <input id="street" type="street" name="street" placeholder="Street of restaurant" />
       <input id="city" type="city" name="city" placeholder="City of restaurant" />
       <input id="postalCode" type="postalCode" name="postalCode" placeholder="Postal code of restaurant" />

@@ -12,6 +12,34 @@
     </li>
 <?php } ?>
 
+<?php function drawAddtoCart(dish $dish) { ?>
+  <button onclick="addToCart(['<?=$dish->image_path?>','<?=$dish->name?>',<?=$dish->price?>])"  class="add-button" data-title="<?=$dish->description?>" data-price="<?=$dish->price?>">
+            Add to Cart
+          </button>
+<?php } ?>
+
+<?php function drawCart() { ?>
+  <div class="screen-cart">
+    <h2>Your Cart</h2>
+    <ul id="#cart_" class="cart-items">
+    </ul>
+    <div id="#cart_m" class="cart-math" style="padding-top: 20px;">
+      <p class="cart-math-item">
+        <span class="cart-math-header">Subtotal:</span>
+        <span id="#subtotal_tax" class="g-price subtotal"></span>
+      </p>
+      <p class="cart-math-item">
+        <span class="cart-math-header">Tax:</span>
+        <span id="#total_tax" class="g-price tax"></span>
+      </p>
+      <p class="cart-math-item">
+        <span class="cart-math-header">Total:</span>
+        <span id="#total" class="g-price total"></span>
+      </p>
+    </div>
+    </div>
+<?php } ?>
+
 <?php function drawRestaurants(array $restaurants) { ?>
   <h2>Restaurants :</h2>
   <section id="restaurantsections">
@@ -57,33 +85,15 @@
             <p class="g-price"><?=$dish->price?>€</p> 
             <p class="menu-item-decription"><?=$dish->description?></p>        
           </div>
-          <button onclick="addToCart(['<?=$dish->image_path?>','<?=$dish->name?>',<?=$dish->price?>])"  class="add-button" data-title="<?=$dish->description?>" data-price="<?=$dish->price?>">
-            Add to Cart
-          </button>  
+          <?php if($restaurant->id_Owner != $session->getId_User())
+            drawAddtoCart($dish); ?>  
         </li>  
     <?php } 
       if($restaurant->id_Owner == $session->getId_User()) 
       drawAddDish($restaurant->id_category, $restaurant->id_Restaurant, $restaurant->name);?>
     </ul> 
-    <div class="screen-cart">
-    <h2>Your Cart</h2>
-    <ul id="#cart_" class="cart-items">
-    </ul>
-    <div id="#cart_m" class="cart-math" style="padding-top: 20px;">
-      <p class="cart-math-item">
-        <span class="cart-math-header">Subtotal:</span>
-        <span id="#subtotal_tax" class="g-price subtotal"></span>
-      </p>
-      <p class="cart-math-item">
-        <span class="cart-math-header">Tax:</span>
-        <span id="#total_tax" class="g-price tax"></span>
-      </p>
-      <p class="cart-math-item">
-        <span class="cart-math-header">Total:</span>
-        <span id="#total" class="g-price total"></span>
-      </p>
-    </div>
-    </div>
+    <?php if($restaurant->id_Owner != $session->getId_User())
+            drawCart(); ?>
   </div> 
   </section>
 <?php } ?>
