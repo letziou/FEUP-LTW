@@ -95,20 +95,12 @@ body>header #logout {
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  margin: auto auto auto auto;
-}
-
-body>footer {
-  grid-column-start: start;
-  grid-column-end: end;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  margin: auto auto 1em auto;
 }
 
 /*footer*/
 body>footer {
   grid-column-start: start;
   grid-column-end: end;
+  grid-row: end;
 }
