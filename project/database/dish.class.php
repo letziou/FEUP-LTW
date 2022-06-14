@@ -21,10 +21,6 @@
       $this->image_path =$image_path;
     }
 
-    static function getId(Dish $dish) {
-      return $dish->id_Dish;
-    }
-
     static function save_newDish(PDO $db, string $name, float $price, string $description, int $id_Restaurant, int $id_Image) {
       $stmt = $db->prepare('INSERT INTO Dish (name, price, description, id_Restaurant, id_Image) 
                             VALUES (?,?,?,?,?)');
