@@ -24,18 +24,21 @@
   <<div class="addOnbox">
 
     <h1> Add Restaurant</h1>
-    <form action="/actions/action_createRestaurant.php" id="formlog" method="post" class="addOn">
+    <form action="/actions/action_createRestaurant.php" method="post" class="addOn" enctype="multipart/form-data">
     <div class="form-content">
       <input id="name" type="name" name="name" placeholder="Name of restaurant" />
+      <input id="category" type="category" name="category" placeholder="category" />
       <input id="street" type="street" name="street" placeholder="Street of restaurant" />
       <input id="city" type="city" name="city" placeholder="City of restaurant" />
-      <input id="postalcode" type="postalcode" name="postalcode" placeholder="Postal code of restaurant" />
-      <input id="type" type="type" name="type" placeholder="Type of picture of Dish" />
-      <input id="image" type="image" name="image" placeholder="File of Dish image" />
+      <input id="postalCode" type="postalCode" name="postalCode" placeholder="Postal code of restaurant" />
+      <label>Upload Image:
+        <input type="file" name="image">
+      </label>
+      <span id=buttons>
+        <button class="addOn_button" input type= "submit"> Add</button>
+      </span> 
       </form> 
       </div>
-      <span id=buttons>
-        <button class="addOn_button" form="formlog"> Add</button>
-      </span> 
+      
   </div> 
 <?php } ?>

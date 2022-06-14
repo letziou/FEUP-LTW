@@ -21,19 +21,19 @@
       $this->image_path =$image_path;
     }
 
-    static function save_newRestaurant(PDO $db, $name, $id_category,  $id_Address,  $id_Owner, $id_Image, $image_path) {
-      $stmt = $db->prepare('INSERT INTO Restaurant (name, id_category, id_Address, id_Owner, id_Image, image_path) 
-                            VALUES (?,?,?,?,?,?)');
+    static function save_newRestaurant(PDO $db, $name, $id_category,  $id_Address,  $id_Owner, $id_Image) {
+      $stmt = $db->prepare('INSERT INTO Restaurant (name, id_category, id_Address, id_Owner, id_Image) 
+                            VALUES (?,?,?,?,?)');
 
-      $stmt->execute(array($name, $id_category, $id_Address, $id_Owner, $id_Image, $image_path));
+      $stmt->execute(array($name, $id_category, $id_Address, $id_Owner, $id_Image));
 
     }
 
     static function save_editRestaurant($db) {
-      $stmt = $db->prepare('UPDATE Restaurant SET name = ?, id_category = ?, id_Address = ?, id_Image = ?, image_path = ?
+      $stmt = $db->prepare('UPDATE Restaurant SET name = ?, id_category = ?, id_Address = ?, id_Image = ?
                             WHERE id_Restaurant = ?');
 
-      $stmt->execute(array($this->name, $this->id_category, $this->id_Address, $this->id_Image,$this->image_path));
+      $stmt->execute(array($this->name, $this->id_category, $this->id_Address, $this->id_Image));
     }
 
     function getRestaurant_Category(){

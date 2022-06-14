@@ -11,18 +11,38 @@
 
   $db = getDatabaseConnection();
 
+    $id_Owner=$session->getId_User();
     $name = $_POST['name'];
-    $category = $_GET['category'];
+    $category = $_POST['category'];
     $street = $_POST['street'];
     $city = $_POST['city'];
     $postalCode = $_POST['postalCode'];
-    $type = $_POST['type'];
-    $image = $_POST['image'];  
+    $type = ".jpg";
+    $image_path = $name.$type;
 
-    Image::save_newImage($db, $type, $image);
+    Image::save_newImage($db, $type, $image_path);
     $id_Image = $db -> lastInsertId();
+
+    if (!is_dir('../images')) mkdir('../images');
+    if (!is_dir('../images/Rest_Logos')) mkdir('../images/Rest_Logos');
+
+    $originalFileName = "../images/Rest_Logos/$image_path";
+    
+    move_uploaded_file($_FILES['image']['tmp_name'], $originalFileName);
+
+
     Address::save_newAddress($db, $city, $postalCode, $street);
     $id_Address = $db -> lastInsertId();
-    Restaurant::save_newRestaurant($db, $name, $category, (int)$id_Address, (int)$id_Image, $image);
+    Restaurant::save_newRestaurant($db, $name, $category, (int)$id_Address, (int)$id_Owner, (int)$id_Image);
+
+    $id_Restaurant = $db -> lastInsertId();
+
+    $newRest = Restaurant:: getRestaurant($db, (int)$id_Restaurant);
+    
+    if ($newRest) {
+      
+        $session->addMessage('Success', 'Restaurant Created');
+        header('Location: /../index.php');
+      } 
   
 ?>

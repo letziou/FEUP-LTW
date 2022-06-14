@@ -48,7 +48,7 @@ CREATE TABLE Address (
 CREATE TABLE Restaurant (
     id_Restaurant INTEGER PRIMARY KEY,                          -- id for each id_Restaurant
     name VARCHAR,                                               -- restaurant's name
-    id_category INTEGER REFERENCES Category(id_Category),       -- restaurants's category
+    id_Category INTEGER REFERENCES Category(id_Category),       -- restaurants's category
     id_Address INTEGER REFERENCES Address(id_Address),          -- id of
     id_Owner INTEGER REFERENCES ROwner(id_Owner),               -- owner's id of restaurant
     id_Image INTEGER REFERENCES Image(id_Image)                 -- image id of restaurant
@@ -96,13 +96,13 @@ INSERT INTO Image VALUES('1002','PNG','categories/gourmet.png');
 INSERT INTO Image VALUES('1003','PNG','categories/healthy.png');
 
 -- Images Restaurants
-INSERT INTO Image Values('2000','PNG','Rest_Logos/McDonalds-logo-1.png');
-INSERT INTO Image Values('2001','PNG','Rest_Logos/kfc-logo-1.png');
-INSERT INTO Image Values('2002','PNG','Rest_Logos/daterra.png');
-INSERT INTO Image Values('2003','PNG','Rest_Logos/Extremepita.png');
-INSERT INTO Image Values('2004','PNG','Rest_Logos/DunkinDonuts.png');
-INSERT INTO Image Values('2005','PNG','Rest_Logos/Burger-King-Logo.png');
-INSERT INTO Image Values('2006','PNG','Rest_Logos/Burger-King-Logo.png');
+INSERT INTO Image Values('2000','PNG','McDonalds-logo-1.png');
+INSERT INTO Image Values('2001','PNG','kfc-logo-1.png');
+INSERT INTO Image Values('2002','PNG','daterra.png');
+INSERT INTO Image Values('2003','PNG','Extremepita.png');
+INSERT INTO Image Values('2004','PNG','DunkinDonuts.png');
+INSERT INTO Image Values('2005','PNG','Burger-King-Logo.png');
+INSERT INTO Image Values('2006','PNG','Burger-King-Logo.png');
 
 -- Images MacDonalds
 INSERT INTO Image VALUES('1','PNG','Mac/bigmac.png');
