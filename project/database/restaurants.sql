@@ -7,7 +7,6 @@ DROP TABLE IF EXISTS Dish;
 DROP TABLE IF EXISTS Review;
 DROP TABLE IF EXISTS OOrder;
 DROP TABLE IF EXISTS Restaurant;
-DROP TABLE IF EXISTS ROwner;
 DROP TABLE IF EXISTS User;
 
 
@@ -42,8 +41,8 @@ CREATE TABLE Restaurant (
     id_Restaurant INTEGER PRIMARY KEY,                          -- id for each id_Restaurant
     name VARCHAR,                                               -- restaurant's name
     id_category INTEGER REFERENCES Category(id_Category),       -- restaurants's category
-    id_Address INTEGER REFERENCES Address(id_Address),          -- id of
-    id_Owner INTEGER REFERENCES User(id_User),                of restaurant
+    id_Address INTEGER REFERENCES Address(id_Address),          -- id of address
+    id_Owner INTEGER REFERENCES User(id_User),               -- id of restaurant Owner
     id_Image INTEGER REFERENCES Image(id_Image)                 -- image id of restaurant
 );
 
@@ -232,12 +231,12 @@ INSERT INTO User VALUES('68','Jenifer Lopes','#Test68','Jenifer','Lopes','910000
 INSERT INTO User VALUES('69','Brad Pit','#Test69','Brad','Pit','910983898','89');
 INSERT INTO User VALUES('70','Mila Reguila','#Test70','Mila','Reguila','915555558','90');
 INSERT INTO User VALUES('1','Joana Valente','#Test1','Joana','Valente','918929898','20');      
-INSERT INTO User VALUES('2','Diogo Almeida','#Test2','Diogo','Almeida','918929892','21');     
-INSERT INTO User VALUES('3','Jorge Duarte','#Test3','Jorge','Duarte','918929843','22');       
+INSERT INTO User VALUES('2','Diogo Almeida','#Test2','Diogo','Almeida','918929892','21');      
+INSERT INTO User VALUES('3','Jorge Duarte','#Test3','Jorge','Duarte','918929843','22');        
 INSERT INTO User VALUES('4','Carlos Sousa','#Test4','Carlos','Sousa','918929223','23');       
 INSERT INTO User VALUES('5','João Sousa','#Test5','João','Sousa','918929123','24');           
-INSERT INTO User VALUES('6','João Almeida','#Test6','João','Almeida','918929124','25');       
-INSERT INTO User VALUES('7','Manuel Andrade','#Test7','Manuel','Andrade','918719124','26');    
+INSERT INTO User VALUES('6','João Almeida','#Test6','João','Almeida','918929124','25');        
+INSERT INTO User VALUES('7','Manuel Andrade','#Test7','Manuel','Andrade','918719124','26'); 
 
 -- Different types of categories
 INSERT INTO Category VALUES('1','Fast-Food','1000');
