@@ -23,6 +23,59 @@ h2,
   margin: 8px 0;
 }
 
+.meter {
+  height: 5px;
+  position: relative;
+  background: #f3efe6;
+  overflow: hidden;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+}
+
+.s_time {
+  margin-top: 30px;
+  text-align: left;
+  font-weight: bold;
+
+}
+
+
+.time {
+  font-size: xx-large;
+  text-align: center;
+  color: grey;
+}
+
+.request {
+  margin-top: 50px;
+  text-align: bottom;
+  font-weight: bold;
+}
+
+.progress {
+  background-color: #e4c465;
+  animation: progressBar 3s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+
 #dish-container {
   width: 90%;
   max-width: 780px;
@@ -110,6 +163,20 @@ ul {
 
 .menu-item .add-button:hover {
   background: #5815AE;
+}
+
+.add-prch {
+  margin-top: 10px;
+  border: none;
+  background: #6B00F5;
+  padding: 6px 20px 4px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  bottom: -10px;
+  left: 150px;
+  transition: all 0.3s;
 }
 
 .menu-item-dets {
