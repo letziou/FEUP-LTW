@@ -51,9 +51,8 @@
 
 <?php function drawSearchBar() { ?>
   <div id="searchbar">
-        <form action="restaurant_search.php" method="GET">
+        <form action="restaurant_search.php" method="GET" class="searchbarFlex">
         <input type="text" name="search" placeholder="Search Restaurant" class="searchbar">
-        <input id="submit" type="submit" value="Search">
       </div>
  
    <?php } ?>
