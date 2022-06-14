@@ -4,8 +4,8 @@
 ?>
 
 <?php function drawOrders(Session $session, array $orders) { ?>
-  <h2>Your Orders</h2>
   <section id="order-container">
+  <h2>Your Orders</h2>
       <?php foreach ($orders as $order) { ?>
         <article class="order">
           <span class="restaurant_name"><?=$order->restaurant_name?>
