@@ -211,8 +211,7 @@
       </a>  
     </div>
     </header>
-    <?php drawSearchBar();
-
+    <?php
   } ?>
 
 <?php function drawHeaderReviews(Session $session, int $id_Category, int $id_Restaurant, string $name) { ?>
