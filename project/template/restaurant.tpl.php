@@ -1,6 +1,7 @@
 <?php declare(strict_types = 1); 
-      require_once('database/restaurant.class.php');
-      require_once('database/dish.class.php');
+      //require_once('database/restaurant.class.php');
+      require_once(__DIR__ . '/../database/restaurant.class.php');
+      require_once(__DIR__ . '/../database/dish.class.php');
 ?>
 
 <?php function drawAddDish(int $id_Category, int $id_Restaurant, string $restaurantName) { ?>
