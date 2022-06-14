@@ -121,6 +121,7 @@ h2 {
   grid-column-end: end;
   display: block;
   margin-left: 1em;
+  font-weight: bolder;
 }
 
 #restaurantsections {
@@ -135,6 +136,16 @@ h2 {
 
 #restaurantsections>article {
   text-align: center;
+}
+
+#restaurantsOwnedsections {
+  grid-column-start: start;
+  grid-column-end: end;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5em auto 3em auto;
 }
 
 #dishsection {
@@ -152,6 +163,17 @@ h2 {
   margin: 3em;
   width: 300px;
   height: 200px;
+}
+
+#restaurantsOwnedsections>article>a>img {
+  margin: 3em;
+  width: 300px;
+  height: 200px;
+}
+
+#addRestaurant > a{
+  display: flex;
+  flex-direction: row;
 }
 
 /*footer*/

@@ -27,22 +27,21 @@
 <?php } ?>
 
 <?php function drawRestaurantsFromOwner(array $restaurants, int $id_Owner) { ?>
-  <h2>Restaurants :</h2>
-  <section id="restaurantsections">
+  <section id="restaurantsOwnedsections">
+    <h2>Your Restaurants :</h2>
     <?php foreach($restaurants as $restaurant) { ?> 
       <article>
       <a href="restaurant.php?cat=<?=$restaurant->id_category?>&id=<?=$restaurant->id_Restaurant?>&name=<?=$restaurant->name?>">
-          <img src="images/Rest_Logos/<?=$restaurant->image_path?>">
           <p><?=$restaurant->name?></p>
       </a>
       </article>
     <?php } ?>
-    <article>
+    <div id="addRestaurant">
       <a href="addRestaurant.php?id=<?=$id_Owner?>">
+      <span style="margin-top: 8px; padding: 0.5em;"><i class="fa-solid fa-plus"></i></span>
       <p class="add">Add new Restaurant</p>
-      <i class="fa-regular fa-circle-plus"></i>
       </a>
-    </article>
+    </div>
   </section>
 <?php } ?>
 
