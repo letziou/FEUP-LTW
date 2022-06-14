@@ -13,21 +13,20 @@
       <li>Postal Code: <?=$address->postalCode?> </li>
       <li>Street: <?=$address->street?></li>
     </ul>
-    <span id=buttons>
-    <a href="edit_profile.php">
-    <button class="edit_button"> Edit Profile</button>
-  </span> 
   </div>
   <div class="restButton">
+    <a href="edit_profile.php">
+      <button class="edit_button"> Edit Profile</button>
+    </a>  
     <a href="restaurants_owned.php?id=<?=$user->id_User?>">
-    <button>Checkout your restaurants!</button>
-  </a>
+      <button>Checkout your restaurants!</button>
+    </a>
   </div>
 <?php } ?>
 
 <?php function drawEditProfile(Session $session, User $user, Address $address) { ?>
   <div id="loginbox">
-  <h2> Edit Profile </h2>
+  <h2> Edit Profile: </h2>
     <form action="/actions/action_EditProfile.php" id="formedit" method="post" class="edit">
       <input id="email" type="text" name="email" placeholder="e-mail">
         <br>
