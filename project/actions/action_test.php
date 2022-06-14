@@ -17,6 +17,7 @@
     $type = ".jpg";
     $image_path = $name.$type; 
 
+    echo $image_path;
     Image::save_newImage($db, $type, $image_path);
     $id_Image = $db -> lastInsertId();
 
@@ -26,6 +27,9 @@
     $originalFileName = "../images/Food_images/$image_path";
     
     move_uploaded_file($_FILES['image']['tmp_name'], $originalFileName);
+
+    echo $_FILES['image']['tmp_name'];
+    print_r($_FILES);
 
     Dish::save_newDish($db, $name, (float)$price, $description, (int)$id_Restaurant, (int)$id_Image);
     $id_Dish = $db -> lastInsertId();

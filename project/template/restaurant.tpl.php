@@ -9,7 +9,7 @@
     <?php foreach($restaurants as $restaurant) { ?> 
       <article>
       <a href="restaurant.php?cat=<?=$restaurant->id_category?>&id=<?=$restaurant->id_Restaurant?>&name=<?=$restaurant->name?>">
-          <img src="images/<?=$restaurant->image_path?>">
+          <img src="images/Rest_Logos/<?=$restaurant->image_path?>">
           <p><?=$restaurant->name?></p>
       </a>
       </article>
