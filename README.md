@@ -11,7 +11,7 @@
 - [x] Add Dish Photo
 - [x] List Reviews
 - [ ] Restaurant Owner Can Answer to Review
-- [ ] List Customer Orders
+- [x] List Customer Orders
 - [ ] Change Order State
 - [x] Search Restaurants
 - [ ] Order Dishes
