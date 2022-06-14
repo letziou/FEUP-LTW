@@ -122,6 +122,17 @@ ul {
   margin: 10px 0 12px;
 }
 
+.menu-item-add {
+  font-size: 18px;
+  text-align: center;
+}
+
+#flexy {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .screen-cart {
   padding-right: 30px;
 }

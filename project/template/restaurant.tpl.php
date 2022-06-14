@@ -4,10 +4,10 @@
 ?>
 
 <?php function drawAddDish(int $id_Category, int $id_Restaurant, string $restaurantName) { ?>
-    <li>
-      <a href="addDish.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$restaurantName?>">
-      <p class="add">Add new Dish</p>
-      <i class="fa-regular fa-circle-plus"></i>
+    <li class="menu-item">
+      <a href="addDish.php?cat=<?=$id_Category?>&id=<?=$id_Restaurant?>&name=<?=$restaurantName?>"  id="flexy">
+      <span style="margin-top: 11px; padding: 0.5em;"><i class="fa-solid fa-plus"></i></span>
+      <p class="menu-item-add">Add new Dish</p>
       </a>
     </li>
 <?php } ?>
