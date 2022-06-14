@@ -25,13 +25,6 @@ CREATE TABLE User (
     id_Address INTEGER REFERENCES Address(id_Address)       -- user's address
 );
 
-
-CREATE TABLE ROwner (
-    id_Owner INTEGER REFERENCES User(id_User),              -- restaurant owner id given by website
-    companyName VARCHAR,                                    -- company who's owner owns
-    PRIMARY KEY(id_Owner)
-);
-
 CREATE TABLE Image (
     id_Image INTEGER PRIMARY KEY,                           -- image id given by website to each image 
     type TEXT,                                              -- type (JPG,PNG,...)
@@ -50,7 +43,7 @@ CREATE TABLE Restaurant (
     name VARCHAR,                                               -- restaurant's name
     id_category INTEGER REFERENCES Category(id_Category),       -- restaurants's category
     id_Address INTEGER REFERENCES Address(id_Address),          -- id of
-    id_Owner INTEGER REFERENCES ROwner(id_Owner),               -- owner's id of restaurant
+    id_Owner INTEGER REFERENCES User(id_User),                of restaurant
     id_Image INTEGER REFERENCES Image(id_Image)                 -- image id of restaurant
 );
 
@@ -238,25 +231,13 @@ INSERT INTO User VALUES('67','Vladimir Rip','#Test67','Vladimir','Rip','91110009
 INSERT INTO User VALUES('68','Jenifer Lopes','#Test68','Jenifer','Lopes','910000008','88');
 INSERT INTO User VALUES('69','Brad Pit','#Test69','Brad','Pit','910983898','89');
 INSERT INTO User VALUES('70','Mila Reguila','#Test70','Mila','Reguila','915555558','90');
-
-
--- Users (Restaurant Owners)
-INSERT INTO User VALUES('1','Joana Valente','#Test1','Joana','Valente','918929898','20');     -- Owner of Macdonalds Circunvalação
-INSERT INTO User VALUES('2','Diogo Almeida','#Test2','Diogo','Almeida','918929892','21');     -- Owner of Adega Soares
-INSERT INTO User VALUES('3','Jorge Duarte','#Test3','Jorge','Duarte','918929843','22');       -- Owner of Soul Food
-INSERT INTO User VALUES('4','Carlos Sousa','#Test4','Carlos','Sousa','918929223','23');       -- Owner of 100culpa
-INSERT INTO User VALUES('5','João Sousa','#Test5','João','Sousa','918929123','24');           -- Owner of Rocinha
-INSERT INTO User VALUES('6','João Almeida','#Test6','João','Almeida','918929124','25');       -- Owner of Burguer King S.Mamede
-INSERT INTO User VALUES('7','Manuel Andrade','#Test7','Manuel','Andrade','918719124','26');   -- Owner of Burguer King S.Mamede
-
--- Restaurant Owners
-INSERT INTO ROwner VALUES('50','McDonalds Aliados');
-INSERT INTO ROwner VALUES('2','KFC');
-INSERT INTO ROwner VALUES('3','daTerra');
-INSERT INTO ROwner VALUES('4','Extremepita');
-INSERT INTO ROwner VALUES('5','Dunkin Donuts');
-INSERT INTO ROwner VALUES('6','Burguer King S.Mamede');
-INSERT INTO ROwner VALUES('7','Burguer King Colombo');
+INSERT INTO User VALUES('1','Joana Valente','#Test1','Joana','Valente','918929898','20');      
+INSERT INTO User VALUES('2','Diogo Almeida','#Test2','Diogo','Almeida','918929892','21');     
+INSERT INTO User VALUES('3','Jorge Duarte','#Test3','Jorge','Duarte','918929843','22');       
+INSERT INTO User VALUES('4','Carlos Sousa','#Test4','Carlos','Sousa','918929223','23');       
+INSERT INTO User VALUES('5','João Sousa','#Test5','João','Sousa','918929123','24');           
+INSERT INTO User VALUES('6','João Almeida','#Test6','João','Almeida','918929124','25');       
+INSERT INTO User VALUES('7','Manuel Andrade','#Test7','Manuel','Andrade','918719124','26');    
 
 -- Different types of categories
 INSERT INTO Category VALUES('1','Fast-Food','1000');
@@ -266,7 +247,7 @@ INSERT INTO Category VALUES('4','Desert','1003');
 
 --Restaurants
 INSERT INTO Restaurant VALUES('1','McDonalds Imperial','1','1','50','2000');
-INSERT INTO Restaurant VALUES('2','KFC','1','2','2','2001');
+INSERT INTO Restaurant VALUES('2','KFC','1','2','50','2001');
 INSERT INTO Restaurant VALUES('3','daTerra','3','3','3','2002');
 INSERT INTO Restaurant VALUES('4','Extremepita','3','4','4','2003');
 INSERT INTO Restaurant VALUES('5','Dunkin Donuts','4','5','5','2004');
