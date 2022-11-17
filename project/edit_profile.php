@@ -20,6 +20,6 @@ $address= Address::getAddressFromID($db, $user->id_Address);
 
 drawHeaderProfile($session);
 drawEditProfile($session,$user,$address);
-drawFooter();
+drawFooter(); 
 
 ?>
